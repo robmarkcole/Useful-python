@@ -1,0 +1,22 @@
+Patient: 1
+
+ID: 1
+Name: X
+FamilyN: Y
+Age: 20
+
+Some data
+1.0	2.4	3.0
+4.2	5.6	6.7
+
+Patient: 2
+
+ID: 2
+Name: H
+FamilyN: F
+Age: 23
+
+Some data
+7.2	8.2	9.5
+1.4	5.7	8.7
+
