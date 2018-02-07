@@ -1,0 +1,8 @@
+{
+ "argv": ["python3",
+          "-m", "jupyter_micropython_kernel",
+          "/dev/cu.usbmodem14341", "115200",
+          "-f", "{connection_file}"],
+ "display_name": "MicroPython - M0",
+ "language": "micropython"
+}
