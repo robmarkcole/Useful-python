@@ -6,12 +6,14 @@ from datetime import datetime
 
 TEMPLATE_PATH = os.getcwd()
 
-def create_previews():
-    print("Event at {}".format(str(datetime.now())))
+def create_previews(event):
+  #  print("Event at {} from {}".format(str(datetime.now())), str(event))
+    print("Event {}".format(event.src_path))
+    print("type {}".format(event.event_type))
 
 class EventHandler(FileSystemEventHandler):
     def on_any_event(self, event):
-        create_previews()
+        create_previews(event)
 
 observer = Observer()
 observer.schedule(EventHandler(), TEMPLATE_PATH, recursive=True)

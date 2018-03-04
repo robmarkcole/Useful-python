@@ -1,0 +1,2 @@
+Created file: /Users/robincole/Documents/test_dir/test copy.md
+Modified directory: /Users/robincole/Documents/test_dir
