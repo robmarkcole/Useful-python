@@ -4,10 +4,10 @@
 
 <variable-table>from_csv</variable-table>
 
-<section-filechange paths="['test.csv']">
+<section-filechange paths="['input.csv']">
 
 ```python
-from_csv = pd.read_csv('test.csv', index_col=0)
+from_csv = pd.read_csv('input.csv', index_col=0)
 from_csv
 ```
 
