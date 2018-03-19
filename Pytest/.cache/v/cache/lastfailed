@@ -1,3 +1,4 @@
 {
-  "test_sample.py::test_answer": true
+  "test_sample.py::test_answer": true,
+  "test_smtpsimple.py::test_ehlo": true
 }
