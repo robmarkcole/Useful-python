@@ -21,3 +21,14 @@ We are organising XX day trips around Puglia. A chartered bus will depart daily 
 
 CASTLE HISTORY
 Construction of the castle began in 916 on the orders of the Byzantine general Niccolò Piccingli, in order to defend the area against Saracen attacks. During the Houhenstaufen period around 1240 it was converted to a fortified residential castle, with large windows and an escape tunnel added. During the 1800's the castle fell into disrepair, but in 1900 Sannicandro town hall purchased the castle and restoration began. The castle is now used for national and international conferences, as well as private functions.
+
+########################### 20-4-2018
+
+WEDDING CEREMONY
+Please arrive at the castle at 2.30pm for the wedding ceremony which runs from 3pm to 4pm. If you arrive late please contact Maria’s brother on his personal phone number and he will assist accordingly. The ceremony is accompanied by a speech by the Mayor in Italian & English. After the ceremony we will have a classic Italian “rinfresco” with bubbles and nibbles in main court of the castl. The rinfresco is followed by the traditional rice throwing and a group photo with the newlyweds. This is the time where the couple usually accept gifts for their future life together.
+
+RECEPTION
+The wedding ceremony is followed by the reception with dinner and entertainment. Guests will be directed to the main food court in the castle and shown to their seats. Dinner begins at 6pm with the classic “brindisi” (toast) after the newlyweds join the guests.
+
+BRUNCH on 1st of October
+Brunch will be served for wedding survivors at 11am on Monday 1st October. The location of brunch will be a local restaurant (to be confirmed). Brunch is  followed by trip to Castel Del Monte.
