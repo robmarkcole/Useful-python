@@ -22,6 +22,11 @@ QUANTUM_EFFICIENCY = 0.75
 READ_OUT_NOISE_ELECTRONS = 25
 WAVELENGTH = 500e-9
 
+def test_calc_blackbody_radiance():
+    """Test around peak radiance of the Sun."""
+    radiance = ot.calc_blackbody_radiance(wavelength=WAVELENGTH,
+                                          temperature=const.sun_temperature)
+    assert radiance == 7939213821760.563
 
 def test_calc_camera_input_power():
     """Test calc input power at camera."""
@@ -72,9 +77,8 @@ def test_calc_gsd_cross():
     """Test GSD cross track."""
     result = ot.calc_gsd_cross(altitude=ALTITUDE,
                                focal_length=FOCAL_LENGTH,
-                               pixels_cross=PIXELS_CROSS,
-                               sensor_dim_cross=25e-4)
-    assert result == 2.734375
+                               pixel_dim_cross=PIXEL_DIM_CROSS)
+    assert result == 14.000000000000002
 
 def test_calc_ifov():
     """Test IFOV calc."""
@@ -101,7 +105,7 @@ def test_calc_pixel_solid_angle():
 def test_calc_radiated_power_nadir():
     """Test calculation of radiated power with pixel resolution
     equal along and cross track."""
-    assert ot.calc_radiated_power_nadir(integrated_upwelling_radiance=0.433,
+    assert ot.calc_radiated_power_nadir(radiance_integrated=0.433,
                                         pixel_resolution_along=30,
                                         pixel_resolution_cross=30) == 389.7
 
@@ -119,9 +123,10 @@ def test_calc_swath_at_nadir_cross():
 
 def test_calc_total_noise_electrons():
     """Test calc total noise."""
-    noise_e = ot.calc_total_noise_electrons(shott_noise_electrons=50,
-                                            read_out_noise_electrons=25)
-    assert noise_e == 55
+    noise_e = ot.calc_total_noise_electrons(shott_noise_electrons=10,
+                                            read_out_noise_electrons=10,
+                                            dark_current_electrons=10)
+    assert noise_e == 17
 
 def test_calc_shott_noise():
     """Test Shott noise calc."""
@@ -137,9 +142,17 @@ def test_conv_celcius_to_kelvin():
     """Test conversion of temperatures."""
     assert ot.conv_celcius_to_kelvin(celcius=0.0) == const.zero_celcius_in_kelvin
 
+def test_conv_current_to_electrons_second():
+    """test Convert a current to electrons per sec."""
+    assert ot.conv_current_to_electrons_second(1e-15) == 6241
+
 def test_conv_decibels():
     """Test conversion of decibels to power ratio."""
     assert ot.conv_decibels_to_power_ratio(decibels=70)/1e6 == 10.0
+
+def test_conv_electrons_second_to_current():
+    """Test conversion to Amps."""
+    assert ot.conv_electrons_second_to_current(electrons=1.5e6) == 2.4032649312e-13
 
 def test_conv_kelvin_to_celcius():
     """Test conversion of temperatures."""

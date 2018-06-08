@@ -19,8 +19,8 @@ Where a property has _min and _max suffixes, it is only necessary to add the
 _min version to the variables list below.
 
 Along and cross track properties are indicated by _along and _cross suffixes
-respectively. It is only necessary to add the _along version to the
-variables list below.
+respectively. It is only necessary to add either the the _along OR _cross
+version to the variables list below.
 
 The format of the Return section is 'type : unit'. All units SI.
 
@@ -44,9 +44,19 @@ bands_spectral
     int : no units
     The number of spectral bands, e.g. R/G/B/NIR = 4 bands.
 
+bandwidth_operating
+    double : Meters
+    The sensor operating bandwith, delta lambda.
+
 bits
     int : units bits
     The bit depth, B, to encode each pixel.
+
+blackbody_radiance
+    double : Watts per Meter squared per Sterradian at a wavelength
+    The spectral irradiance (Blackbody emission, temperature and wavelength
+    dependent) divided by the total solid-angle of a body (4 Pi)
+    gives the blackbody spectral radiance (L_lambda).
 
 cameras
     int : no units
@@ -56,9 +66,17 @@ camera_input_power
     double : Watts
     The input power (P_in) on the camera aperture.
 
+current
+    double : Amps
+    A current in Amps.
+
 decibels
     double : Decibels
     Decibels (dB).
+
+dark_current
+    double : Amps
+    A dark current in Amps.
 
 earth_mean_orbital_speed
     double : Meters per second
@@ -111,9 +129,14 @@ ifov
     The instantaneous field of view (IFOV) is the solid angle that a
     single pixel is sensitive to, in deg.
 
-integrated_upwelling_radiance
+radiance_reference
+    double : Watts per Meter squared per Sterradian per unit bandwith,
+             typicaly microns in which case units (W/m^2/sr/um)
+    The radiance for a reference bandwidth.
+
+radiance_integrated
     double : Watts per Meter squared per Sterradian (W/m^2/sr)
-    L_int evaluated over operating bandwidth.
+    The radiance integrated over operating bandwidth (L_int).
 
 integration_time
     double : Seconds
@@ -189,6 +212,10 @@ shott_noise
     int : no units, assume particles
     The Shott noise sqrt(particles)
 
+swath_at_nadir_cross
+    double : Meters
+    The cross track swath for a single camera.
+
 total_noise_electrons
     int : no units, numer of electrons
     The total noise due to Shott and read-out noise.
@@ -212,6 +239,24 @@ weight
 
 from optics_tools import const as const
 import numpy as np
+
+def calc_blackbody_radiance(wavelength,
+                            temperature):
+    """
+    Calculate the blackbody spectral radiance. Note this is normalised over
+    4 pi.
+    https://en.wikipedia.org/wiki/Planck%27s_law
+
+    Returns
+    -------
+    double : Watts per Meter squared per Sterradian at a wavelength
+    """
+
+    intensity_factor = (const.planck * const.speed_of_light**2) \
+                        / (2 * wavelength**5)
+    power_factor = (const.planck * const.speed_of_light) \
+                    / (const.boltzmann * temperature * wavelength)
+    return intensity_factor / (np.exp(power_factor) - 1.0)
 
 def calc_camera_input_power(altitude,
                             aperture_diameter,
@@ -311,8 +356,7 @@ def calc_f_number(aperture_diameter,
 
 def calc_gsd_cross(altitude,
                    focal_length,
-                   pixels_cross,
-                   sensor_dim_cross):
+                   pixel_dim_cross):
     """
     ground sample distance (gsd) is the distance between pixel centers measured
     on the ground.
@@ -324,7 +368,7 @@ def calc_gsd_cross(altitude,
     """
 
     magnification = altitude / focal_length
-    return sensor_dim_cross * magnification / pixels_cross
+    return magnification * pixel_dim_cross
 
 def calc_ifov(pixel_dim_cross,
               focal_length):
@@ -376,7 +420,7 @@ def calc_pixel_resolution(ifov,
 
     return np.deg2rad(ifov) * altitude
 
-def calc_radiated_power_nadir(integrated_upwelling_radiance,
+def calc_radiated_power_nadir(radiance_integrated,
                               pixel_resolution_along,
                               pixel_resolution_cross):
     """
@@ -387,7 +431,7 @@ def calc_radiated_power_nadir(integrated_upwelling_radiance,
     double : Watts per Sterradian.
     """
 
-    return integrated_upwelling_radiance * pixel_resolution_along * pixel_resolution_cross
+    return radiance_integrated * pixel_resolution_along * pixel_resolution_cross
 
 def calc_sensor_incident_power(camera_input_power,
                                optical_transmission_factor):
@@ -426,7 +470,8 @@ def calc_swath_at_nadir_cross(gsd_cross,
     return gsd_cross * pixels_cross
 
 def calc_total_noise_electrons(shott_noise_electrons,
-                               read_out_noise_electrons):
+                               read_out_noise_electrons,
+                               dark_current_electrons):
     """
     Calculate the total noise electrons.
 
@@ -435,7 +480,11 @@ def calc_total_noise_electrons(shott_noise_electrons,
     int : no units, assume particles
     """
 
-    return int(np.sqrt((shott_noise_electrons**2) + (read_out_noise_electrons**2)))
+    return int(np.sqrt(
+        (shott_noise_electrons**2) + \
+        (read_out_noise_electrons**2) + \
+        (dark_current_electrons**2)
+        ))
 
 def calc_velocity_ground_track(earth_orbital_period):
     """
@@ -459,6 +508,13 @@ def conv_celcius_to_kelvin(celcius):
 
     return celcius + const.zero_celcius_in_kelvin
 
+def conv_current_to_electrons_second(current):
+    """
+    Convert a current in Amps to a number of
+    electrons per second.
+    """
+    return int(current / const.electron_charge)
+
 def conv_decibels_to_power_ratio(decibels):
     """
     Calculate the power ratio P2/P1 where P1 = 1.
@@ -469,6 +525,12 @@ def conv_decibels_to_power_ratio(decibels):
     """
 
     return 10 ** (decibels / 10)
+
+def conv_electrons_second_to_current(electrons):
+    """
+    Convert a number of electrons per second to a current in Amps.
+    """
+    return electrons * const.electron_charge
 
 def conv_kelvin_to_celcius(kelvin):
     """
