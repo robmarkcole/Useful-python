@@ -3,8 +3,8 @@ app = Flask(__name__)
 
 def makecalc():
 	"""
-	Function run at each API call
-    No need to re-load the model 
+	Function run at each API call.
+    No need to re-load the model.
 	"""
     # reads the received json 
 	jsonfile = request.get_json()
@@ -17,6 +17,6 @@ def makecalc():
 
 
 if __name__ == '__main__':
-        # Model is loaded when the API is launched
+    # Model is loaded when the API is launched
 	model = pickle.load(open('modelfile', 'rb'))
 	app.run(debug=True)
