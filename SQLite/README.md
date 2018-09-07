@@ -5,3 +5,4 @@
 * Use [falcon](https://github.com/plotly/falcon) for graphing
 * Convert [csv-to-sqlite](https://github.com/simonw/csvs-to-sqlite)
 * Add a JSON API using [datasette](https://github.com/simonw/datasette)
+* Attach images with [sqlalchemy-imageattach](https://github.com/dahlia/sqlalchemy-imageattach)
