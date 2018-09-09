@@ -1,0 +1,1 @@
+Recommend installing with `pip install opencv-python` as per https://pypi.org/project/opencv-python/

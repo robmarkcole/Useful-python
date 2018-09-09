@@ -1,2 +1,23 @@
+*.py[co]
+__pycache__
+*.egg-info
+*~
+*.bak
 .ipynb_checkpoints
-*.pyc
+.tox
+.DS_Store
+\#*#
+.#*
+.coverage
+src
+
+*.swp
+*.map
+.idea/
+Read the Docs
+config.rst
+
+/.project
+/.pydevproject
+
+package-lock.json
