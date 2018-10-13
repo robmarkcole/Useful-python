@@ -1,0 +1,21 @@
+name: intake-blog
+channels:
+- intake
+- pyviz
+- defaults
+- conda-forge
+dependencies:
+- python=3.6
+- ruamel_yaml=0.15
+- intake>=0.2.3
+- intake-xarray
+- notebook
+- ipykernel
+- pyviz
+- pygithub
+- ipywidgets
+- xarray
+- rasterio
+- zarr
+- s3fs
+- tqdm
