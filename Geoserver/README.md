@@ -14,6 +14,7 @@
 * Default creds: `{User name: admin, Password: geoserver}`
 * [Add a postGIS db](https://docs.geoserver.org/latest/en/user/data/database/postgis.html)
 * Run docs server locally https://github.com/geoserver/geoserver.github.io
+* [CURL docs](https://docs.geoserver.org/2.0.0/user/extensions/rest/rest-config-examples-curl.html)
 
 
 ## GSconfig
@@ -46,6 +47,10 @@
 * http://eoxserver.org/
 * EOxServer is a Python (2) application and framework for presenting Earth Observation (EO) data and metadata.
 * Looks like development has gone cold
+
+## GeoDjango
+* Create web app with Geoserver backend https://github.com/liorshahverdi/learning-geodjango
+* Example app https://github.com/ngageoint/geoq
 
 ### Other references
 * Course https://www.udemy.com/enterprise-gis/?couponCode=gisadvisor
