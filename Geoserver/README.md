@@ -19,6 +19,10 @@
 ## Python API
 * [Read](https://docs.geoserver.org/latest/en/user/community/scripting/py/index.html)
 
+## OWSLib
+* https://github.com/geopython/OWSLib
+* OWSLib is a Python package for client programming with Open Geospatial Consortium (OGC) web service (hence OWS)
+
 ## GSconfig
 * https://github.com/boundlessgeo/gsconfig
 * Python wrapper to the geoserver rest API
