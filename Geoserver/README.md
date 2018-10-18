@@ -9,18 +9,18 @@
 * Make myself owner of folder using `sudo chown -R robincole /Users/robincole/Documents/geoserver-2.14.0`
 * `cd bin` and `sh startup.sh` to start GeoServer
 
-## Server admin
+## Admin
 * In chrome view http://localhost:8080/geoserver
 * Default creds: `{User name: admin, Password: geoserver}`
-
-## Db admin
 * [Add a postGIS db](https://docs.geoserver.org/latest/en/user/data/database/postgis.html)
+* Run docs server locally https://github.com/geoserver/geoserver.github.io
 
 
 ## GSconfig
 * https://github.com/boundlessgeo/gsconfig
 * Python wrapper to the geoserver rest API
 * Last updated in 2015?
+* Python 2..
 
 ## Extensions
 * A variety of [extensions](https://docs.geoserver.org/latest/en/user/extensions/index.html#extensions) are available for geoserver
@@ -51,7 +51,7 @@
 * OWSlib http://geopython.github.io/OWSLib/
 * https://geotrellis.io/
 * [Guide on AWS linux ec2 instance with GeoServer & PostGIS](https://gist.github.com/karlaking/6a58279652f6ea23fd085aa5d7822119)
-* [geoserver-docker](https://github.com/DruidSmith/geoserver-docker/blob/master/Dockerfile)
+* [geoserver-docker](https://github.com/DenisCarriere/Geoserver-Docker)
 
 ### Acronyms
 * **WMS** Web Map Service Interface Standard (WMS) provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases.  A WMS request defines the geographic layer(s) and area of interest to be processed. The response to the request is one or more geo-registered map images (returned as JPEG, PNG, etc) that can be displayed in a browser application. The interface also supports the ability to specify whether the returned images should be transparent so that layers from multiple servers can be combined or not.
