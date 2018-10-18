@@ -13,6 +13,10 @@
 * In chrome view http://localhost:8080/geoserver
 * Default creds: `{User name: admin, Password: geoserver}`
 
+## Db admin
+* [Add a postGIS db](https://docs.geoserver.org/latest/en/user/data/database/postgis.html)
+
+
 ## GSconfig
 * https://github.com/boundlessgeo/gsconfig
 * Python wrapper to the geoserver rest API
@@ -21,6 +25,12 @@
 ## Extensions
 * A variety of [extensions](https://docs.geoserver.org/latest/en/user/extensions/index.html#extensions) are available for geoserver
 * [NetCDF data store extension](https://docs.geoserver.org/latest/en/user/extensions/netcdf/netcdf.html) - this format is [supported by Pangeo](http://pangeo.io/architecture.html#hdf-and-netcdf)
+
+### Cloud Optimized GeoTIFF
+* https://www.cogeo.org/
+* GeoServer can use a new GeoTools community module named 's3-geotiff' to use COG's as a datastore.
+* [Rio-cogeo](https://github.com/mapbox/rio-cogeo) Rasterio plugin creates Cloud Optimized GeoTIFF's.
+* [s3-geotiff](https://github.com/geotools/geotools/tree/master/modules/unsupported/s3-geotiff)
 
 ### pycsw
 * Publish metadata
@@ -41,6 +51,7 @@
 * OWSlib http://geopython.github.io/OWSLib/
 * https://geotrellis.io/
 * [Guide on AWS linux ec2 instance with GeoServer & PostGIS](https://gist.github.com/karlaking/6a58279652f6ea23fd085aa5d7822119)
+* [geoserver-docker](https://github.com/DruidSmith/geoserver-docker/blob/master/Dockerfile)
 
 ### Acronyms
 * **WMS** Web Map Service Interface Standard (WMS) provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases.  A WMS request defines the geographic layer(s) and area of interest to be processed. The response to the request is one or more geo-registered map images (returned as JPEG, PNG, etc) that can be displayed in a browser application. The interface also supports the ability to specify whether the returned images should be transparent so that layers from multiple servers can be combined or not.
