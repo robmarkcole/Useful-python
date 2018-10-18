@@ -20,7 +20,8 @@
 * https://github.com/boundlessgeo/gsconfig
 * Python wrapper to the geoserver rest API
 * Last updated in 2015?
-* Python 2..
+* Python 2 and uses [httplib2](https://github.com/httplib2/httplib2)
+* Worth bothering with?
 
 ## Extensions
 * A variety of [extensions](https://docs.geoserver.org/latest/en/user/extensions/index.html#extensions) are available for geoserver
