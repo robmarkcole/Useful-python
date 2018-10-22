@@ -3,3 +3,7 @@
 
 ## HIPI - Hadoop image processing interface
 * http://hipi.cs.virginia.edu/
+
+## References
+* [LARGE SCALE SATELLITE IMAGE PROCESSING
+USING HADOOP DISTRIBUTED SYSTEM](http://ijarcet.org/wp-content/uploads/IJARCET-VOL-3-ISSUE-3-731-735.pdf)
