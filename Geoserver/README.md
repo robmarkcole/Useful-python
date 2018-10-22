@@ -16,6 +16,10 @@
 * Run docs server locally https://github.com/geoserver/geoserver.github.io
 * [CURL docs](https://docs.geoserver.org/2.0.0/user/extensions/rest/rest-config-examples-curl.html)
 
+## Rest API
+* https://docs.geoserver.org/latest/en/user/rest/api/index.html
+
+
 ## Python API
 * [Read](https://docs.geoserver.org/latest/en/user/community/scripting/py/index.html)
 
