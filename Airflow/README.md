@@ -3,6 +3,7 @@
 * https://github.com/apache/incubator-airflow
 * Airflow is a platform to programmatically author, schedule and monitor workflows.
 * Airflow pipelines are configuration as code (Python), allowing for dynamic pipeline generation.
+* [Using Airflow from Jupyter](https://medium.com/@rajnishkumargarg/using-jupyter-notebook-in-apache-airflow-9ccf32e37c7a)
 
 ### DAGs
 An Airflow DAG is a collection of all the tasks you want to run, organized in a way that show their relationships and dependencies. It is defined in python files that are placed in `DAG_FOLDER` which is defined in the Airflow configuration file (`airflow.cfg`) that is in airflow_home directory.
