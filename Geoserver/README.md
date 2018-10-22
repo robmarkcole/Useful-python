@@ -31,7 +31,7 @@
 * https://github.com/boundlessgeo/gsconfig
 * Python wrapper to the geoserver rest API
 * Last updated in 2015?
-* Python 2 and uses [httplib2](https://github.com/httplib2/httplib2)
+* Python 2 and uses [httplib2](https://github.com/httplib2/httplib2) but [PR open](https://github.com/boundlessgeo/gsconfig/pull/189) for python 3 compatability (py3 branch [here](https://github.com/boundlessgeo/gsconfig/tree/noaa))
 * Worth bothering with?
 
 ## Extensions
