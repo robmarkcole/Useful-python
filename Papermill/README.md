@@ -14,10 +14,21 @@
 * Create input.ipynb, then run from command line:
 ```
 (C:\ProgramData\Anaconda3) C:\Users\RCole\Documents\Bitbucket\robin_cole\Python_
-Packages_Examples\papermill>papermill input.ipynb output.ipynb -p alpha 2 -p rat
-io 1
+Packages_Examples\papermill>papermill input.ipynb output.ipynb -p alpha 2 -p ratio 1
 Input Notebook:  input.ipynb
 Output Notebook: output.ipynb
 100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 4/4 [00:00<00:00, 83.32it/s]
 ```
 * `output.ipynb` is generated with the `injected-parameters`
+
+## Python API
+For example:
+```Python
+import papermill as pm
+
+pm.execute_notebook(
+   'path/to/input.ipynb',
+   'path/to/output.ipynb',
+   parameters = dict(alpha=0.6, ratio=0.1)
+)
+```
