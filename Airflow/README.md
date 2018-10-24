@@ -1,6 +1,7 @@
 ## Airflow
 * https://airflow.incubator.apache.org/
 * https://github.com/apache/incubator-airflow
+* On Windows? Use Docker https://hub.docker.com/r/puckel/docker-airflow/
 * Airflow is a platform to programmatically author, schedule and monitor workflows.
 * Airflow pipelines are configuration as code (Python), allowing for dynamic pipeline generation.
 * [Using Airflow from Jupyter](https://medium.com/@rajnishkumargarg/using-jupyter-notebook-in-apache-airflow-9ccf32e37c7a)
