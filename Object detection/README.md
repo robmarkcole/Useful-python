@@ -12,11 +12,13 @@
 ### Other
 * [A PyTorch Implementation of Single Shot MultiBox Detector](https://github.com/amdegroot/ssd.pytorch)
 * [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)
+* [Building a Toy Detector with Tensorflow Object Detection API](https://towardsdatascience.com/building-a-toy-detector-with-tensorflow-object-detection-api-63c0fdf2ac95)
 * [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://github.com/charlesq34/pointnet)
 * https://modeldepot.io/
 
 ### Annotation tools
 * http://www.robots.ox.ac.uk/~vgg/software/via/ - free html tool
+* https://github.com/tzutalin/labelImg python with QT gui
 * [Rectlabel for Mac](https://rectlabel.com/) - paid after 2 week trial, creates xml files
 ```xml
 <annotation>
