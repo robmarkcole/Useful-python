@@ -22,7 +22,10 @@ Along and cross track properties are indicated by _along and _cross suffixes
 respectively. It is only necessary to add either the the _along OR _cross
 version to the variables list below.
 
-The format of the Return section is 'type : unit'. All units SI.
+The format of the Return section is 'type : unit'. All units SI. It is preferable
+to calculate realistically measureable values, such as a current in Amps, rather
+than a number of electrons. Also large numbers are preferable to small (0 >>) as
+rounding will often turn small values to zero.
 
 All constants to be imported from optics_tools.const.
 
@@ -44,9 +47,9 @@ bands_spectral
     int : no units
     The number of spectral bands, e.g. R/G/B/NIR = 4 bands.
 
-bandwidth_operating
-    double : Meters
-    The sensor operating bandwith, delta lambda.
+bandwidth
+    double : Hertz
+    A bandwidth in Hertz, typically of a measurement.
 
 bits
     int : units bits
@@ -70,13 +73,49 @@ current
     double : Amps
     A current in Amps.
 
+dark_current
+    double : Amps per pixel
+    The current arising from thermal excitation in a pixel.
+
+dark_signal
+    double : Electrons per pixel per second
+    The signal arising from thermal excitation in a pixel.
+
 decibels
     double : Decibels
     Decibels (dB).
 
-dark_current
-    double : Amps
-    A dark current in Amps.
+detectivity
+    double : Centimeters per sqrt Hertz per Watt (Jones units).
+    The detectivity or specific detectivity of a sensor (Larson equation 9-15,
+    see https://en.wikipedia.org/wiki/Specific_detectivity) is a measure of
+    performance, inversely proportional to the noise equivalent power (NEP) but
+    normalised for the sensors area and the integration time. Useful for
+    comparing sensors of different area.
+
+detector_bias
+    double : Watts per Meter squared per Sterradian (W/m^2/sr)
+    The detector bias.
+
+detector_gain
+    double : Watts per Meter squared per Sterradian (W/m^2/sr)
+    The detector gain.
+
+detector_mtf
+    double: No units, range 0 - 1
+    The MTF of the detector. https://spie.org/publications/tt52_21_detector_footprint_mtf?SSO=1
+
+diffusion_factor
+    double: No units, range 0 - 1
+    Relates a pixel diffusion length to pixel size, where length=diffusion_factor*pixel_dim.
+
+digital_number
+    double : No units
+    The number reported by a sensor for a pixel, DN.
+
+dynamic_range
+    double : No units
+    The dynamic range of a detector.
 
 earth_mean_orbital_speed
     double : Meters per second
@@ -87,14 +126,6 @@ earth_orbital_period
     The orbital period of a body in a circular
     orbit of the Earth
 
-electron_full_well
-    int : RMS Electrons
-    The number of electrons at full well capacity.
-
-electron_read_noise
-    int : RMS Electrons
-    The number of electrons constituting read noise, Nr.
-
 electrons
     int : no units, number of electrons
     A number of electrons.
@@ -102,11 +133,6 @@ electrons
 energy
     double : Joules (Watts per second)
     The energy of interest for a calculation.
-
-exposure_time_min
-    double : Seconds
-    The minimum possible exposture time (sometimes referred to as
-    integration time).
 
 f_number
     double : no units
@@ -117,8 +143,12 @@ focal_length
     The focal length of the camera, f.
 
 frame_rate
-    double : inverse Seconds (i.e. Hz)
+    double : Hertz
     The rate at which the frame (all pixels) is read.
+
+full_well_capacity
+    integer : A number of electrons
+    The numnber of electrons an individual pixel can hold before saturating.
 
 gsd_cross
     double : Meters
@@ -129,24 +159,24 @@ ifov
     The instantaneous field of view (IFOV) is the solid angle that a
     single pixel is sensitive to, in deg.
 
-radiance_reference
-    double : Watts per Meter squared per Sterradian per unit bandwith,
-             typicaly microns in which case units (W/m^2/sr/um)
-    The radiance for a reference bandwidth.
-
-radiance_integrated
-    double : Watts per Meter squared per Sterradian (W/m^2/sr)
-    The radiance integrated over operating bandwidth (L_int).
-
 integration_time
     double : Seconds
     The time of integration.
 
-operating_temperature_min
+line_rate
+    double : Hertz
+    The maximum rate that a line of pixels can be read.
+
+noise_equivalent_power
+    double : Watts.
+    The NEP is a measure of the sensitivity of a photodetector sensor, and is
+    the power (Watts) that would produce an SNR = 1.
+
+operating_temperature
     double : Kelvin
     The minium operating temperature for a camera.
 
-optical_transmission_factor
+optical_transmission
     double : range 0 to 1, no units.
     The cameras optics transmission factor, typically 0.75.
 
@@ -154,9 +184,9 @@ photons
     int : no units
     A number of photons.
 
-pixel_pitch
+pixel_pitch_along
     double : Meters
-    The pitch of adjacent pixels, assumed equal along and cross track.
+    The pitch of adjacent pixels along track.
 
 pixels_along
     int : no units
@@ -166,6 +196,15 @@ pixel_dim_along
     double : Meters
     The size of a pixel along track, often identical to pixel_pitch,
     e.g. 20 microns.
+
+pixel_incident_power
+    double : Watts
+    The power incident on a pixel.
+
+pixel_read_rate
+    double : Hertz
+    The rate at which a single pixel can be read, calculated from the line or
+    frame rate.
 
 pixel_solid_angle
     double : Steradians
@@ -191,34 +230,54 @@ quantum_efficiency
     double : no units, values in interval [0 - 1]
     The sensor quantum efficiency, QE.
 
+radiance_spectral
+    double : Watts per Meter squared per Sterradian per unit bandwith,
+             typicaly microns in which case units (W/m^2/sr/um)
+    The spectral radiance for a reference bandwidth.
+
+radiance_integrated
+    double : Watts per Meter squared per Sterradian (W/m^2/sr)
+    The radiance integrated over operating bandwidth (L_int).
+
 radiated_power_nadir
     double : Watts per Steradian
-    The radiated power, L, from a ground pixel at nadir.
+    The radiated power, L, from a ground pixel at nadir, equal to L_int * X * Y.
 
-read_out_noise_electrons
-    int : no units, a number of electrons
-    The read-out noise electrons, typically 25 electrons.
+readout_noise
+    integer : no units, a number of electrons
+    The readout noise electrons per pixel, e.g. 25 electrons.
+
+readout_time
+    double : Seconds
+    The readout time of a sensor, typically ms.
 
 sensor_dim_along
     double : Meters
-    The physical dimension of the camera sensor (pixel array) in the
-    along track direction.
+    The physical dimension of the camera sensor (pixel array) in the along track direction.
 
-sensor_incident_power
-    double : Watts
-    The optical power, Pd, incident on a sensor.
+sensor_nyquist_frequency
+    double : Cycles per meter
+    The sensor nquist sampling spatial frequency derived from the pixel pitch.
 
 shott_noise
     int : no units, assume particles
     The Shott noise sqrt(particles)
 
+signal_electrons
+    int : no units, number of electrons
+    A number of electrons constituting a signal.
+
+spatial_frequency
+    double : Cycles per meter
+    A measure of how ofter the sinusodial components of an image repeat per unit distace.
+
 swath_at_nadir_cross
     double : Meters
     The cross track swath for a single camera.
 
-total_noise_electrons
-    int : no units, numer of electrons
-    The total noise due to Shott and read-out noise.
+time_delay_integrations
+    int : no units
+    The number of TDI integrations to perform.
 
 velocity_ground_track
     double : meters per second.
@@ -228,10 +287,6 @@ wavelength
     double : Meters
     The wavelength of interest for a calculation.
 
-wavelength_min
-    double : Meters
-    The minimum wavelength of response from the sensor.
-
 weight
     double : Kilograms
     The mass of the camera.
@@ -239,6 +294,27 @@ weight
 
 from optics_tools import const as const
 import numpy as np
+
+def calc_aperture_diameter(f_number, focal_length):
+    """Calculate the aperture_diameter required for an f_number/focal_length."""
+    return focal_length / f_number
+
+def calc_beam_divergence(D1 : float, D2 : float, distance : float) -> float:
+    """
+    Calc the divergence angle from measured beamwidths.
+    https://en.wikipedia.org/wiki/Beam_divergence
+    
+    D1 = beam diameter at position 1
+    D2 = beam diameter at position 2
+    distance = distance between position 1 & 2
+    
+    Returns
+    divergence : radians
+    """
+    from math import atan
+    x = (max(D1, D2) - min(D1, D2))/(2*distance)
+    divergence = 2*atan(x)
+    return divergence
 
 def calc_blackbody_radiance(wavelength,
                             temperature):
@@ -271,11 +347,21 @@ def calc_camera_input_power(altitude,
 
     return (radiated_power_nadir / (altitude **2)) * const.pi * (aperture_diameter / 2)**2
 
+def calc_dark_current_scaling(delta_celcius):
+    """
+    As a rule of thumb, dark current doubles with
+    every 7 degrees celcius increase in temperature.
+    This function takes a delta celcius and calculates
+    the factor to multiply a dark current by.
+    """
+    return 2**(delta_celcius / 7)
+
 def calc_data_rate(bands_spectral,
                    bits,
                    cameras,
                    frame_rate,
-                   pixels_total):
+                   pixels_total,
+                   time_delay_integrations):
     """
     Calculate the data rate generated by an imager that may comprise multiple
     cameras.
@@ -285,7 +371,49 @@ def calc_data_rate(bands_spectral,
     double : bits per second
     """
 
-    return bands_spectral * bits * cameras * frame_rate * pixels_total
+    return bands_spectral * bits * cameras * frame_rate * pixels_total * time_delay_integrations
+
+def calc_detectivity(sensor_dim_along,
+                     sensor_dim_cross,
+                     measurement_bandwidth,
+                     noise_equivalent_power):
+    """
+    Calculate detector detectivity D*.
+    https://en.wikipedia.org/wiki/Specific_detectivity
+    """
+    root_area_cm = (sensor_dim_along * sensor_dim_cross * (100)**2)**0.5 # convert to sqrt(cm).
+    return root_area_cm * (measurement_bandwidth**0.5) / noise_equivalent_power
+
+def calc_detector_mtf(pixel_dim, diffusion_factor, spatial_frequency):
+    '''Calculate detector MTF given a pixel dimension and diffusion factor.'''
+    au = pixel_dim * spatial_frequency
+    df = diffusion_factor
+    left = (1/(1+2*df))*(1/(1+(2*np.pi*au*df)))
+    right =  np.absolute(np.sinc(au) + 2*df*np.cos(np.pi*au))
+    return left*right
+
+def calc_diffraction_limited_beam_divergence(wavelength : float, beam_waist : float) -> float:
+    """
+    Diffraction limits the minimum laser beam divergence.
+    Note that the beam waist is defined at the point the irradiance decreases to 
+    1/e^2
+    https://en.wikipedia.org/wiki/Beam_divergence
+    
+    wavelength : the optical wavelength in m
+    beam_waist : the radius of the beam at its narrowest point
+    
+    Returns
+    
+    diff_limited_divergence : radians, the diffraction limited radial 
+                              beam divergence, half cone 
+    """
+    from math import pi
+    diff_limited_divergence = wavelength/(pi * beam_waist)
+    return diff_limited_divergence
+
+def calc_dynamic_range(full_well_capacity, readout_noise):
+    """Calculate detector dynamic range."""
+    return full_well_capacity / readout_noise
 
 def calc_earth_mean_orbital_speed(altitude):
     """
@@ -329,17 +457,17 @@ def calc_electrons_from_photons(photons,
 
     return int(photons * quantum_efficiency)
 
-def calc_energy_per_integration(sensor_incident_power,
+def calc_energy_per_integration(pixel_incident_power,
                                 integration_time):
     """
-    Calculate the energy imparted to a sensor during an integration time.
+    Calculate the energy imparted to a pixel during an integration time.
 
     Returns
     -------
     double : Joules
     """
 
-    return sensor_incident_power * integration_time
+    return pixel_incident_power * integration_time
 
 def calc_f_number(aperture_diameter,
                   focal_length):
@@ -354,9 +482,13 @@ def calc_f_number(aperture_diameter,
 
     return focal_length / aperture_diameter
 
-def calc_gsd_cross(altitude,
-                   focal_length,
-                   pixel_dim_cross):
+def calc_focal_length(altitude, pixel_pitch, gsd):
+    """Calculate the focal_length to achive a required GSD."""
+    return  altitude * pixel_pitch / gsd
+
+def calc_gsd(altitude,
+             focal_length,
+             pixel_dim):
     """
     ground sample distance (gsd) is the distance between pixel centers measured
     on the ground.
@@ -367,8 +499,7 @@ def calc_gsd_cross(altitude,
     double : meters per pixel
     """
 
-    magnification = altitude / focal_length
-    return magnification * pixel_dim_cross
+    return (altitude * pixel_dim) / focal_length
 
 def calc_ifov(pixel_dim_cross,
               focal_length):
@@ -383,6 +514,22 @@ def calc_ifov(pixel_dim_cross,
     """
 
     return np.rad2deg(pixel_dim_cross / focal_length)
+
+def calc_measurement_bandwidth(integration_time):
+    """
+    Calculate the bandwidth (Hertz) of a measurement.
+    https://en.wikipedia.org/wiki/Specific_detectivity
+
+    Returns
+    -------
+    double : Hertz.
+    """
+
+    return 1 / (2 * integration_time)
+
+def calc_noise_equivalent_power(camera_input_power, snr):
+    """Calculate the NEP."""
+    return camera_input_power / snr
 
 def calc_photons_from_energy(energy,
                              wavelength):
@@ -399,7 +546,7 @@ def calc_photons_from_energy(energy,
 def calc_pixel_solid_angle(gsd,
                            altitude):
     """
-    Calculate the pixel solid angle. gsd assumed equal along and cross track.
+    Calculate the pixel solid angle. gsd assumed equal along and cross track, i.e. square pixel.
 
     Returns
     -------
@@ -424,7 +571,7 @@ def calc_radiated_power_nadir(radiance_integrated,
                               pixel_resolution_along,
                               pixel_resolution_cross):
     """
-    Calculate the power radiated from a ground pixel at Nadir.
+    Calculate the power radiated from a ground pixel at Nadir, equals Lint * X  *Y.
 
     Returns
     -------
@@ -433,17 +580,28 @@ def calc_radiated_power_nadir(radiance_integrated,
 
     return radiance_integrated * pixel_resolution_along * pixel_resolution_cross
 
-def calc_sensor_incident_power(camera_input_power,
-                               optical_transmission_factor):
+def calc_pixel_incident_power(camera_input_power,
+                              optical_transmission):
     """
-    Calculate the optical power incident on the sensor.
+    Calculate the optical power incident on a pixel.
 
     Returns
     -------
     double : Watts
     """
 
-    return camera_input_power * optical_transmission_factor
+    return camera_input_power * optical_transmission
+
+def calc_sensor_nyquist_frequency(pixel_pitch):
+    """
+    Calculate the nyquist sampling frequency of a sensor.
+
+    Returns
+    -------
+    double : Cycles per meter
+    """
+
+    return 1/(2 * pixel_pitch)
 
 def calc_shott_noise(particles):
     """
@@ -456,10 +614,51 @@ def calc_shott_noise(particles):
 
     return int(np.sqrt(particles))
 
-def calc_swath_at_nadir_cross(gsd_cross,
-                              pixels_cross):
+def calc_signal_photons(altitude,
+                        aperture_diameter,
+                        gsd,
+                        integration_time,
+                        optical_transmission,
+                        radiance_integrated,
+                        wavelength):
     """
-    Calculate the swath at nadir cross track.
+    Calculate the number of signal photons incident on a sensor.
+    """
+    radiated_power = calc_radiated_power_nadir(radiance_integrated, gsd, gsd)
+    camera_input_power = calc_camera_input_power(altitude, aperture_diameter, radiated_power)
+    pixel_incident_power = calc_pixel_incident_power(camera_input_power, optical_transmission)
+    energy_imparted = calc_energy_per_integration(pixel_incident_power, integration_time)
+    photons_from_energy = calc_photons_from_energy(energy_imparted, wavelength)
+    return int(photons_from_energy)
+
+
+def calc_snr(altitude,
+             dark_current,
+             f_number,
+             focal_length,
+             integration_time,
+             optical_transmission,
+             pixel_dim,
+             quantum_efficiency,
+             radiance_integrated,
+             readout_noise,
+             wavelength):
+    """Wrapper to calculate system SNR."""
+    gsd = calc_gsd(altitude, focal_length, pixel_dim)
+    aperture_diameter = calc_aperture_diameter(f_number, focal_length)
+    signal_photons = calc_signal_photons(altitude, aperture_diameter, gsd, integration_time, optical_transmission, radiance_integrated, wavelength)
+    signal_electrons = signal_photons * quantum_efficiency
+    signal_electrons_shott = calc_shott_noise(signal_electrons)
+    dark_electrons = conv_current_to_electrons_second(dark_current * integration_time)
+    dark_electrons_shott = calc_shott_noise(dark_electrons)
+    total_noise = calc_uncorrellated_noise(signal_electrons_shott, dark_electrons_shott, readout_noise)
+    snr = signal_electrons / total_noise
+    return snr
+
+def calc_swath_at_nadir(gsd,
+                        pixels):
+    """
+    Calculate the swath at nadir along or cross track.
     https://en.wikipedia.org/wiki/Swathe
 
     Returns
@@ -467,24 +666,18 @@ def calc_swath_at_nadir_cross(gsd_cross,
     double : meters
     """
 
-    return gsd_cross * pixels_cross
+    return gsd * pixels
 
-def calc_total_noise_electrons(shott_noise_electrons,
-                               read_out_noise_electrons,
-                               dark_current_electrons):
+def calc_uncorrellated_noise(*args):
     """
-    Calculate the total noise electrons.
+    Given a series of uncorrelated noise sources, calculat the total noise.
 
     Returns
     -------
-    int : no units, assume particles
+    double : units of inputs, assume particles
     """
 
-    return int(np.sqrt(
-        (shott_noise_electrons**2) + \
-        (read_out_noise_electrons**2) + \
-        (dark_current_electrons**2)
-        ))
+    return sum([arg**2 for arg in args])**0.5
 
 def calc_velocity_ground_track(earth_orbital_period):
     """
@@ -496,6 +689,18 @@ def calc_velocity_ground_track(earth_orbital_period):
     """
 
     return 2 * const.pi * (const.earth_radius /earth_orbital_period)
+
+def conv_arcsec_to_radians(arcseconds : float) -> float:
+    """
+    Convert arcseconds to radians.
+    
+    arcseconds : the arcseconds to convert
+    
+    Returns
+    radians : the input arcseconds converted to radians
+    """
+    from math import pi
+    return arcseconds * pi/(180 * 3600)
 
 def conv_celcius_to_kelvin(celcius):
     """
@@ -542,3 +747,15 @@ def conv_kelvin_to_celcius(kelvin):
     """
 
     return kelvin - const.zero_celcius_in_kelvin
+
+def conv_radians_to_arcsec(radians : float) -> float:
+    """
+    Convert radians to arcseconds.
+    
+    radians : the radians to convert
+    
+    Returns
+    arcseconds : the input radians converted to arcseconds
+    """
+    from math import pi
+    return radians * (180 * 3600)/pi
