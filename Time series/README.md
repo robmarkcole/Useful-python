@@ -11,7 +11,9 @@ A number of techniques are popular for analysis of time series data, both classi
   * Simple: it is very simple to use and configure, making the entire experience better
 * [Forecasting USD-MNT Exchange Rate](https://medium.com/mongolian-data-stories/forecasting-usd-mnt-exchange-rate-part-1-prophet-4e95ecadf9b2)
 
-## ARIMA
+## Bayesian techniques
+* [STAN docs give intro to several techniques](http://mc-stan.org/docs/bayes-stats-stan/time-series-chapter.html)
+* ARIMA - Stats test for stationarity, find p & q parameters. [Simple intro](https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3)
 
 ## Deep learning
 * https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
