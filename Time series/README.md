@@ -2,6 +2,7 @@
 A number of techniques are popular for analysis of time series data, both classical and deep learning techniques.
 * [Intro to time series modelling](https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-9-time-series-analysis-in-python-a270cb05e0b3)
 * [More comprehensive tutorial](https://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/)
+* [Awesome time-series anomaly detection](https://github.com/rob-med/awesome-TS-anomaly-detection)
 
 
 ## Prophet
