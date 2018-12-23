@@ -1,0 +1,1 @@
+* Examples of pointwise operations for tasts such as contrast enhancement
