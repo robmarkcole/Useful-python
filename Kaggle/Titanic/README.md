@@ -1,2 +1,2 @@
-* https://www.kaggle.com/c/titanic
-* Article -> https://www.dataquest.io/blog/kaggle-fundamentals/
+* https://www.kaggle.com/francksylla/titanic-machine-learning-from-disaster
+* https://www.dataquest.io/blog/kaggle-fundamentals/
