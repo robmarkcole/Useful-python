@@ -1,0 +1,1 @@
+* For animations another alternative is Holoviews -> http://holoviews.org/user_guide/Plotting_with_Matplotlib.html
