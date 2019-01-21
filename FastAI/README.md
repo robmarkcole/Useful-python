@@ -1,7 +1,7 @@
 ## Fast.ai course v3
 * TLDR: deep learning course using the [fastai](https://docs.fast.ai/) package
 * [fastai website](https://www.fast.ai/)
-* Course (v3) dates: 2019 March 18 - April 30 (7 weeks)
+* Course (v3) videos online late Jan 2019
 
 Course components:
 1. Seven [full video lessons](https://course.fast.ai/lessons/lessons.html) of a little over 2 hours each, plus two shorter introductory videos
@@ -19,4 +19,5 @@ Course components:
 
 ### Salamander
 * Recommend selecting 40GB storage option to keep costs low.
-* Have to `pip install fastai` in terminal in the base env (note the `fastai` env is not kept up to date) 
+* 2 options, K80 and P100, read [here for comparison](https://www.xcelerit.com/computing-benchmarks/insights/nvidia-p100-vs-k80-gpu/). TLDR -> P100 gives a 1.7x speed boost on average
+* Note the `fastai` env is not kept up to date, so you need to `source activate fastai` and `conda install -c fastai fastai` before using the fastai kernel
