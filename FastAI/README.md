@@ -21,3 +21,6 @@ Course components:
 * Recommend selecting 40GB storage option to keep costs low.
 * 2 options, K80 and P100, read [here for comparison](https://www.xcelerit.com/computing-benchmarks/insights/nvidia-p100-vs-k80-gpu/). TLDR -> P100 gives a 1.7x speed boost on average
 * Note the `fastai` env is not kept up to date, so you need to `source activate fastai` and `conda install -c fastai fastai` before using the fastai kernel
+
+## Fastai package
+* Wont run on Mac (read the docs and see [this issue](https://github.com/fastai/fastai/issues/1492))
