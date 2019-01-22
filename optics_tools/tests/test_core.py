@@ -8,10 +8,10 @@ Tests are named test_{function name}
 import optics_tools as ot
 from optics_tools import const as const
 
-ALTITUDE = 700e3 # 700 km
+ALTITUDE = 700e3  # 700 km
 APERTURE_DIAMETER = 0.1
 BITS = 12
-DARK_CURRENT = 1e-9 #  Amps
+DARK_CURRENT = 1e-9  #  Amps
 F_NUMBER = 4.0
 FOCAL_LENGTH = 1.0
 FRAME_RATE = 30
@@ -22,224 +22,354 @@ PIXELS_ALONG = 512
 PIXELS_CROSS = 640
 PIXELS_TOTAL = PIXELS_ALONG * PIXELS_CROSS
 PIXEL_DIM_CROSS = 20e-6
-RADIANCE_INTEGRATED = 40 # W/m^2/sr
+RADIANCE_INTEGRATED = 40  # W/m^2/sr
 QUANTUM_EFFICIENCY = 0.75
 READ_OUT_NOISE_ELECTRONS = 25
 WAVELENGTH = 500e-9
 
+
 def test_calc_aperture_diameter():
     """Test calc aperture_diameter required for an f_number/focal_length."""
-    assert ot.calc_aperture_diameter(f_number=F_NUMBER,
-                                     focal_length=FOCAL_LENGTH) == 0.25
+    assert (
+        ot.calc_aperture_diameter(f_number=F_NUMBER, focal_length=FOCAL_LENGTH) == 0.25
+    )
 
-def test_calc_blackbody_radiance():
-    """Test around peak radiance of the Sun."""
-    assert ot.calc_blackbody_radiance(wavelength=WAVELENGTH,
-                                      temperature=const.sun_temperature) == 7939213821760.563
 
 def test_calc_beam_divergence():
     """Test around peak radiance of the Sun."""
-    assert ot.calc_beam_divergence(
-        D1 = 2.0,
-        D2 = 5.5,
-        distance = 300.0
-    ) == 0.01166653433912143
+    assert (
+        ot.calc_beam_divergence(D1=2.0, D2=5.5, distance=300.0) == 0.01166653433912143
+    )
+
+
+def test_calc_beam_radius_at_distance():
+    """Test calc a beam radius at a distance."""
+    assert (
+        ot.calc_beam_radius_at_distance(
+            beam_waist=10.0e-6, wavelength=WAVELENGTH, distance=1.0
+        )
+        == 0.015915497450781874
+    )
+
+
+def test_calc_beam_waist():
+    """Text calc a beam waist."""
+    assert (
+        ot.calc_beam_waist(wavelength=WAVELENGTH, beam_divergence=0.1)
+        == 3.1830988618379067e-06
+    )
+
+
+def test_calc_bit_error_rate():
+    """Test calc a BER."""
+    assert ot.calc_bit_error_rate(3, 10) == 0.3
+
+
+def test_calc_blackbody_radiance():
+    """Test around peak radiance of the Sun."""
+    assert (
+        ot.calc_blackbody_radiance(
+            wavelength=WAVELENGTH, temperature=const.sun_temperature
+        )
+        == 7939213821760.563
+    )
+
 
 def test_calc_camera_input_power():
     """Test calc input power at camera."""
-    assert ot.calc_camera_input_power(altitude=ALTITUDE,
-                                      aperture_diameter=APERTURE_DIAMETER,
-                                      radiated_power_nadir=389.5) == 6.243113972312371e-12
+    assert (
+        ot.calc_camera_input_power(
+            altitude=ALTITUDE,
+            aperture_diameter=APERTURE_DIAMETER,
+            radiated_power_nadir=389.5,
+        )
+        == 6.243113972312371e-12
+    )
+
 
 def test_calc_dark_current_scaling():
     """Test calc increase in dark current with 21 degrees
     celcius increase, 2**3 = 8."""
     assert ot.calc_dark_current_scaling(21) == 8.0
 
+
 def test_calc_data_rate():
     """Test imager data rate, typically quoted in GB/s."""
-    assert ot.calc_data_rate(bands_spectral=4,
-                             bits=BITS,
-                             cameras=3,
-                             frame_rate=FRAME_RATE,
-                             pixels_total=PIXELS_TOTAL,
-                             time_delay_integrations=1) == 1.415577600e9
+    assert (
+        ot.calc_data_rate(
+            bands_spectral=4,
+            bits=BITS,
+            cameras=3,
+            frame_rate=FRAME_RATE,
+            pixels_total=PIXELS_TOTAL,
+            time_delay_integrations=1,
+        )
+        == 1.415577600e9
+    )
+
 
 def test_calc_detectivity():
     """Test calc a detectivity."""
-    assert ot.calc_detectivity(sensor_dim_along=50e-6,
-                               sensor_dim_cross=50e-6,
-                               measurement_bandwidth=500e3,
-                               noise_equivalent_power=1.06e-9) == 3.335409345219564e9
+    assert (
+        ot.calc_detectivity(
+            sensor_dim_along=50e-6,
+            sensor_dim_cross=50e-6,
+            measurement_bandwidth=500e3,
+            noise_equivalent_power=1.06e-9,
+        )
+        == 3.335409345219564e9
+    )
+
 
 def test_calc_detector_mtf():
     """Test calc a det MTF."""
-    assert ot.calc_detector_mtf(pixel_dim=20e-6,
-                                diffusion_factor=0.1,
-                                spatial_frequency=30000) == 0.26794396590872244
+    assert (
+        ot.calc_detector_mtf(
+            pixel_dim=20e-6, diffusion_factor=0.1, spatial_frequency=30000
+        )
+        == 0.26794396590872244
+    )
+
 
 def test_calc_diffraction_limited_beam_divergence():
     """Test calc a det MTF."""
-    assert ot.calc_diffraction_limited_beam_divergence(
-        wavelength = WAVELENGTH,
-        beam_waist = 10e-6
-    ) == 0.01591549430918953
+    assert (
+        ot.calc_diffraction_limited_beam_divergence(
+            wavelength=WAVELENGTH, beam_waist=10e-6
+        )
+        == 0.01591549430918953
+    )
+
 
 def test_calc_dynamic_range():
     """Test calc a dynamic range"""
-    assert ot.calc_dynamic_range(full_well_capacity=30e3, 
-                                 readout_noise=25) == 1200.0
+    assert ot.calc_dynamic_range(full_well_capacity=30e3, readout_noise=25) == 1200.0
+
 
 def test_calc_earth_speed():
     """Test oribital speed at altitude."""
     assert ot.calc_earth_mean_orbital_speed(altitude=ALTITUDE) == 7.504305710836449e3
 
+
 def test_calc_earth_orbital_period():
     """Test orbital period."""
-    assert ot.calc_earth_orbital_period(altitude=ALTITUDE)/(60*60) == 1.6462035869223801
+    assert (
+        ot.calc_earth_orbital_period(altitude=ALTITUDE) / (60 * 60)
+        == 1.6462035869223801
+    )
+
 
 def test_calc_electrons():
     """Test calc of the number of electrons generated by photons."""
-    assert ot.calc_electrons_from_photons(photons=1e6,
-                                          quantum_efficiency=QUANTUM_EFFICIENCY) == 750000
+    assert (
+        ot.calc_electrons_from_photons(
+            photons=1e6, quantum_efficiency=QUANTUM_EFFICIENCY
+        )
+        == 750000
+    )
+
 
 def test_calc_energy_per_int():
     """Test calc of energy imparted in an integration time."""
-    assert ot.calc_energy_per_integration(pixel_incident_power=3.2e-11,
-                                          integration_time=24e-6) == 7.68e-16
+    assert (
+        ot.calc_energy_per_integration(
+            pixel_incident_power=3.2e-11, integration_time=24e-6
+        )
+        == 7.68e-16
+    )
+
 
 def test_calc_f_number():
     """Test f number."""
-    assert ot.calc_f_number(
-        aperture_diameter=APERTURE_DIAMETER,
-        focal_length=FOCAL_LENGTH) == 10.0
+    assert (
+        ot.calc_f_number(aperture_diameter=APERTURE_DIAMETER, focal_length=FOCAL_LENGTH)
+        == 10.0
+    )
+
 
 def test_calc_focal_length():
     """Test calc a focal length."""
-    assert ot.calc_focal_length(altitude=ALTITUDE,
-                                pixel_pitch=PIXEL_DIM_CROSS,
-                                gsd=GSD) == 14.000000000000002
+    assert (
+        ot.calc_focal_length(altitude=ALTITUDE, pixel_pitch=PIXEL_DIM_CROSS, gsd=GSD)
+        == 14.000000000000002
+    )
+
+
+def test_calc_fso_received_power():
+    """Test calc received laser power after propagating through
+    an atmosphere."""
+    assert (
+        ot.calc_fso_received_power(
+            power_transmitted=50e-3,
+            receiver_area=0.1 ** 2,
+            beam_divergence=1e-3,
+            distance=5000,
+            attenuation_factor=1 / 1000,
+        )
+        == 1.3475893998170937e-07
+    )
+
 
 def test_calc_gsd():
     """Test calc GSD."""
-    assert ot.calc_gsd(altitude=ALTITUDE,
-                       focal_length=FOCAL_LENGTH,
-                       pixel_dim=PIXEL_DIM_CROSS) == 14.000000000000002
+    assert (
+        ot.calc_gsd(
+            altitude=ALTITUDE, focal_length=FOCAL_LENGTH, pixel_dim=PIXEL_DIM_CROSS
+        )
+        == 14.000000000000002
+    )
+
 
 def test_calc_ifov():
     """Test IFOV calc."""
-    assert ot.calc_ifov(pixel_dim_cross=PIXEL_DIM_CROSS,
-                        focal_length=FOCAL_LENGTH) == 0.0011459155902616466
+    assert (
+        ot.calc_ifov(pixel_dim_cross=PIXEL_DIM_CROSS, focal_length=FOCAL_LENGTH)
+        == 0.0011459155902616466
+    )
+
 
 def test_calc_measurement_bandwidth():
     """Test calc a measurement bandwitdth."""
     assert ot.calc_measurement_bandwidth(integration_time=0.5) == 1.0
 
+
 def test_calc_noise_equivalent_power():
     """Test calc an NEP."""
-    assert ot.calc_noise_equivalent_power(camera_input_power=4.0, 
-                                       snr=2.0) == 2.0
+    assert ot.calc_noise_equivalent_power(camera_input_power=4.0, snr=2.0) == 2.0
+
 
 def test_calc_photons_from_energy():
     """Test calc number of photons equivalent to an energy."""
-    assert ot.calc_photons_from_energy(energy=3e-14,
-                                       wavelength=WAVELENGTH) == 75511
+    assert ot.calc_photons_from_energy(energy=3e-14, wavelength=WAVELENGTH) == 75511
+
 
 def test_calc_pixel_resolution():
     """Test calc pixel resolution"""
-    assert ot.calc_pixel_resolution(ifov=0.00245,
-                                    altitude=ALTITUDE) == 29.93239667170275
+    assert (
+        ot.calc_pixel_resolution(ifov=0.00245, altitude=ALTITUDE) == 29.93239667170275
+    )
+
 
 def test_calc_pixel_solid_angle():
     """Test calc pixel solid angle"""
-    assert ot.calc_pixel_solid_angle(gsd=GSD,
-                                     altitude=ALTITUDE) == 2.0408163265306126e-12
+    assert (
+        ot.calc_pixel_solid_angle(gsd=GSD, altitude=ALTITUDE) == 2.0408163265306126e-12
+    )
+
 
 def test_calc_radiated_power_nadir():
     """Test calculation of radiated power with pixel resolution
     equal along and cross track."""
-    assert ot.calc_radiated_power_nadir(radiance_integrated=0.433,
-                                        pixel_resolution_along=30,
-                                        pixel_resolution_cross=30) == 389.7
+    assert (
+        ot.calc_radiated_power_nadir(
+            radiance_integrated=0.433,
+            pixel_resolution_along=30,
+            pixel_resolution_cross=30,
+        )
+        == 389.7
+    )
+
 
 def test_calc_pixel_incident_power():
     """Test calc input power on pixel."""
-    assert ot.calc_pixel_incident_power(camera_input_power=1.0,
-                                        optical_transmission=0.75) == 0.75
+    assert (
+        ot.calc_pixel_incident_power(camera_input_power=1.0, optical_transmission=0.75)
+        == 0.75
+    )
+
 
 def test_calc_sensor_nyquist_frequency():
     """Text calc a spatial sapling frequency in cycles/mm."""
-    assert ot.calc_sensor_nyquist_frequency(pixel_pitch=12.5e-6)/1e3 == 40.0
+    assert ot.calc_sensor_nyquist_frequency(pixel_pitch=12.5e-6) / 1e3 == 40.0
+
 
 def test_calc_shott_noise():
     """Test Shott noise calc."""
     assert ot.calc_shott_noise(particles=100) == 10
 
+
 def test_calc_snr():
     """Test calc an SNR."""
-    snr_result = ot.calc_snr(altitude=ALTITUDE,
-                            dark_current=DARK_CURRENT,
-                            f_number=F_NUMBER,
-                            focal_length=FOCAL_LENGTH,
-                            integration_time=INTEGRATION_TIME,
-                            optical_transmission=OPTICAL_TRANSMISSION,
-                            pixel_dim=PIXEL_DIM_CROSS,
-                            quantum_efficiency=QUANTUM_EFFICIENCY,
-                            radiance_integrated=RADIANCE_INTEGRATED,
-                            readout_noise=READ_OUT_NOISE_ELECTRONS,
-                            wavelength=WAVELENGTH)
+    snr_result = ot.calc_snr(
+        altitude=ALTITUDE,
+        dark_current=DARK_CURRENT,
+        f_number=F_NUMBER,
+        focal_length=FOCAL_LENGTH,
+        integration_time=INTEGRATION_TIME,
+        optical_transmission=OPTICAL_TRANSMISSION,
+        pixel_dim=PIXEL_DIM_CROSS,
+        quantum_efficiency=QUANTUM_EFFICIENCY,
+        radiance_integrated=RADIANCE_INTEGRATED,
+        readout_noise=READ_OUT_NOISE_ELECTRONS,
+        wavelength=WAVELENGTH,
+    )
     assert snr_result == 860.2044628595601
+
 
 def test_calc_swath_at_nadir():
     """Test swath at Nadir."""
     assert ot.calc_swath_at_nadir(gsd=GSD, pixels=PIXELS_CROSS) == 640.0
 
+
 def test_calc_signal_photons():
     """Test calc signal photons"""
-    assert ot.calc_signal_photons(altitude=ALTITUDE,
-                                  aperture_diameter=APERTURE_DIAMETER,
-                                  gsd=GSD,
-                                  integration_time=INTEGRATION_TIME,
-                                  optical_transmission=OPTICAL_TRANSMISSION,
-                                  radiance_integrated=RADIANCE_INTEGRATED,
-                                  wavelength=WAVELENGTH) == 5648
+    assert (
+        ot.calc_signal_photons(
+            altitude=ALTITUDE,
+            aperture_diameter=APERTURE_DIAMETER,
+            gsd=GSD,
+            integration_time=INTEGRATION_TIME,
+            optical_transmission=OPTICAL_TRANSMISSION,
+            radiance_integrated=RADIANCE_INTEGRATED,
+            wavelength=WAVELENGTH,
+        )
+        == 5648
+    )
+
 
 def test_calc_uncorrellated_noise():
     """Test calc total noise."""
     assert ot.calc_uncorrellated_noise(10, 10) == 14.142135623730951
 
+
 def test_calc_velocity_ground_track():
     """Test calc of ground track velocity."""
     period = ot.calc_earth_orbital_period(altitude=ALTITUDE)
-    assert ot.calc_velocity_ground_track(
-        earth_orbital_period=period) == 6762.155416606992
+    assert (
+        ot.calc_velocity_ground_track(earth_orbital_period=period) == 6762.155416606992
+    )
+
 
 def test_conv_arcsec_to_radian():
     """Test conversion of arcseconds."""
     assert ot.conv_arcsec_to_radians(arcseconds=1.0) == 4.84813681109536e-06
 
+
 def test_conv_celcius_to_kelvin():
     """Test conversion of temperatures."""
     assert ot.conv_celcius_to_kelvin(celcius=0.0) == const.zero_celcius_in_kelvin
+
 
 def test_conv_current_to_electrons_second():
     """test Convert a current to electrons per sec."""
     assert ot.conv_current_to_electrons_second(1e-15) == 6241
 
+
 def test_conv_decibels():
     """Test conversion of decibels to power ratio."""
-    assert ot.conv_decibels_to_power_ratio(decibels=70)/1e6 == 10.0
+    assert ot.conv_decibels_to_power_ratio(decibels=70) / 1e6 == 10.0
+
 
 def test_conv_electrons_second_to_current():
     """Test conversion to Amps."""
     assert ot.conv_electrons_second_to_current(electrons=1.5e6) == 2.4032649312e-13
 
+
 def test_conv_kelvin_to_celcius():
     """Test conversion of temperatures."""
     assert ot.conv_kelvin_to_celcius(kelvin=273.15) == 0.0
 
+
 def test_conv_radians_to_arcsec():
     """Test conversion of radians."""
-    assert ot.conv_radians_to_arcsec(
-        radians=9.69627362219072e-06
-        ) == 2.0
+    assert ot.conv_radians_to_arcsec(radians=9.69627362219072e-06) == 2.0

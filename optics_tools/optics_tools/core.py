@@ -23,7 +23,7 @@ respectively. It is only necessary to add either the the _along OR _cross
 version to the variables list below.
 
 The format of the Return section is 'type : unit'. All units SI. It is preferable
-to calculate realistically measureable values, such as a current in Amps, rather
+to calculate realistically measurable values, such as a current in Amps, rather
 than a number of electrons. Also large numbers are preferable to small (0 >>) as
 rounding will often turn small values to zero.
 
@@ -51,9 +51,23 @@ bandwidth
     double : Hertz
     A bandwidth in Hertz, typically of a measurement.
 
+beam_divergence
+    float : radians
+    An angular measure of beam divergence (a full cone angle). Be careful not
+    to confuse with the 'radial beam divergence', which is a half-cone.
+    https://en.wikipedia.org/wiki/Beam_divergence
+
+beam_waist
+    float : Meters
+    A laser beam waist - note this is a radius, not a diameter
+
 bits
     int : units bits
     The bit depth, B, to encode each pixel.
+
+bit_error_rate
+    float : no units
+    The ratio of the error bits to transmitted bits.
 
 blackbody_radiance
     double : Watts per Meter squared per Sterradian at a wavelength
@@ -283,6 +297,11 @@ velocity_ground_track
     double : meters per second.
     The apparent velocity, Vg, of the satellite on the ground (Earth).
 
+visibility
+    float : inverse meters
+    Visibility is the distance at which a signial is 5% of its initial intensity.
+    https://www.radioeng.cz/fulltexts/2007/07_03_007_012.pdf
+
 wavelength
     double : Meters
     The wavelength of interest for a calculation.
@@ -295,13 +314,17 @@ weight
 from optics_tools import const as const
 import numpy as np
 
+
 def calc_aperture_diameter(f_number, focal_length):
     """Calculate the aperture_diameter required for an f_number/focal_length."""
     return focal_length / f_number
 
-def calc_beam_divergence(D1 : float, D2 : float, distance : float) -> float:
+
+def calc_beam_divergence(D1: float, D2: float, distance: float) -> float:
     """
-    Calc the divergence angle from measured beamwidths.
+    Calc the beam divergence of a laser beam from measured beamwidths,
+    where beam divergence is an angular measure of the increase in beam
+    diameter with distancee.
     https://en.wikipedia.org/wiki/Beam_divergence
     
     D1 = beam diameter at position 1
@@ -309,15 +332,69 @@ def calc_beam_divergence(D1 : float, D2 : float, distance : float) -> float:
     distance = distance between position 1 & 2
     
     Returns
-    divergence : radians
+    divergence : radians, full cone angle
     """
     from math import atan
-    x = (max(D1, D2) - min(D1, D2))/(2*distance)
-    divergence = 2*atan(x)
+
+    x = (max(D1, D2) - min(D1, D2)) / (2 * distance)
+    divergence = 2 * atan(x)
     return divergence
 
-def calc_blackbody_radiance(wavelength,
-                            temperature):
+
+def calc_beam_radius_at_distance(
+    beam_waist: float, wavelength: float, distance: float
+) -> float:
+    """
+    Calculate a laser beam radius at distance from the source
+    along the optical axis.
+    https://en.wikipedia.org/wiki/Rayleigh_length
+
+    beam_waist : meters
+    wavelength : meters
+    distance : meters
+
+    Returns
+    beam_radius_at_distance : meters
+    """
+    from math import pi
+
+    rayleigh_length = (pi * beam_waist ** 2) / wavelength
+    return beam_waist * (1 + (distance / rayleigh_length) ** 2) ** 0.5
+
+
+def calc_beam_waist(wavelength: float, beam_divergence: float) -> float:
+    """
+    Calculate the beam waist of a laser beam.
+    https://en.wikipedia.org/wiki/Beam_divergence
+
+    wavelength : the optical wavelength, in meters
+    beam_divergence : the beam divergence (a full cone) in radians
+
+    Returns
+
+    beam_waist : the beam waist (a radius) in meters
+    """
+    from math import pi
+
+    beam_waist = wavelength / (pi * 0.5 * beam_divergence)
+    return beam_waist
+
+
+def calc_bit_error_rate(error_bits: int, transmitted_bits: int) -> float:
+    """
+    Calculate the bit error rate, BER.
+    https://www.radioeng.cz/fulltexts/2007/07_03_007_012.pdf
+    
+    error_bits : number of bit errors
+    transmitted_bits : number of transmitted bits
+    
+    Returns 
+    bit_error_rate : the bit error rate, BER
+    """
+    return error_bits / transmitted_bits
+
+
+def calc_blackbody_radiance(wavelength, temperature):
     """
     Calculate the blackbody spectral radiance. Note this is normalised over
     4 pi.
@@ -328,15 +405,16 @@ def calc_blackbody_radiance(wavelength,
     double : Watts per Meter squared per Sterradian at a wavelength
     """
 
-    intensity_factor = (const.planck * const.speed_of_light**2) \
-                        / (2 * wavelength**5)
-    power_factor = (const.planck * const.speed_of_light) \
-                    / (const.boltzmann * temperature * wavelength)
+    intensity_factor = (const.planck * const.speed_of_light ** 2) / (
+        2 * wavelength ** 5
+    )
+    power_factor = (const.planck * const.speed_of_light) / (
+        const.boltzmann * temperature * wavelength
+    )
     return intensity_factor / (np.exp(power_factor) - 1.0)
 
-def calc_camera_input_power(altitude,
-                            aperture_diameter,
-                            radiated_power_nadir):
+
+def calc_camera_input_power(altitude, aperture_diameter, radiated_power_nadir):
     """
     Calculate the input power (P_in) at the camera.
 
@@ -345,7 +423,12 @@ def calc_camera_input_power(altitude,
     double : Watts
     """
 
-    return (radiated_power_nadir / (altitude **2)) * const.pi * (aperture_diameter / 2)**2
+    return (
+        (radiated_power_nadir / (altitude ** 2))
+        * const.pi
+        * (aperture_diameter / 2) ** 2
+    )
+
 
 def calc_dark_current_scaling(delta_celcius):
     """
@@ -354,14 +437,12 @@ def calc_dark_current_scaling(delta_celcius):
     This function takes a delta celcius and calculates
     the factor to multiply a dark current by.
     """
-    return 2**(delta_celcius / 7)
+    return 2 ** (delta_celcius / 7)
 
-def calc_data_rate(bands_spectral,
-                   bits,
-                   cameras,
-                   frame_rate,
-                   pixels_total,
-                   time_delay_integrations):
+
+def calc_data_rate(
+    bands_spectral, bits, cameras, frame_rate, pixels_total, time_delay_integrations
+):
     """
     Calculate the data rate generated by an imager that may comprise multiple
     cameras.
@@ -371,28 +452,43 @@ def calc_data_rate(bands_spectral,
     double : bits per second
     """
 
-    return bands_spectral * bits * cameras * frame_rate * pixels_total * time_delay_integrations
+    data_rate = (
+        bands_spectral
+        * bits
+        * cameras
+        * frame_rate
+        * pixels_total
+        * time_delay_integrations
+    )
 
-def calc_detectivity(sensor_dim_along,
-                     sensor_dim_cross,
-                     measurement_bandwidth,
-                     noise_equivalent_power):
+    return data_rate
+
+
+def calc_detectivity(
+    sensor_dim_along, sensor_dim_cross, measurement_bandwidth, noise_equivalent_power
+):
     """
     Calculate detector detectivity D*.
     https://en.wikipedia.org/wiki/Specific_detectivity
     """
-    root_area_cm = (sensor_dim_along * sensor_dim_cross * (100)**2)**0.5 # convert to sqrt(cm).
-    return root_area_cm * (measurement_bandwidth**0.5) / noise_equivalent_power
+    root_area_cm = (
+        sensor_dim_along * sensor_dim_cross * (100) ** 2
+    ) ** 0.5  # convert to sqrt(cm).
+    return root_area_cm * (measurement_bandwidth ** 0.5) / noise_equivalent_power
+
 
 def calc_detector_mtf(pixel_dim, diffusion_factor, spatial_frequency):
-    '''Calculate detector MTF given a pixel dimension and diffusion factor.'''
+    """Calculate detector MTF given a pixel dimension and diffusion factor."""
     au = pixel_dim * spatial_frequency
     df = diffusion_factor
-    left = (1/(1+2*df))*(1/(1+(2*np.pi*au*df)))
-    right =  np.absolute(np.sinc(au) + 2*df*np.cos(np.pi*au))
-    return left*right
+    left = (1 / (1 + 2 * df)) * (1 / (1 + (2 * np.pi * au * df)))
+    right = np.absolute(np.sinc(au) + 2 * df * np.cos(np.pi * au))
+    return left * right
 
-def calc_diffraction_limited_beam_divergence(wavelength : float, beam_waist : float) -> float:
+
+def calc_diffraction_limited_beam_divergence(
+    wavelength: float, beam_waist: float
+) -> float:
     """
     Diffraction limits the minimum laser beam divergence.
     Note that the beam waist is defined at the point the irradiance decreases to 
@@ -408,12 +504,15 @@ def calc_diffraction_limited_beam_divergence(wavelength : float, beam_waist : fl
                               beam divergence, half cone 
     """
     from math import pi
-    diff_limited_divergence = wavelength/(pi * beam_waist)
+
+    diff_limited_divergence = wavelength / (pi * beam_waist)
     return diff_limited_divergence
+
 
 def calc_dynamic_range(full_well_capacity, readout_noise):
     """Calculate detector dynamic range."""
     return full_well_capacity / readout_noise
+
 
 def calc_earth_mean_orbital_speed(altitude):
     """
@@ -426,8 +525,11 @@ def calc_earth_mean_orbital_speed(altitude):
     double : meters per second
     """
 
-    return np.sqrt((const.gravitational_constant * const.earth_mass)/
-                   (altitude + const.earth_radius))
+    return np.sqrt(
+        (const.gravitational_constant * const.earth_mass)
+        / (altitude + const.earth_radius)
+    )
+
 
 def calc_earth_orbital_period(altitude):
     """
@@ -440,13 +542,17 @@ def calc_earth_orbital_period(altitude):
     double : seconds
     """
 
-    return 2 * const.pi * np.sqrt(
-        (altitude + const.earth_radius)**3 /
-        (const.gravitational_constant * const.earth_mass)
+    return (
+        2
+        * const.pi
+        * np.sqrt(
+            (altitude + const.earth_radius) ** 3
+            / (const.gravitational_constant * const.earth_mass)
         )
+    )
 
-def calc_electrons_from_photons(photons,
-                                quantum_efficiency):
+
+def calc_electrons_from_photons(photons, quantum_efficiency):
     """
     Calculate the number of electrons generated by incident photons.
 
@@ -457,8 +563,8 @@ def calc_electrons_from_photons(photons,
 
     return int(photons * quantum_efficiency)
 
-def calc_energy_per_integration(pixel_incident_power,
-                                integration_time):
+
+def calc_energy_per_integration(pixel_incident_power, integration_time):
     """
     Calculate the energy imparted to a pixel during an integration time.
 
@@ -469,8 +575,8 @@ def calc_energy_per_integration(pixel_incident_power,
 
     return pixel_incident_power * integration_time
 
-def calc_f_number(aperture_diameter,
-                  focal_length):
+
+def calc_f_number(aperture_diameter, focal_length):
     """
     Calculate the f-number N (or f#) of an optical system.
     https://en.wikipedia.org/wiki/F-number
@@ -482,13 +588,39 @@ def calc_f_number(aperture_diameter,
 
     return focal_length / aperture_diameter
 
-def calc_focal_length(altitude, pixel_pitch, gsd):
-    """Calculate the focal_length to achive a required GSD."""
-    return  altitude * pixel_pitch / gsd
 
-def calc_gsd(altitude,
-             focal_length,
-             pixel_dim):
+def calc_focal_length(altitude, pixel_pitch, gsd):
+    """Calculate the focal_length to achieve a required GSD."""
+    return altitude * pixel_pitch / gsd
+
+
+def calc_fso_received_power(
+    power_transmitted: float,
+    receiver_area: float,
+    beam_divergence: float,
+    distance: float,
+    attenuation_factor: float,
+) -> float:
+    """
+    For a free-space-optical (fso) system calculate the received optical
+    power through atmosphere using the fso link-equation.
+    See figure 1 : http://morse.uml.edu/Activities.d/Summer-05/PAPERS/KC/AirFiber-HFR.pdf
+    
+    power_transmitted : the tansmitted optical power, watts
+    receiver_area : the receiver area, meters squared
+    beam_divergence : the full cone beam divergence, radians
+    distance : the distance between transmitter and receiver, meters
+    attenuation_factor : the atmospheric attenuation factor, 
+        approximately equal to 3/visibility, units inverse meters
+    """
+    from numpy import exp
+
+    geometrical_factor = receiver_area / (beam_divergence * distance) ** 2
+    atmospheric_transmission = exp(-1 * attenuation_factor * distance)
+    return power_transmitted * geometrical_factor * atmospheric_transmission
+
+
+def calc_gsd(altitude, focal_length, pixel_dim):
     """
     ground sample distance (gsd) is the distance between pixel centers measured
     on the ground.
@@ -501,8 +633,8 @@ def calc_gsd(altitude,
 
     return (altitude * pixel_dim) / focal_length
 
-def calc_ifov(pixel_dim_cross,
-              focal_length):
+
+def calc_ifov(pixel_dim_cross, focal_length):
     """
     Calculate the instantaneous field of view cross track. Note that there are
     several approaches possible.
@@ -514,6 +646,7 @@ def calc_ifov(pixel_dim_cross,
     """
 
     return np.rad2deg(pixel_dim_cross / focal_length)
+
 
 def calc_measurement_bandwidth(integration_time):
     """
@@ -527,12 +660,13 @@ def calc_measurement_bandwidth(integration_time):
 
     return 1 / (2 * integration_time)
 
+
 def calc_noise_equivalent_power(camera_input_power, snr):
     """Calculate the NEP."""
     return camera_input_power / snr
 
-def calc_photons_from_energy(energy,
-                             wavelength):
+
+def calc_photons_from_energy(energy, wavelength):
     """
     Calculate the number of photons equivalent to an energy.
 
@@ -543,8 +677,8 @@ def calc_photons_from_energy(energy,
 
     return int((energy * wavelength) / (const.planck * const.speed_of_light))
 
-def calc_pixel_solid_angle(gsd,
-                           altitude):
+
+def calc_pixel_solid_angle(gsd, altitude):
     """
     Calculate the pixel solid angle. gsd assumed equal along and cross track, i.e. square pixel.
 
@@ -553,10 +687,10 @@ def calc_pixel_solid_angle(gsd,
     double : Steradians
     """
 
-    return (gsd / altitude)**2
+    return (gsd / altitude) ** 2
 
-def calc_pixel_resolution(ifov,
-                          altitude):
+
+def calc_pixel_resolution(ifov, altitude):
     """
     Calculate the on-ground resolution of a pixel.
 
@@ -567,9 +701,10 @@ def calc_pixel_resolution(ifov,
 
     return np.deg2rad(ifov) * altitude
 
-def calc_radiated_power_nadir(radiance_integrated,
-                              pixel_resolution_along,
-                              pixel_resolution_cross):
+
+def calc_radiated_power_nadir(
+    radiance_integrated, pixel_resolution_along, pixel_resolution_cross
+):
     """
     Calculate the power radiated from a ground pixel at Nadir, equals Lint * X  *Y.
 
@@ -580,8 +715,8 @@ def calc_radiated_power_nadir(radiance_integrated,
 
     return radiance_integrated * pixel_resolution_along * pixel_resolution_cross
 
-def calc_pixel_incident_power(camera_input_power,
-                              optical_transmission):
+
+def calc_pixel_incident_power(camera_input_power, optical_transmission):
     """
     Calculate the optical power incident on a pixel.
 
@@ -592,6 +727,7 @@ def calc_pixel_incident_power(camera_input_power,
 
     return camera_input_power * optical_transmission
 
+
 def calc_sensor_nyquist_frequency(pixel_pitch):
     """
     Calculate the nyquist sampling frequency of a sensor.
@@ -601,7 +737,8 @@ def calc_sensor_nyquist_frequency(pixel_pitch):
     double : Cycles per meter
     """
 
-    return 1/(2 * pixel_pitch)
+    return 1 / (2 * pixel_pitch)
+
 
 def calc_shott_noise(particles):
     """
@@ -614,49 +751,70 @@ def calc_shott_noise(particles):
 
     return int(np.sqrt(particles))
 
-def calc_signal_photons(altitude,
-                        aperture_diameter,
-                        gsd,
-                        integration_time,
-                        optical_transmission,
-                        radiance_integrated,
-                        wavelength):
+
+def calc_signal_photons(
+    altitude,
+    aperture_diameter,
+    gsd,
+    integration_time,
+    optical_transmission,
+    radiance_integrated,
+    wavelength,
+):
     """
     Calculate the number of signal photons incident on a sensor.
     """
     radiated_power = calc_radiated_power_nadir(radiance_integrated, gsd, gsd)
-    camera_input_power = calc_camera_input_power(altitude, aperture_diameter, radiated_power)
-    pixel_incident_power = calc_pixel_incident_power(camera_input_power, optical_transmission)
-    energy_imparted = calc_energy_per_integration(pixel_incident_power, integration_time)
+    camera_input_power = calc_camera_input_power(
+        altitude, aperture_diameter, radiated_power
+    )
+    pixel_incident_power = calc_pixel_incident_power(
+        camera_input_power, optical_transmission
+    )
+    energy_imparted = calc_energy_per_integration(
+        pixel_incident_power, integration_time
+    )
     photons_from_energy = calc_photons_from_energy(energy_imparted, wavelength)
     return int(photons_from_energy)
 
 
-def calc_snr(altitude,
-             dark_current,
-             f_number,
-             focal_length,
-             integration_time,
-             optical_transmission,
-             pixel_dim,
-             quantum_efficiency,
-             radiance_integrated,
-             readout_noise,
-             wavelength):
+def calc_snr(
+    altitude,
+    dark_current,
+    f_number,
+    focal_length,
+    integration_time,
+    optical_transmission,
+    pixel_dim,
+    quantum_efficiency,
+    radiance_integrated,
+    readout_noise,
+    wavelength,
+):
     """Wrapper to calculate system SNR."""
     gsd = calc_gsd(altitude, focal_length, pixel_dim)
     aperture_diameter = calc_aperture_diameter(f_number, focal_length)
-    signal_photons = calc_signal_photons(altitude, aperture_diameter, gsd, integration_time, optical_transmission, radiance_integrated, wavelength)
+    signal_photons = calc_signal_photons(
+        altitude,
+        aperture_diameter,
+        gsd,
+        integration_time,
+        optical_transmission,
+        radiance_integrated,
+        wavelength,
+    )
     signal_electrons = signal_photons * quantum_efficiency
     signal_electrons_shott = calc_shott_noise(signal_electrons)
     dark_electrons = conv_current_to_electrons_second(dark_current * integration_time)
     dark_electrons_shott = calc_shott_noise(dark_electrons)
-    total_noise = calc_uncorrellated_noise(signal_electrons_shott, dark_electrons_shott, readout_noise)
+    total_noise = calc_uncorrellated_noise(
+        signal_electrons_shott, dark_electrons_shott, readout_noise
+    )
     snr = signal_electrons / total_noise
     return snr
 
-def calc_swath_at_nadir(gsd,
-                        pixels):
+
+def calc_swath_at_nadir(gsd, pixels):
     """
     Calculate the swath at nadir along or cross track.
     https://en.wikipedia.org/wiki/Swathe
@@ -668,6 +826,7 @@ def calc_swath_at_nadir(gsd,
 
     return gsd * pixels
 
+
 def calc_uncorrellated_noise(*args):
     """
     Given a series of uncorrelated noise sources, calculat the total noise.
@@ -677,7 +836,8 @@ def calc_uncorrellated_noise(*args):
     double : units of inputs, assume particles
     """
 
-    return sum([arg**2 for arg in args])**0.5
+    return sum([arg ** 2 for arg in args]) ** 0.5
+
 
 def calc_velocity_ground_track(earth_orbital_period):
     """
@@ -688,9 +848,10 @@ def calc_velocity_ground_track(earth_orbital_period):
     double : meters per second
     """
 
-    return 2 * const.pi * (const.earth_radius /earth_orbital_period)
+    return 2 * const.pi * (const.earth_radius / earth_orbital_period)
 
-def conv_arcsec_to_radians(arcseconds : float) -> float:
+
+def conv_arcsec_to_radians(arcseconds: float) -> float:
     """
     Convert arcseconds to radians.
     
@@ -700,7 +861,9 @@ def conv_arcsec_to_radians(arcseconds : float) -> float:
     radians : the input arcseconds converted to radians
     """
     from math import pi
-    return arcseconds * pi/(180 * 3600)
+
+    return arcseconds * pi / (180 * 3600)
+
 
 def conv_celcius_to_kelvin(celcius):
     """
@@ -713,12 +876,14 @@ def conv_celcius_to_kelvin(celcius):
 
     return celcius + const.zero_celcius_in_kelvin
 
+
 def conv_current_to_electrons_second(current):
     """
     Convert a current in Amps to a number of
     electrons per second.
     """
     return int(current / const.electron_charge)
+
 
 def conv_decibels_to_power_ratio(decibels):
     """
@@ -731,11 +896,13 @@ def conv_decibels_to_power_ratio(decibels):
 
     return 10 ** (decibels / 10)
 
+
 def conv_electrons_second_to_current(electrons):
     """
     Convert a number of electrons per second to a current in Amps.
     """
     return electrons * const.electron_charge
+
 
 def conv_kelvin_to_celcius(kelvin):
     """
@@ -748,7 +915,8 @@ def conv_kelvin_to_celcius(kelvin):
 
     return kelvin - const.zero_celcius_in_kelvin
 
-def conv_radians_to_arcsec(radians : float) -> float:
+
+def conv_radians_to_arcsec(radians: float) -> float:
     """
     Convert radians to arcseconds.
     
@@ -758,4 +926,5 @@ def conv_radians_to_arcsec(radians : float) -> float:
     arcseconds : the input radians converted to arcseconds
     """
     from math import pi
-    return radians * (180 * 3600)/pi
+
+    return radians * (180 * 3600) / pi
