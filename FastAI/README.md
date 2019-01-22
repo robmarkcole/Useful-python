@@ -23,4 +23,4 @@ Course components:
 * Note the `fastai` env is not kept up to date, so you need to `source activate fastai` and `conda install -c fastai fastai` before using the fastai kernel
 
 ## Fastai package
-* Wont run on Mac (read the docs and see [this issue](https://github.com/fastai/fastai/issues/1492))
+* Not supported on Mac (read the docs). Did run some of the examples but training was going to take hours on the Mac CPU vs minutes on a GPU, so Mac is not feasible.
