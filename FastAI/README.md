@@ -15,7 +15,9 @@ Course components:
 
 ## Paid GPU
 * Overview of paid options -> https://course-v3.fast.ai/index.html
-* I've been using Floydhub which has a nice ecosystem ($1.20/hour + $9.00/month (100GB storage)), but am now experimenting with Salamander as cheaper (tracks the AWS spot price +26%, K80: $0.36 per hour, storage min 40GB at $4 month, automatically bills $20 when you are low on credit).
+* I've been using Floydhub which has a nice ecosystem but isn't the cheapest, but hace nice ecosystem and UI, and good integration with the course, also pre-paid which is more reassuring ($1.20/hour + $9.00/month (100GB storage))
+* Tried out Paperspace as cheaper than Floydhub, classic notebook rather than Jupyter lab, didn't like it as much as Floydhub -> https://course-v3.fast.ai/start_gradient.html
+* Also experimenting with Salamander as cheaper (tracks the AWS spot price +26%, K80: $0.36 per hour, storage min 40GB at $4 month, automatically bills $20 when you are low on credit) -> not my first choice.
 
 ### Salamander
 * Recommend selecting 40GB storage option to keep costs low.
