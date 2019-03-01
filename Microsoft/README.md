@@ -7,6 +7,11 @@ I use OneNote daily, Excel quite often for sharing data and basic analytics. Mic
 
 List of services in alphabetical order:
 
+#### Azure Cache for Redis
+* https://azure.microsoft.com/en-us/services/cache/
+* A fully managed version of the popular open-source Redis server with a turnkey caching solution.
+* https://redis.io/ -> in-memory data structure store, used as a database, cache and message broker
+
 #### Azure Cosmos DB
 * https://azure.microsoft.com/en-gb/services/cosmos-db/
 * NoSQL
@@ -41,7 +46,7 @@ List of services in alphabetical order:
 * Connect from iPad with https://juno.sh/
 
 #### Azure SQL db
-* MariaDB, MySQL and [PostgreSQL]
+* MySQL and PostgreSQL (MariaDB?)
 * https://azure.microsoft.com/en-us/services/postgresql/
 
 #### Azure SQL data & warehouse
