@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Post</title>
+</head>
+
+<body>
+    <h1>Add Post</h1>
+    <form action="/posts" method="post">
+        <label>Post Title</label>
+        {{ postform.title }}
+        <label>Post Text</label>
+        {{ postform.post_text }}
+        <input type="submit" name="submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/Users/robincole/anaconda3/bin/python",
+    "python.formatting.provider": "black"
+}

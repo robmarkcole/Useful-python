@@ -1,5 +1,6 @@
 # PostgreSQL
-* On mac have https://postgresapp.com/ and for admin https://www.pgadmin.org/ ([download](https://www.pgadmin.org/download/pgadmin-4-macos/))
+* On Mac, for running the postgres server use https://postgresapp.com/
+* For admin https://www.pgadmin.org/ ([download](https://www.pgadmin.org/download/pgadmin-4-macos/))
 * [PostGIS](http://postgis.net/) is a spatial database extender. It adds support for geographic objects allowing location queries to be run in SQL.
 
 ```sql
