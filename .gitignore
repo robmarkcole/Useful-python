@@ -21,3 +21,4 @@ config.rst
 /.pydevproject
 
 package-lock.json
+Flask/hello_world/.vscode/settings.json
