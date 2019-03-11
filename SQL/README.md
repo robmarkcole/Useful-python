@@ -9,3 +9,5 @@
 * [Read](http://joshualande.com/database-normalization)
 * TLDR: process of designing a db so that data appears in one place only, with info in different tables linked by unique ID. Allows horizontal scalability and reduces risk of errors, and allows efficient queries.
 
+## Distributed systems
+* [Tutorials on consistency in Distributed Systems](https://mwhittaker.github.io/consistency_in_distributed_systems/)
