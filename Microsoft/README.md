@@ -16,13 +16,6 @@ List of services in alphabetical order:
 * https://azure.microsoft.com/en-gb/services/cosmos-db/
 * NoSQL
 
-#### Azure Storage, Data Lakes & Blob storage
-* https://azure.microsoft.com/en-gb/solutions/data-lake/
-* Built on blob storage
-* S3 equivalent for storing files up to 4.7 TB
-* [Python blobgs example](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)
-* [azure-storage-python](https://github.com/Azure/azure-storage-python)
-
 #### Azure DataBricks -> Spark
 * https://azure.microsoft.com/en-gb/services/databricks/
 * Integration of the [DataBricks](https://databricks.com/) platform with Azure
@@ -30,6 +23,12 @@ List of services in alphabetical order:
 #### Azure Functions
 * https://azure.microsoft.com/en-us/services/functions/
 * Serverless functions, like AWS Lambda functions
+
+#### Azure HDInsight
+* 'Big data' solutions
+* https://azure.microsoft.com/en-gb/services/hdinsight
+* Easily run popular open source frameworks – including Apache Hadoop, Spark and Kafka – using Azure HDInsight, a cost-effective, enterprise-grade service for open source analytics
+* Quickly spin up clusters
 
 #### Azure ML
 * https://azure.microsoft.com/en-gb/services/machine-learning-service/
@@ -52,3 +51,10 @@ List of services in alphabetical order:
 #### Azure SQL data & warehouse
 * https://azure.microsoft.com/en-gb/services/sql-data-warehouse/
 * Microsoft SQL Server
+
+#### Azure Storage, Data Lakes & Blob storage
+* https://azure.microsoft.com/en-gb/solutions/data-lake/
+* Built on blob storage
+* S3 equivalent for storing files up to 4.7 TB
+* [Python blobgs example](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)
+* [azure-storage-python](https://github.com/Azure/azure-storage-python)
