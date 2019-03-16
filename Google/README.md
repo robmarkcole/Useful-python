@@ -9,6 +9,11 @@ GCP products in alphabetical order:
 * [Getting Started With SQL and BigQuery on Kaggle](https://www.kaggle.com/dansbecker/getting-started-with-sql-and-bigquery)
 * [Public datasets](https://www.reddit.com/r/bigquery/wiki/datasets)
 
+#### BigTable
+* https://cloud.google.com/bigtable/
+* A petabyte-scale, fully managed NoSQL database service for large analytical and operational workloads.
+* Integrates with big data tools like Hadoop & HBase
+
 #### Cloud Composer
 * https://cloud.google.com/composer/
 * Apache Airflow pipeline orchestrator, using python
