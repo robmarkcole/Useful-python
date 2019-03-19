@@ -1,0 +1,2 @@
+* Article -> https://towardsdatascience.com/cleaning-financial-time-series-data-with-python-f30a3ed580b7
+* Notebooks -> https://github.com/RonKG/Machine-Learning-Projects-2/tree/master/1.%20data_cleaning_project

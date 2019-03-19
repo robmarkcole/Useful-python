@@ -31,3 +31,6 @@ GCP products in alphabetical order:
 #### Compute Engine
 * https://cloud.google.com/compute/
 * VMs -> Run your choice of OS, including Debian, CentOS, CoreOS, SUSE, Ubuntu, Red Hat Enterprise Linux, FreeBSD, or Windows Server 2008 R2, 2012 R2, and 2016. 
+
+## Python API
+* https://github.com/googleapis/google-cloud-python
