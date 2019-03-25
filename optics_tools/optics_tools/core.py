@@ -43,6 +43,10 @@ aperture_diameter
     double : Meters
     The diameter, D, of the entrance pupil.
 
+antenna_diameter
+    double : Meters
+    The diameter, D, of an antenna.
+
 bands_spectral
     int : no units
     The number of spectral bands, e.g. R/G/B/NIR = 4 bands.
@@ -181,6 +185,10 @@ line_rate
     double : Hertz
     The maximum rate that a line of pixels can be read.
 
+look_ahead_angle
+    double : Radians
+    The look ahead angle for a satellite downlinking data via lasercomms.
+
 noise_equivalent_power
     double : Watts.
     The NEP is a measure of the sensitivity of a photodetector sensor, and is
@@ -243,6 +251,10 @@ power_supply_v
 quantum_efficiency
     double : no units, values in interval [0 - 1]
     The sensor quantum efficiency, QE.
+
+radial_beam_divergence
+    double : radians
+    The beam divergence half-cone
 
 radiance_spectral
     double : Watts per Meter squared per Sterradian per unit bandwith,
@@ -531,6 +543,25 @@ def calc_earth_mean_orbital_speed(altitude):
     )
 
 
+def calc_earth_east_west_velocity(latitude=0):
+    """
+    Calculate the speed (m/s) of a point on the Earth surface
+    as a function of the latitude. Approximately as Earth isn't entirely 
+    rotating on its axis but is tilted at an angle of 
+    23.5 degrees relative to our orbital plane.
+    
+    latitude : float in range 0 (equator) to 90 (north-pole), degrees
+    
+    Returns
+    -------
+    double : velocity, meters per second
+    """
+    from optics_tools import const as const
+    circumference = 2 * const.pi * const.earth_radius * np.cos(np.deg2rad(latitude))
+    time = 24 * 60 * 60
+    return circumference / time
+
+
 def calc_earth_orbital_period(altitude):
     """
     Calculate the orbital period (in seconds) of a body
@@ -648,6 +679,21 @@ def calc_ifov(pixel_dim_cross, focal_length):
     return np.rad2deg(pixel_dim_cross / focal_length)
 
 
+def calc_look_ahead_angle(spacecraft_velocity : float):
+    """
+    Calculate the look ahead angle for a satellite 
+    downlinking data via lasercomms.
+    
+    spacecraft_velocity: float, the velocity, m/s of the spacecraft
+    
+    Returns
+    look_ahead_angle: float, radians
+    """
+    C = const.speed_of_light
+    look_ahead_angle = 2*spacecraft_velocity/C
+    return look_ahead_angle
+
+
 def calc_measurement_bandwidth(integration_time):
     """
     Calculate the bandwidth (Hertz) of a measurement.
@@ -714,6 +760,24 @@ def calc_radiated_power_nadir(
     """
 
     return radiance_integrated * pixel_resolution_along * pixel_resolution_cross
+
+
+def calc_receiving_antenna_gain(antenna_diameter, wavelength):
+    """
+    Calculate the receiving antenna gain in dB
+    
+    Eqtn. 2.20 from H. Hemmati.
+    
+    antenna_diameter : double, a diameter in meters
+    wavelength : double, the optical wavelength in meters
+    
+    Returns
+    
+    gain : decibels
+    """
+    antenna_area = np.pi * (antenna_diameter/2)**2
+    gain = (4 * np.pi * antenna_area)/(wavelength**2)
+    return conv_power_ratio_to_decibels(gain)
 
 
 def calc_pixel_incident_power(camera_input_power, optical_transmission):
@@ -814,6 +878,23 @@ def calc_snr(
     return snr
 
 
+def calc_space_loss(wavelength, distance):
+    """
+    Calculate the loss in dB over propagation of a distance.
+    
+    Eqtn. 2.19 from H. Hemmati.
+    
+    wavelength : double, the optical wavelength in meters
+    distance : doulble, the propagation distance in meters
+    
+    Returns
+    
+    loss : decibels
+    """
+    loss = (wavelength/(4*np.pi * distance))**2
+    return conv_power_ratio_to_decibels(loss)
+
+
 def calc_swath_at_nadir(gsd, pixels):
     """
     Calculate the swath at nadir along or cross track.
@@ -885,6 +966,20 @@ def conv_current_to_electrons_second(current):
     return int(current / const.electron_charge)
 
 
+def conv_dBm_to_watts(dBm):
+    """
+    Convert dBm to Watts.
+    https://en.wikipedia.org/wiki/DBm
+    
+    dBm : float, the dBm value
+    
+    Returns
+    float : Watts
+    """
+    exponent = (dBm - 30)/10 
+    return np.power(10, exponent)
+
+
 def conv_decibels_to_power_ratio(decibels):
     """
     Calculate the power ratio P2/P1 where P1 = 1.
@@ -914,6 +1009,18 @@ def conv_kelvin_to_celcius(kelvin):
     """
 
     return kelvin - const.zero_celcius_in_kelvin
+
+
+def conv_power_ratio_to_decibels(power_ratio):
+    """
+    Convert a power ratio P2/P1 to decibels.
+
+    Returns
+    -------
+    double : decibels
+    """
+
+    return 10 * np.log10(power_ratio)
 
 
 def conv_radians_to_arcsec(radians: float) -> float:

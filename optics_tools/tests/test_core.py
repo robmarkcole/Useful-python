@@ -146,10 +146,13 @@ def test_calc_dynamic_range():
     assert ot.calc_dynamic_range(full_well_capacity=30e3, readout_noise=25) == 1200.0
 
 
-def test_calc_earth_speed():
+def test_calc_earth_mean_orbital_speed():
     """Test oribital speed at altitude."""
     assert ot.calc_earth_mean_orbital_speed(altitude=ALTITUDE) == 7.504305710836449e3
 
+
+def test_calc_earth_east_west_velocity():
+    assert ot.calc_earth_east_west_velocity() == 463.82852092270974
 
 def test_calc_earth_orbital_period():
     """Test orbital period."""
@@ -227,6 +230,8 @@ def test_calc_ifov():
         == 0.0011459155902616466
     )
 
+def test_calc_look_ahead_angle():
+    assert ot.calc_look_ahead_angle(7e3) == 4.669897332774129e-05
 
 def test_calc_measurement_bandwidth():
     """Test calc a measurement bandwitdth."""
@@ -270,6 +275,13 @@ def test_calc_radiated_power_nadir():
     )
 
 
+def test_calc_receiving_antenna_gain():
+    assert ot.calc_receiving_antenna_gain(
+        antenna_diameter=APERTURE_DIAMETER,
+        wavelength=WAVELENGTH
+    ) == 115.96359736716231
+
+
 def test_calc_pixel_incident_power():
     """Test calc input power on pixel."""
     assert (
@@ -305,6 +317,10 @@ def test_calc_snr():
     )
     assert snr_result == 860.2044628595601
 
+
+def test_calc_space_loss():
+    assert ot.calc_space_loss(wavelength=WAVELENGTH, 
+                              distance=ALTITUDE) == -264.9067579940067
 
 def test_calc_swath_at_nadir():
     """Test swath at Nadir."""
@@ -355,6 +371,9 @@ def test_conv_current_to_electrons_second():
     assert ot.conv_current_to_electrons_second(1e-15) == 6241
 
 
+def test_conv_dBm_to_watts():
+    assert ot.conv_dBm_to_watts(7) == 0.005011872336272725
+
 def test_conv_decibels():
     """Test conversion of decibels to power ratio."""
     assert ot.conv_decibels_to_power_ratio(decibels=70) / 1e6 == 10.0
@@ -368,6 +387,11 @@ def test_conv_electrons_second_to_current():
 def test_conv_kelvin_to_celcius():
     """Test conversion of temperatures."""
     assert ot.conv_kelvin_to_celcius(kelvin=273.15) == 0.0
+
+
+def test_conv_power_ratio_to_decibels():
+    """Test conversion of radians."""
+    assert ot.conv_power_ratio_to_decibels(power_ratio=0.01) == -20.0
 
 
 def test_conv_radians_to_arcsec():

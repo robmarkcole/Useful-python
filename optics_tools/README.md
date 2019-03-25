@@ -1,12 +1,10 @@
-* Helper tools for the satellite optics.
-* For usage see http://ariane.sstl.co.uk:7990/projects/OP/repos/optics_tools/browse/usage.ipynb
+* Helper tools for satellite optics.
 * To understand how the package is structured see http://docs.python-guide.org/en/latest/writing/structure/#modules
 * To install in editable mode install with >> `pip install -e .` from within the folder containing `setup.py`
-* Use [black](https://github.com/ambv/black) to format code before committing `black filename.py` 
+* Use [black](https://github.com/ambv/black) to format code before committing `black filename.py`
 * To run tests with py.test and pytest-cov plugin:
 ```
-(C:\ProgramData\Anaconda3) C:\Users\RCole\Documents\Bitbucket\optics_tools>py.te
-st --cov tests/
+(C:\ProgramData\Anaconda3) C:\Users\RCole\Documents\optics_tools>py.test --cov tests/
 ============================= test session starts =============================
 platform win32 -- Python 3.6.2, pytest-3.2.1, py-1.4.34, pluggy-0.4.0
 rootdir: C:\Users\RCole\Documents\Bitbucket\optics_tools, inifile:
