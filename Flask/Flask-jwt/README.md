@@ -1,0 +1,3 @@
+* JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. Basically, rather than adding user information in every request we make to our server, we can send an encrypted token which is compact & self contained.
+* https://flask-jwt-extended.readthedocs.io
+* [Authentication using JSON Web Tokens](https://medium.com/@riken.mehta/full-stack-tutorial-3-flask-jwt-e759d2ee5727)

@@ -1,3 +1,4 @@
 * https://flask-restful.readthedocs.io/en/latest/index.html
 * Flask-RESTful is an extension for Flask that adds support for quickly building REST APIs. It is a lightweight abstraction that works with your existing ORM/libraries. Flask-RESTful encourages best practices with minimal setup. If you are familiar with Flask, Flask-RESTful should be easy to pick up.
 * The main building block provided by Flask-RESTful are resources. Resources are built on top of Flask pluggable views, giving you easy access to multiple HTTP methods just by defining methods on your resource. 
+* https://github.com/karec/cookiecutter-flask-restful

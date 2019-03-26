@@ -1,0 +1,4 @@
+* https://blog.miguelgrinberg.com/post/restful-authentication-with-flask
+* Passwords should never be stored in plain text - store the hash
+* PassLib provides several hashing algorithms, e.g. sha256_crypt
+* **Token based authentication:** Having to send the username and the password with every request is inconvenient and can be seen as a security risk even if the transport is secure HTTP, since the client application must have those credentials stored without encryption to be able to send them with the requests. An improvement is to use a token to authenticate requests. The idea is that the client application exchanges authentication credentials for an authentication token, and in subsequent requests just sends this token. Tokens are usually given out with an expiration time, after which they become invalid and a new token needs to be obtained.
