@@ -12,6 +12,10 @@ List of services in alphabetical order:
 * A fully managed version of the popular open-source Redis server with a turnkey caching solution.
 * https://redis.io/ -> in-memory data structure store, used as a database, cache and message broker
 
+#### Azure container registry
+* Private regsitry of docker containers
+* https://azure.microsoft.com/en-us/services/container-registry/
+
 #### Azure Cosmos DB
 * https://azure.microsoft.com/en-gb/services/cosmos-db/
 * NoSQL
@@ -29,6 +33,9 @@ List of services in alphabetical order:
 * https://azure.microsoft.com/en-gb/services/hdinsight
 * Easily run popular open source frameworks – including Apache Hadoop, Spark and Kafka – using Azure HDInsight, a cost-effective, enterprise-grade service for open source analytics
 * Quickly spin up clusters
+
+#### Azure Kubernetes Service (AKS)
+* https://azure.microsoft.com/en-us/services/kubernetes-service/
 
 #### Azure ML
 * https://azure.microsoft.com/en-gb/services/machine-learning-service/
