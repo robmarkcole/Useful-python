@@ -1,3 +1,6 @@
+## AWS IOT
+* [time-series workflow](https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_timeseriesprocessing_16.pdf)
+
 ## AWS products
 * https://aws.amazon.com/products
 
