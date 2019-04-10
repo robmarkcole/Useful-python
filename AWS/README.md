@@ -14,7 +14,7 @@ AWS products in alphabetical order:
 ### DynamoDB
 * https://aws.amazon.com/dynamodb/
 * NoSQL
-* DynamoDB is [free for your first 25 GB](https://aws.amazon.com/free/)
+* DynamoDB is [free for your first 25 GB](https://aws.amazon.com/free/) or [download a local Docker version](https://hub.docker.com/r/amazon/dynamodb-local)
 * [Rekognition with dynamoDB backend](https://read.acloud.guru/building-an-imgur-clone-part-2-image-rekognition-and-a-dynamodb-backend-abc9af300123)
 * Tables can be created from python [using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html)
 
@@ -26,10 +26,20 @@ AWS products in alphabetical order:
 * https://aws.amazon.com/elasticbeanstalk/
 * An easy-to-use service for deploying and scaling web applications and services 
 
-### IOT
+### Elasticsearch
+* https://aws.amazon.com/elasticsearch-service/what-is-elasticsearch/
+* Search engine
+
+### IOT Core & Greengrass
+* [AWS IOT portal](https://aws.amazon.com/iot/)
 * [Developer guide](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html)
 * [Official python API](https://github.com/aws/aws-iot-device-sdk-python) or just use paho, eg in [this article](https://www.hackster.io/mariocannistra/python-and-paho-for-mqtt-with-aws-iot-921e41)
 * To get your device certificates (including `root-CA.crt`) from the IOT console select `Onboard -> Configure a device -> Download connection kit`
+* [Greengrass](https://aws.amazon.com/greengrass/) -> AWS IOT services at the edge, no network connection required. [Greengrass features](https://aws.amazon.com/greengrass/features/)
+
+### Kibana
+* a free, open-source visualization tool. You can run Kibana on-premises, on Amazon EC2, or on Amazon Elasticsearch Service.
+* [Run with docker](https://opendistro.github.io/for-elasticsearch-docs/docs/kibana/#run-kibana-using-docker)
 
 ### Kinesis
 * https://aws.amazon.com/kinesis/
