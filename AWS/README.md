@@ -30,13 +30,6 @@ AWS products in alphabetical order:
 * https://aws.amazon.com/elasticsearch-service/what-is-elasticsearch/
 * Search engine
 
-### IOT Core & Greengrass
-* [AWS IOT portal](https://aws.amazon.com/iot/)
-* [Developer guide](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html)
-* [Official python API](https://github.com/aws/aws-iot-device-sdk-python) or just use paho, eg in [this article](https://www.hackster.io/mariocannistra/python-and-paho-for-mqtt-with-aws-iot-921e41)
-* To get your device certificates (including `root-CA.crt`) from the IOT console select `Onboard -> Configure a device -> Download connection kit`
-* [Greengrass](https://aws.amazon.com/greengrass/) -> AWS IOT services at the edge, no network connection required. [Greengrass features](https://aws.amazon.com/greengrass/features/)
-
 ### Kibana
 * a free, open-source visualization tool. You can run Kibana on-premises, on Amazon EC2, or on Amazon Elasticsearch Service.
 * [Run with docker](https://opendistro.github.io/for-elasticsearch-docs/docs/kibana/#run-kibana-using-docker)
@@ -73,3 +66,26 @@ AWS products in alphabetical order:
 * https://aws.amazon.com/getting-started/tutorials/send-messages-distributed-applications/?trk=gs_card
 
 
+# IOT 
+Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
+
+## IOT Core 
+* [Developer guide](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html)
+* [Official python API](https://github.com/aws/aws-iot-device-sdk-python) or just use paho, eg in [this article](https://www.hackster.io/mariocannistra/python-and-paho-for-mqtt-with-aws-iot-921e41)
+* To get your device certificates (including `root-CA.crt`) from the IOT console select `Onboard -> Configure a device -> Download connection kit`
+
+## Greengrass
+* [Greengrass](https://aws.amazon.com/greengrass/)
+* AWS IOT services at the edge, no network connection required -> run on a local hub. 
+* [Greengrass features](https://aws.amazon.com/greengrass/features/)
+* [Docker image](https://hub.docker.com/r/amazon/aws-iot-greengrass)
+
+## FreeRTOS
+* https://aws.amazon.com/freertos/
+* IoT operating system for microcontrollers, e.g. [ESP32](https://devices.amazonaws.com/detail/a3G0L00000AANtjUAH/ESP32-DevKitC)
+* [Github](https://github.com/aws/amazon-freertos)
+* [List of supported hardware](https://devices.amazonaws.com/search?page=1&sv=freertos)
+
+## IoT Analytics
+* https://aws.amazon.com/iot-analytics/
+* Hosted analytics platform, enabling querying and visualisation of data, e.g. filtered by MQTT topic
