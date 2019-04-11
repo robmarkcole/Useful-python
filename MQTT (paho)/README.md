@@ -1,12 +1,22 @@
-Use the Eclipse broker mosquitto, at https://github.com/eclipse/mosquitto
-On mac `brew install mosquitto`, you then have 2 options:
-To have launchd start mosquitto now and restart at login:
-  `brew services start mosquitto`
-Or, if you don't want/need a background service you can just run:
-  `mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf`
+# Brokers
+## Mosquitto - basic broker - RECOMMENDED
+* Use the Eclipse broker mosquitto at https://github.com/eclipse/mosquitto 
+* On mac `brew install mosquitto`
+* To have the broker start automatically on Mac startup: `brew services start mosquitto`
+* Or, if you don't want/need a background service you can just run: `mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf`
+* For desktop app I like [MQTT Client on Mac OS](https://itunes.apple.com/gb/app/mqtt-client/id1223420119?mt=12)
 
-Use MQTT lens to observe traffic https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en
+## HiveMQ - broker + UI for broker management - OVERKILL
+* Run a broker and web UI using a docker image at https://hub.docker.com/r/hivemq/hivemq3/ (don't confuse with `hivemq4` which is the Enterprise container)
+* Run with `docker run -p 8080:8080 -p 1883:1883 hivemq/hivemq3` and head to http://localhost:8080/
+* default Username: admin
+* default Password: hivemq
+* Get a nice web UI for messages -> clone https://github.com/hivemq/hivemq-mqtt-web-client and open `index.html`
+* Can [deploy on AWS](https://www.hivemq.com/downloads/aws/)
 
-<p align="center">
-<img src="https://github.com/robmarkcole/Useful-python/blob/master/MQTT%20(paho)/mqtt_lens.png" width="800">
-</p>
+## Chrome apps
+* [MQTT lens](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en)
+* [MQTTBox](https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf?utm_source=chrome-ntp-launcher)
+
+# Useful links
+* [mqttfx - another desktop app](https://mqttfx.jensd.de/index.php)
