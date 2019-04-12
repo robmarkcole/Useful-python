@@ -37,6 +37,7 @@ AWS products in alphabetical order:
 ### Kinesis
 * https://aws.amazon.com/kinesis/
 * Easily collect, process, and analyze video and data streams in real time
+* [Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/)
 
 ### Lambda
 * https://aws.amazon.com/lambda/

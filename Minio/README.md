@@ -5,10 +5,7 @@
 * To test: 
 
 `
-docker run -p 9000:9000 \
-  -e "MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE" \
-  -e "MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY" \
-  minio/minio server /data
+docker run -p 9000:9000 -e "MINIO_ACCESS_KEY=access_key" -e "MINIO_SECRET_KEY=secret_key" minio/minio server /data
 ` 
 
 then http://localhost:9000 but note data will be lost on restart.
