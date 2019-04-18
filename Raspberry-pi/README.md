@@ -11,7 +11,8 @@ sudo pip3 install jupyter
 ```
 
 ## Mosquitto MQTT
-* https://hub.docker.com/_/eclipse-mosquitto
+* https://hub.docker.com/_/eclipse-mosquitto (docker, bit problematic)
+* https://theembeddedlab.com/tutorials/install-mosquitto-on-a-raspberry-pi/ (direct install)
 
 ## Samba
 * https://www.juanmtech.com/samba-file-sharing-raspberry-pi/
