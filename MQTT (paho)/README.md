@@ -4,7 +4,7 @@
 * On mac `brew install mosquitto`
 * To have the broker start automatically on Mac startup: `brew services start mosquitto`
 * Or, if you don't want/need a background service you can just run: `mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf`
-* For desktop app I like [MQTT Client on Mac OS](https://itunes.apple.com/gb/app/mqtt-client/id1223420119?mt=12)
+* **For desktop app I like [MQTT Client on Mac OS](https://itunes.apple.com/gb/app/mqtt-client/id1223420119?mt=12)**
 
 ## HiveMQ - broker + UI for broker management - OVERKILL
 * Run a broker and web UI using a docker image at https://hub.docker.com/r/hivemq/hivemq3/ (don't confuse with `hivemq4` which is the Enterprise container)
