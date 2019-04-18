@@ -68,7 +68,8 @@ AWS products in alphabetical order:
 
 
 # IOT 
-Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
+* Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
+* [Unofficial intro](https://dev.to/frosnerd/sensor-data-processing-on-aws-using-iot-core-kinesis-and-elasticache-26j1)
 
 ## IOT Core 
 * [Developer guide](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html)

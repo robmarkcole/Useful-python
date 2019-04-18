@@ -20,3 +20,4 @@
 
 # Useful links
 * [mqttfx - another desktop app](https://mqttfx.jensd.de/index.php)
+* [homieiot mqtt convention](https://homieiot.github.io/)
