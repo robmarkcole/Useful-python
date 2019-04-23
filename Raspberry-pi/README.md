@@ -1,14 +1,15 @@
 ## Jupyter on Pi
 * [Example](https://www.hackster.io/mjrobot/rpi-physical-computing-using-jupyter-notebook-056fa8)
 ```
-sudo su -
-apt-get update
-apt-get install python3-matplotlib
-apt-get install python3-scipy
+sudo apt-get update
+sudo apt-get install python3-matplotlib
+sudo apt-get install python3-scipy
 sudo pip3 install --upgrade pip
 reboot
 sudo pip3 install jupyter
 ```
+
+[Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/)
 
 ## Mosquitto MQTT
 * https://hub.docker.com/_/eclipse-mosquitto (docker, bit problematic)
