@@ -7,9 +7,10 @@ sudo apt-get install python3-scipy
 sudo pip3 install --upgrade pip
 reboot
 sudo pip3 install jupyter
+sudo pip3 install jupyterlab
 ```
 
-[Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/)
+* [Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/) -> first run  `jupyter notebook --generate-config` then run notebook with password using `jupyter notebook password`
 
 ## Mosquitto MQTT
 * https://hub.docker.com/_/eclipse-mosquitto (docker, bit problematic)
