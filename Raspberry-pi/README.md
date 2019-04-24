@@ -10,7 +10,7 @@ sudo pip3 install jupyter
 sudo pip3 install jupyterlab
 ```
 
-* [Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/) -> first run  `jupyter notebook --generate-config` then run notebook with password using `jupyter notebook password`
+* [Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/) -> first run  `jupyter notebook --generate-config` then set default password using `jupyter notebook password`. Can then run notebook or lab (`jupyter lab --port=9000 --no-browser &`) and connect with ssh: `ssh -N -f -L 9000:localhost:9000 pi@ip` and visit `http://localhost:9000`
 
 ## Mosquitto MQTT
 * https://hub.docker.com/_/eclipse-mosquitto (docker, bit problematic)
