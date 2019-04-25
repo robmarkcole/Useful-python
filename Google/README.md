@@ -34,3 +34,6 @@ GCP products in alphabetical order:
 
 ## Python API
 * https://github.com/googleapis/google-cloud-python
+
+## Certification
+* https://cloud.google.com/certification/data-engineer

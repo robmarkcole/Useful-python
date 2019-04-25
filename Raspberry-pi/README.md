@@ -21,3 +21,6 @@ sudo pip3 install jupyterlab
 
 ## SCP
 * https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md
+
+## VSCode
+* Use Remote extension to edit files on the Pi from VScode on another machine -> https://github.com/rafaelmaiolla/remote-vscode (some more guidance [here](https://www.hackster.io/Ladvien/editing-raspberry-pi-code-remotely-from-visual-studio-code-9d42e0))

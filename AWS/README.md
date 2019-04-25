@@ -91,3 +91,6 @@ AWS products in alphabetical order:
 ## IoT Analytics
 * https://aws.amazon.com/iot-analytics/
 * Hosted analytics platform, enabling querying and visualisation of data, e.g. filtered by MQTT topic
+
+## Certification
+* [Data scientist](https://aws.amazon.com/training/learning-paths/machine-learning/data-scientist/)
