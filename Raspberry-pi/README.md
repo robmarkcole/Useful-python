@@ -13,7 +13,7 @@ sudo pip3 install jupyterlab
 * [Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/) -> first run  `jupyter notebook --generate-config` then set default password using `jupyter notebook password`. Can then run notebook or lab (`jupyter lab --port=9000 --no-browser &`) and connect with ssh: `ssh -N -f -L 9000:localhost:9000 pi@ip` and visit `http://localhost:9000`
 
 ## Mosquitto MQTT
-* https://hub.docker.com/_/eclipse-mosquitto (docker, bit problematic)
+* https://hub.docker.com/_/eclipse-mosquitto (docker, simple and easy)
 * https://theembeddedlab.com/tutorials/install-mosquitto-on-a-raspberry-pi/ (direct install)
 
 ## Samba
@@ -24,3 +24,6 @@ sudo pip3 install jupyterlab
 
 ## VSCode
 * Use Remote extension to edit files on the Pi from VScode on another machine -> https://github.com/rafaelmaiolla/remote-vscode (some more guidance [here](https://www.hackster.io/Ladvien/editing-raspberry-pi-code-remotely-from-visual-studio-code-9d42e0))
+
+## Streaming from cameras
+* Use [Motion](https://motion-project.github.io/motion_config.html), be sure to edit the config file e.g. to allow viewing on remote machines
