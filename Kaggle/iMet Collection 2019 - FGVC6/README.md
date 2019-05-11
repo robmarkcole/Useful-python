@@ -1,0 +1,3 @@
+* Competition -> https://www.kaggle.com/c/imet-2019-fgvc6
+* Article -> https://ai.googleblog.com/2019/04/announcing-6th-fine-grained-visual.html
+* In the iMet Collection challenge, participants compete to train models on artistic attributes including object presence, culture, content, theme, and geographic origin. The Metropolitan Museum of Art provided a large training dataset for this task based on subject matter experts’ descriptions of their museum collections. This dataset highlights the challenge of inferring fine-grained attributes that are grounded in the visual context indirectly (e.g., period, culture, medium).
