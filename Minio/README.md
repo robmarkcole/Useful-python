@@ -12,3 +12,6 @@ then http://localhost:9000 but note data will be lost on restart.
 
 ## Python API
 * https://github.com/minio/minio-py
+
+## Synology
+* Instructions -> https://blog.jonaharagon.com/installing-minio-on-synology/ -> main catch is you need to use the execution command `minio server /data`, also I noticed you need to edit the environment variable name for the access_key to `MINIO_ACCESS_KEY`

@@ -21,6 +21,7 @@ GCP products in alphabetical order:
 #### Cloud storage
 * https://cloud.google.com/storage/
 * S3 equivalent
+* [Asyncio Google Cloud Client Library for Python](https://github.com/talkiq/gcloud-aio)
 
 #### Cloud Pub/Sub
 * https://cloud.google.com/pubsub/
