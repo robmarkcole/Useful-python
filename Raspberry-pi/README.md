@@ -19,6 +19,14 @@ sudo pip3 install jupyterlab
 ## Samba
 * https://www.juanmtech.com/samba-file-sharing-raspberry-pi/
 
+## Minio
+* Not officially supported on pi but as it is just a Go package, can be installed. [Instructions here](https://github.com/christianbaun/ossperf/wiki/Minio-on-a-Raspberry-Pi-3-with-Raspbian-(Debian-Jessie-8.0))
+```
+$ wget https://dl.minio.io/server/minio/release/linux-arm/minio
+$ chmod +x minio 
+$ ./minio server --address ":8080"  s3-storage-folder 
+```
+
 ## SCP
 * https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md
 
@@ -26,4 +34,5 @@ sudo pip3 install jupyterlab
 * Use Remote extension to edit files on the Pi from VScode on another machine -> https://github.com/rafaelmaiolla/remote-vscode (some more guidance [here](https://www.hackster.io/Ladvien/editing-raspberry-pi-code-remotely-from-visual-studio-code-9d42e0))
 
 ## Streaming from cameras
-* Use [Motion](https://motion-project.github.io/motion_config.html), be sure to edit the config file e.g. to allow viewing on remote machines
+* [https://kerberos.io/](https://kerberos.io/) is very full featured, exposes camera as mjpeg, save images to S3, fire MQTT message on captures, recommended
+* [Motion](https://motion-project.github.io/motion_config.html) has been around for years and works quite well, be sure to edit the config file e.g. to allow viewing on remote machines.
