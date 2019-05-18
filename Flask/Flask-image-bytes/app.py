@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request
-import pandas as pd
-import cv2
+from flask import Flask, request
+
 import numpy as np
 import base64
 from PIL import Image
