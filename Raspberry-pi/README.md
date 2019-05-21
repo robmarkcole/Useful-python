@@ -27,6 +27,9 @@ $ chmod +x minio
 $ ./minio server --address ":8080"  s3-storage-folder 
 ```
 
+## Run scrips on rpi startup
+* Have a script run on pi startup -> [rc.local](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)
+
 ## SCP
 * https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md
 
