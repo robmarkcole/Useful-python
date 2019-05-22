@@ -17,9 +17,20 @@ sudo pip3 install jupyterlab
 * https://theembeddedlab.com/tutorials/install-mosquitto-on-a-raspberry-pi/ (direct install)
 
 ## Samba
+* Expose folders as a shared drive
 * https://www.juanmtech.com/samba-file-sharing-raspberry-pi/
 
+## SFTP
+* SFTP: Securely and interactively transfer files over SSH -> use Filezilla for a nice UI
+* https://www.raspberrypi.org/documentation/remote-access/ssh/sftp.md
+
+## SCP
+* Copy file over the network using SSH, not interactive
+* https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md
+* Compare SCP & SFTP -> https://www.maketecheasier.com/scp-vs-sftp/
+
 ## Minio
+* Local S3
 * Not officially supported on pi but as it is just a Go package, can be installed. [Instructions here](https://github.com/christianbaun/ossperf/wiki/Minio-on-a-Raspberry-Pi-3-with-Raspbian-(Debian-Jessie-8.0))
 ```
 $ wget https://dl.minio.io/server/minio/release/linux-arm/minio
@@ -30,12 +41,9 @@ $ ./minio server --address ":8080"  s3-storage-folder
 ## Run scrips on rpi startup
 * Have a script run on pi startup -> [rc.local](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)
 
-## SCP
-* https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md
-
 ## VSCode
 * Use Remote extension to edit files on the Pi from VScode on another machine -> https://github.com/rafaelmaiolla/remote-vscode (some more guidance [here](https://www.hackster.io/Ladvien/editing-raspberry-pi-code-remotely-from-visual-studio-code-9d42e0))
 
 ## Streaming from cameras
-* [https://kerberos.io/](https://kerberos.io/) is very full featured, exposes camera as mjpeg, save images to S3, fire MQTT message on captures, recommended
-* [Motion](https://motion-project.github.io/motion_config.html) has been around for years and works quite well, be sure to edit the config file e.g. to allow viewing on remote machines.
+* [https://kerberos.io/](https://kerberos.io/) is very full featured, exposes camera as mjpeg, save images to S3, fire MQTT message on captures
+* [Motion](https://motion-project.github.io/motion_config.html) has been around for years and works well, be sure to edit the config file e.g. to allow viewing on remote machines. Motion detection algorithm might be better than kerberos
