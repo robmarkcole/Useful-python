@@ -22,3 +22,4 @@
 * [mqttfx - another desktop app](https://mqttfx.jensd.de/index.php)
 * [homieiot mqtt convention](https://homieiot.github.io/)
 * [mosquitto in docker on a synology](https://philhawthorne.com/setting-up-a-local-mosquitto-server-using-docker-for-mqtt-communication/)
+* [Sending and Receiving Pictures From a Raspberry Pi via MQTT](https://developer.ibm.com/recipes/tutorials/sending-and-receiving-pictures-from-a-raspberry-pi-via-mqtt/)

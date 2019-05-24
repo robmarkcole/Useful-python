@@ -30,6 +30,11 @@ AWS products in alphabetical order:
 * https://aws.amazon.com/elasticsearch-service/what-is-elasticsearch/
 * Search engine
 
+### Firehose
+* Used for ingesting streaming data
+* https://aws.amazon.com/kinesis/data-firehose/
+* https://towardsdatascience.com/delivering-real-time-streaming-data-to-amazon-s3-using-amazon-kinesis-data-firehose-2cda5c4d1efe
+
 ### Kibana
 * a free, open-source visualization tool. You can run Kibana on-premises, on Amazon EC2, or on Amazon Elasticsearch Service.
 * [Run with docker](https://opendistro.github.io/for-elasticsearch-docs/docs/kibana/#run-kibana-using-docker)
@@ -37,8 +42,9 @@ AWS products in alphabetical order:
 ### Kinesis
 * https://aws.amazon.com/kinesis/
 * Easily collect, process, and analyze video and data streams in real time
-* [Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/)
-
+* [Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/) -> [getting started](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/getting-started.html) -> **TLDR** using C++ and Gstreamer, with [Pi example here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producersdk-cpp-rpi.html)
+ 
+ 
 ### Lambda
 * https://aws.amazon.com/lambda/
 * Functions in the cloud, can be written in python etc
