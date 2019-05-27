@@ -29,15 +29,6 @@ sudo pip3 install jupyterlab
 * https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md
 * Compare SCP & SFTP -> https://www.maketecheasier.com/scp-vs-sftp/
 
-## Minio
-* Local S3
-* Not officially supported on pi but as it is just a Go package, can be installed. [Instructions here](https://github.com/christianbaun/ossperf/wiki/Minio-on-a-Raspberry-Pi-3-with-Raspbian-(Debian-Jessie-8.0))
-```
-$ wget https://dl.minio.io/server/minio/release/linux-arm/minio
-$ chmod +x minio 
-$ ./minio server --address ":8080"  s3-storage-folder 
-```
-
 ## Run scrips on rpi startup
 * Have a script run on pi startup -> [rc.local](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)
 
@@ -47,6 +38,17 @@ $ ./minio server --address ":8080"  s3-storage-folder
 ## Streaming from cameras
 * [https://kerberos.io/](https://kerberos.io/) is very full featured, exposes camera as mjpeg, save images to S3, fire MQTT message on captures
 * [Motion](https://motion-project.github.io/motion_config.html) has been around for years and works well, be sure to edit the config file e.g. to allow viewing on remote machines. Motion detection algorithm might be better than kerberos
+* https://github.com/rob5standingby/raspberry-pi-s3-cam
 
 ## Find a file
 * https://www.bitpi.co/2015/02/15/using-find-command-raspbian/
+
+## Minio
+* Local S3
+* Not officially supported on pi but as it is just a Go package, can be installed. [Instructions here](https://github.com/christianbaun/ossperf/wiki/Minio-on-a-Raspberry-Pi-3-with-Raspbian-(Debian-Jessie-8.0))
+
+```
+$ wget https://dl.minio.io/server/minio/release/linux-arm/minio
+$ chmod +x minio 
+$ ./minio server --address ":8080"  s3-storage-folder 
+```

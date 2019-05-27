@@ -3,6 +3,11 @@
 
 AWS products in alphabetical order:
 
+### API-Gateway
+* https://aws.amazon.com/api-gateway/
+* Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. With a few clicks in the AWS Management Console, you can create REST and WebSocket APIs that act as a “front door” for applications to access data, business logic, or functionality from your backend services, such as workloads running on Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS Lambda, any web application, or real-time communication applications.
+* [Deploy deep learning models with api-gateway and lambda](https://course.fast.ai/deployment_aws_lambda.html)
+
 ### Cloud9
 * https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html
 * Web IDE, runs on EC2 instance
@@ -58,6 +63,7 @@ AWS products in alphabetical order:
 ### S3
 * https://aws.amazon.com/s3/
 * Bucket file storage
+* [tinys3](https://www.smore.com/labs/tinys3/) -> small lib for uploading files to S3
 
 ### SageMaker
 * ML & Jupyter notebooks
