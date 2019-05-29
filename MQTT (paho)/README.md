@@ -18,6 +18,9 @@
 * [MQTT lens](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en)
 * [MQTTBox](https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf?utm_source=chrome-ntp-launcher)
 
+## Paho
+* `pip3 install paho-mqtt`
+
 # Useful links
 * [mqttfx - another desktop app](https://mqttfx.jensd.de/index.php)
 * [homieiot mqtt convention](https://homieiot.github.io/)
