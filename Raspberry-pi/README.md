@@ -43,6 +43,35 @@ sudo pip3 install jupyterlab
 ## Find a file
 * https://www.bitpi.co/2015/02/15/using-find-command-raspbian/
 
+## View images on pi on Mac via SSH
+* https://github.com/eddieantonio/imgcat
+
+## Pip3
+* https://www.raspberrypi.org/documentation/linux/software/python.md
+* `sudo apt-get install python3-pip`
+
+## PiCamera
+* https://picamera.readthedocs.io/en/release-1.13/index.html
+* `sudo apt-get install python3-picamera`
+
+## OpenCV
+* [Install instructions](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
+
+## Pillow
+* Very useful library for working with images
+* [Install](https://www.techcoil.com/blog/how-to-setup-python-imaging-library-pillow-on-raspbian-stretch-lite-for-processing-images-on-your-raspberry-pi/)
+
+```
+sudo apt-get update
+sudo apt-get install libjpeg-dev -y
+sudo apt-get install zlib1g-dev -y
+sudo apt-get install libfreetype6-dev -y
+sudo apt-get install liblcms1-dev -y
+sudo apt-get install libopenjp2-7 -y
+sudo apt-get install libtiff5 -y
+pip3 install pillow
+```
+
 ## Minio
 * Local S3
 * Not officially supported on pi but as it is just a Go package, can be installed. [Instructions here](https://github.com/christianbaun/ossperf/wiki/Minio-on-a-Raspberry-Pi-3-with-Raspbian-(Debian-Jessie-8.0))
