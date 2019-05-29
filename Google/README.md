@@ -3,6 +3,22 @@
 
 GCP products in alphabetical order:
 
+#### AI platform VM
+* https://cloud.google.com/deep-learning-vm/
+* The AI Platform Deep Learning VM Images are a set of Debian 9-based Compute Engine virtual machine images optimized for data science and machine learning tasks. 
+* The VM images deliver a seamless notebook experience with integrated support for JupyterLab. [Connecting to Jupyter Lab](https://cloud.google.com/deep-learning-vm/docs/jupyter)
+
+## AI Platform Notebooks
+* https://cloud.google.com/ai-platform-notebooks/
+* An enterprise notebook service to get your projects up and running in minutes 
+* Notebooks is integrated with BigQuery, Cloud Dataproc, and Cloud Dataflow, making it easy to go from data ingestion to preprocessing and exploration, and eventually model training and deployment.
+* There are no minimum fees or up-front commitments. There’s no charge for using Notebooks. You pay only for the cloud resources you use with the Notebooks instance
+* [Docs](https://cloud.google.com/ml-engine/docs/notebooks/#how-to)
+* TLDR: looks like a lot of faff, just use Colab
+
+#### AI hub
+* https://aihub.cloud.google.com/u/0/
+
 #### BigQuery
 * https://cloud.google.com/bigquery/
 * BigQuery runs blazing-fast SQL queries on gigabytes to petabytes of data and makes it easy to join public or commercial datasets with your data
