@@ -1,3 +1,5 @@
+## TimescaleDB
+
 * Postgres extension, optimised for time-series
 * https://github.com/timescale/timescaledb
 * [Article: why relational for IOT](https://blog.timescale.com/use-relational-database-instead-of-nosql-for-iot-application/) -> SQL for familiarity and heritage, schemas for complex queries, eliminate data silos

@@ -1,3 +1,5 @@
+# Radpberry pi
+
 ## Jupyter on Pi
 * [Example](https://www.hackster.io/mjrobot/rpi-physical-computing-using-jupyter-notebook-056fa8)
 ```
@@ -12,6 +14,27 @@ sudo pip3 install jupyterlab
 
 * [Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/) -> first run  `jupyter notebook --generate-config` then set default password using `jupyter notebook password`. Can then run notebook or lab (`jupyter lab --port=9000 --no-browser &`) and connect with ssh: `ssh -N -f -L 9000:localhost:9000 pi@ip` and visit `http://localhost:9000`
 
+## Python
+* [Build python 3.6.5](https://gist.github.com/dschep/24aa61672a2092246eaca2824400d37f) (commands below) -> does not update the PATH python automatically but tested on 8/6/2019 successfully
+
+```
+$ wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tar.xz
+$ tar xf Python-3.6.5.tar.xz
+$ cd Python-3.6.5
+$ ./configure
+$ make
+$ sudo make altinstall
+```
+
+Then:
+```
+pi@raspberrypi:~/Downloads/Python-3.6.5 $ ./python
+Python 3.6.5 (default, Jun  8 2019, 07:25:32)
+[GCC 6.3.0 20170516] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+ 
 ## Mosquitto MQTT
 * https://hub.docker.com/_/eclipse-mosquitto (docker, simple and easy)
 * https://theembeddedlab.com/tutorials/install-mosquitto-on-a-raspberry-pi/ (direct install)
