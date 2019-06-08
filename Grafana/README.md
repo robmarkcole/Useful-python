@@ -4,6 +4,7 @@
 * [Various plugins](https://grafana.com/plugins) including [postgres](https://grafana.com/plugins/postgres) and [influxdb](https://grafana.com/plugins/influxdb)
 * Several python libs including https://github.com/m0nhawk/grafana_api and https://github.com/weaveworks/grafanalib
 * [TimescaleDB and Grafana](https://blog.timescale.com/grafana-time-series-exploration-visualization-postgresql-8c7baa9c3bfe/)
+* [Postgres for IOT thread](https://community.grafana.com/t/postgres-schema-for-iot-sensors/14449) and [another here](https://community.particle.io/t/postgres-schema-for-iot-sensors/47821). TLDR -> include everything in your db that might help you understand your data later on
 
 ## Example usage
 * [home-monitoring-with-mqtt-influxdb-grafana](http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana)
