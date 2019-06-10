@@ -1,5 +1,6 @@
 ## ffmpeg
 * http://www.ffmpeg.org/
+* [Linux, OSX and WIndows](http://www.ffmpeg.org/download.html)
 * Command line tool for capturing and working with audio and video. E.g. convert video format with `ffmpeg -i input.mp4 output.avi`
 
 ## Python bindings
