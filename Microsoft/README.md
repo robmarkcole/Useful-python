@@ -65,3 +65,6 @@ List of services in alphabetical order:
 * S3 equivalent for storing files up to 4.7 TB
 * [Python blobgs example](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)
 * [azure-storage-python](https://github.com/Azure/azure-storage-python)
+
+#### Azure sphere
+* MCU hardware integrated into their IOT platform -> https://azure.microsoft.com/en-us/services/azure-sphere/

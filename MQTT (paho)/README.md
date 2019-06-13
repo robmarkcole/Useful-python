@@ -14,12 +14,12 @@
 * Get a nice web UI for messages -> clone https://github.com/hivemq/hivemq-mqtt-web-client and open `index.html`
 * Can [deploy on AWS](https://www.hivemq.com/downloads/aws/)
 
-## Chrome apps
-* [MQTT lens](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en)
-* [MQTTBox](https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf?utm_source=chrome-ntp-launcher)
-
 ## Paho
 * `pip3 install paho-mqtt`
+* https://github.com/eclipse/paho.mqtt.python
+* The examples in the paho repo are very useful
+* [`message_callback_add()`](https://github.com/eclipse/paho.mqtt.python#message_callback_add) can be used to register callbacks to specific topics
+* [Example connecting to AWS IOT](https://www.hackster.io/mariocannistra/python-and-paho-for-mqtt-with-aws-iot-921e41) -> regular MQTT with TLS certificates 
 
 # Useful links
 * [mqttfx - another desktop app](https://mqttfx.jensd.de/index.php)
