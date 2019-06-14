@@ -62,6 +62,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 * [https://kerberos.io/](https://kerberos.io/) is very full featured, exposes camera as mjpeg, save images to S3, fire MQTT message on captures
 * [Motion](https://motion-project.github.io/motion_config.html) has been around for years and works well, be sure to edit the config file e.g. to allow viewing on remote machines. Motion detection algorithm might be better than kerberos
 * https://github.com/rob5standingby/raspberry-pi-s3-cam
+* [Docker container for streaming a Raspberry Pi's camera via HTTP/MJPG](https://github.com/pschmitt/docker-picamera)
+* [Simple take picture flask app](https://github.com/stlehmann/picamera/blob/master/flaskapp/app.py)
 
 ## Find a file
 * https://www.bitpi.co/2015/02/15/using-find-command-raspbian/
