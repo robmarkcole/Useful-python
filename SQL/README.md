@@ -11,3 +11,6 @@
 
 ## Distributed systems
 * [Tutorials on consistency in Distributed Systems](https://mwhittaker.github.io/consistency_in_distributed_systems/)
+
+## Jupyterlab SQL
+* https://github.com/pbugnion/jupyterlab-sql
