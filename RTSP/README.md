@@ -4,3 +4,4 @@
 * [RTSP Client for Python](https://github.com/statueofmike/rtsp)
 * RTSP streams can be viewed using VLC, or I have the IP Camera MacOS app
 * Can also use ffmpeg (preferred solution using https://github.com/kkroening/ffmpeg-python)
+* https://github.com/MoerkerkeLander/camera-feed-object-detector-tf-serve
