@@ -7,6 +7,8 @@
 * [Getting started with python example](https://blog.alexellis.io/first-faas-python-function/)
 * Image processing example, using Minio -> https://github.com/alexellis/function-storage-example
 * Colorize an image using a store function -> https://blog.alexellis.io/colorise-your-cats-with-openfaas/
+* [On-premises Serverless Computing for
+Event-Driven Data Processing Applications](https://www.grycap.upv.es/gmolto/publications/preprints/Perez2019osc.pdf)
 
 Usage: 
 ```

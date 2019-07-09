@@ -13,3 +13,8 @@
 * Run on edge devices such as coral accelerator -> https://coral.withgoogle.com/docs/edgetpu/models-intro/ -> [transfer learning possible on the edge](https://coral.withgoogle.com/docs/edgetpu/retrain-detection/)
 * Regular tensorflow models can be converted to `.tflite` file
 * [Get started with TensorFlow Lite](https://www.tensorflow.org/lite/guide/get_started)
+
+## Tensorflow probability
+* TensorFlow Probability (TFP) is a Python library built on TensorFlow that makes it easy to combine probabilistic models and deep learning on modern hardware (TPU, GPU). It's for data scientists, statisticians, ML researchers, and practitioners who want to encode domain knowledge to understand data and make predictions.
+* https://www.tensorflow.org/probability/
+* [Structural Time Series modeling in TensorFlow Probability](https://medium.com/tensorflow/structural-time-series-modeling-in-tensorflow-probability-344edac24083)

@@ -20,6 +20,7 @@
 ## RedisTimeSeries
 * https://oss.redislabs.com/redistimeseries/
 * RedisTimeSeries is a Redis Module adding a Time Series data structure to Redis.
+* https://github.com/RedisTimeSeries/redistimeseries-py
 
 ## RedisEdge
 * https://redislabs.com/solutions/redisedge/
