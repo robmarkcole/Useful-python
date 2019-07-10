@@ -1,5 +1,4 @@
 # Radpberry pi
-
 ## Jupyter on Pi
 * [Example](https://www.hackster.io/mjrobot/rpi-physical-computing-using-jupyter-notebook-056fa8)
 ```
@@ -64,6 +63,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 * https://github.com/rob5standingby/raspberry-pi-s3-cam
 * [Docker container for streaming a Raspberry Pi's camera via HTTP/MJPG](https://github.com/pschmitt/docker-picamera)
 * [Simple take picture flask app](https://github.com/stlehmann/picamera/blob/master/flaskapp/app.py)
+
+## Gstreamer
+* `sudo apt-get install gstreamer-tools` or if [specific version required](https://github.com/pimoroni/mlx90640-library/blob/master/examples/src/rawrgb.cpp) `sudo apt-get install gstreamer1.0-tools`
 
 ## Find a file
 * https://www.bitpi.co/2015/02/15/using-find-command-raspbian/

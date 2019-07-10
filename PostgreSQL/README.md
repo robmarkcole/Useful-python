@@ -1,5 +1,6 @@
 # PostgreSQL
-* On Mac, for running the postgres server use https://postgresapp.com/
+* On Mac, for running the postgres server use https://postgresapp.com/ or Docker
+* On Synology in Docker, select use default network and explicitly map ports if there is a port conflict
 * For admin https://www.pgadmin.org/ ([download](https://www.pgadmin.org/download/pgadmin-4-macos/))
 * [PostGIS](http://postgis.net/) is a spatial database extender. It adds support for geographic objects allowing location queries to be run in SQL.
 
