@@ -73,6 +73,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## View images on pi on Mac via SSH
 * https://github.com/eddieantonio/imgcat
 
+## MariaDB
+* https://howtoraspberrypi.com/mariadb-raspbian-raspberry-pi/
+
 ## Pip3
 * https://www.raspberrypi.org/documentation/linux/software/python.md
 * `sudo apt-get install python3-pip`
