@@ -58,6 +58,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 * Use Remote extension to edit files on the Pi from VScode on another machine -> https://github.com/rafaelmaiolla/remote-vscode (some more guidance [here](https://www.hackster.io/Ladvien/editing-raspberry-pi-code-remotely-from-visual-studio-code-9d42e0))
 
 ## Streaming from cameras
+* [Picamera mjpeg stream](https://picamera.readthedocs.io/en/release-1.13/recipes2.html#web-streaming)
 * [https://kerberos.io/](https://kerberos.io/) is very full featured, exposes camera as mjpeg, save images to S3, fire MQTT message on captures
 * [Motion](https://motion-project.github.io/motion_config.html) has been around for years and works well, be sure to edit the config file e.g. to allow viewing on remote machines. Motion detection algorithm might be better than kerberos
 * https://github.com/rob5standingby/raspberry-pi-s3-cam
