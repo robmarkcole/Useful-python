@@ -1,1 +1,2 @@
 * How to upload and process images -> https://medium.com/@sightengine_/image-upload-and-moderation-with-python-and-flask-e7585f43828a
+* Example upload -> https://github.com/robmarkcole/fastai-v3/blob/master/app/server.py
