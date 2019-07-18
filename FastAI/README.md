@@ -17,12 +17,11 @@ Course components:
 * Overview of paid options -> https://course-v3.fast.ai/index.html
 * I've been using Floydhub which has a nice ecosystem but isn't the cheapest, but hace nice ecosystem and UI, and good integration with the course, also pre-paid which is more reassuring ($1.20/hour + $9.00/month (100GB storage))
 * Tried out Paperspace as cheaper than Floydhub, classic notebook rather than Jupyter lab, didn't like it as much as Floydhub -> https://course-v3.fast.ai/start_gradient.html
-* Also experimenting with Salamander as cheaper (tracks the AWS spot price +26%, K80: $0.36 per hour, storage min 40GB at $4 month, automatically bills $20 when you are low on credit) -> not my first choice.
-
-### Salamander
-* Recommend selecting 40GB storage option to keep costs low.
-* 2 options, K80 and P100, read [here for comparison](https://www.xcelerit.com/computing-benchmarks/insights/nvidia-p100-vs-k80-gpu/). TLDR -> P100 gives a 1.7x speed boost on average
-* Note the `fastai` env is not kept up to date, so you need to `source activate fastai` and `conda install -c fastai fastai` before using the fastai kernel
 
 ## Fastai package
 * Not supported on Mac (read the docs). Did run some of the examples but training was going to take hours on the Mac CPU vs minutes on a GPU, so Mac is not feasible.
+
+## FastAi Serving
+* Equivalent to Tensorflow serving
+* https://github.com/developmentseed/fastai-serving
+* Host apps on Render -> https://github.com/render-examples/fastai-v3

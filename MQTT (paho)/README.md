@@ -23,6 +23,10 @@
 
 # Useful links
 * [mqttfx - another desktop app](https://mqttfx.jensd.de/index.php)
-* [homieiot mqtt convention](https://homieiot.github.io/)
 * [mosquitto in docker on a synology](https://philhawthorne.com/setting-up-a-local-mosquitto-server-using-docker-for-mqtt-communication/)
 * [Sending and Receiving Pictures From a Raspberry Pi via MQTT](https://developer.ibm.com/recipes/tutorials/sending-and-receiving-pictures-from-a-raspberry-pi-via-mqtt/)
+
+## Homie
+MQTT doesn’t define the structure and content of these messages and their relation. An IoT device publishes data and provides interaction possibilities but a controlling entity will need to be specifically configured to be able to interface with the device. The Homie convention defines a standardized way of how IoT devices and services announce themselves and their data on the MQTT broker. Homies topic layout follows the pattern `homie/device/node/property`
+* [homieiot mqtt convention](https://homieiot.github.io/)
+* [microhomie](https://github.com/microhomie/microhomie) -> homie for micropython
