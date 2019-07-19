@@ -86,7 +86,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 * `sudo apt-get install python3-picamera`
 
 ## OpenCV
-* [Install instructions](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
+* `sudo apt install python3-opencv` to [install from the Raspbian official package manager](https://raspberrypi.stackexchange.com/questions/100253/how-can-i-install-opencv-on-raspberry-pi-4-raspbian-buster)
 
 ## Pillow
 * Very useful library for working with images
