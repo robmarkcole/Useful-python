@@ -19,3 +19,7 @@ AND city.name = 'Gotham';
 * The official docs aren't great
 * [Getting started guide](https://linuxhint.com/pgadmin4_tutorial_beginners/) -> create a table using the GUI
 * To export a `CREATE TABLE` script select the db, select BACKUP, format 'Plain' and "Only schema".
+
+## Postico
+* Simple mac app for exploring db
+* https://eggerapps.at/postico/
