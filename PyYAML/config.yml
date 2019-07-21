@@ -1,0 +1,34 @@
+web_port: 5000
+
+mqtt:
+  host: mqtt.server.com
+  topic_prefix: frigate
+#  user: username # Optional -- Uncomment for use
+#  password: password # Optional -- Uncomment for use
+
+cameras:
+  back:
+    rtsp:
+      user: viewer
+      host: 10.0.10.10
+      port: 554
+      # values that begin with a "$" will be replaced with environment variable
+      password: $RTSP_PASSWORD
+      path: /cam/realmonitor?channel=1&subtype=2
+    mask: back-mask.bmp
+    regions:
+      - size: 350
+        x_offset: 0
+        y_offset: 300
+        min_person_area: 5000
+        threshold: 0.5
+      - size: 400
+        x_offset: 350
+        y_offset: 250
+        min_person_area: 2000
+        threshold: 0.5
+      - size: 400
+        x_offset: 750
+        y_offset: 250
+        min_person_area: 2000
+        threshold: 0.5
