@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "x",
+        "y"
+    ],
+    "long_name": "random velocity",
+    "units": "metres/sec"
+}
