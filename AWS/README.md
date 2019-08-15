@@ -49,7 +49,6 @@ AWS products in alphabetical order:
 * Easily collect, process, and analyze video and data streams in real time
 * [Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/) -> [getting started](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/getting-started.html) -> **TLDR** using C++ and Gstreamer, with [Pi example here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producersdk-cpp-rpi.html)
  
- 
 ### Lambda
 * https://aws.amazon.com/lambda/
 * Functions in the cloud, can be written in python etc
@@ -64,6 +63,7 @@ AWS products in alphabetical order:
 * https://aws.amazon.com/s3/
 * Bucket file storage
 * [tinys3](https://www.smore.com/labs/tinys3/) -> small lib for uploading files to S3
+* Need to be confident you understand all the access policies and security
 
 ### SageMaker
 * ML & Jupyter notebooks
@@ -77,7 +77,6 @@ AWS products in alphabetical order:
 ### Simple Queue Service (SQS)
 * Stores data in a queue to be retrieved by applications (equivalent to RabbitMQ)
 * https://aws.amazon.com/getting-started/tutorials/send-messages-distributed-applications/?trk=gs_card
-
 
 # IOT 
 * Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
