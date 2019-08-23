@@ -1,6 +1,9 @@
 ## Flask
 * https://palletsprojects.com/p/flask/
 
+## Flask serve over internet
+* https://github.com/gstaff/flask-ngrok
+
 ## Dev in VScode
 * Can develop in docker container -> https://github.com/microsoft/vscode-remote-try-python
 
