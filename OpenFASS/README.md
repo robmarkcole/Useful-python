@@ -5,6 +5,7 @@
 * Write functions in any language for Linux or Windows and package in Docker/OCI image format
 * There is a 'store' for functions published by the community, e.g. face detection, colorization
 * Walkthrough -> https://blog.alexellis.io/quickstart-openfaas-cli/
+* Docker swarm docs -> https://docs.openfaas.com/deployment/docker-swarm/ -> to leave the swarm `docker swarm leave --force`
 * [Getting started with python example](https://blog.alexellis.io/first-faas-python-function/) -> start the script with `./deploy_stack.sh --no-auth`
 * Image processing example, using Minio -> https://github.com/alexellis/function-storage-example
 * Colorize an image using a store function -> https://blog.alexellis.io/colorise-your-cats-with-openfaas/
