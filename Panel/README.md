@@ -3,5 +3,5 @@
 * https://github.com/pyviz/panel
 * A high-level Python toolkit for composing widgets and plots
 * Install via conda
-* Strangely I keep getting `ModuleNotFoundError: No module named 'panel'`
 * Example app -> https://github.com/ericmjl/minimal-panel-app
+* [how-to-build-a-time-series-dashboard-in-python-with-panel-altair](https://towardsdatascience.com/how-to-build-a-time-series-dashboard-in-python-with-panel-altair-and-a-jupyter-notebook-c0ed40f02289)
