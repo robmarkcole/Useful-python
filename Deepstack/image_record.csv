@@ -1,0 +1,6 @@
+,confidence,file_path,label,x_max,x_min,y_max,y_min
+0,0.9985406,/Users/robin/Pictures/family.jpg,person,768,327,627,53
+1,0.99419004,/Users/robin/Pictures/family.jpg,person,1015,556,647,0
+2,0.9998661,/Users/robin/Pictures/test-image3.jpg,person,485,258,676,0
+3,0.9996547,/Users/robin/Pictures/test-image3.jpg,person,639,405,652,0
+4,0.99745613,/Users/robin/Pictures/test-image3.jpg,dog,825,624,591,311
