@@ -1,10 +1,12 @@
 ## Grafana
 * https://grafana.com/
+* [Grafana playground](https://play.grafana.org)
 * Grafana is an open source visualization tool that can be used on top of a variety of different data stores but is most commonly used together with Graphite, InfluxDB, and also Elasticsearch and Logz.io.
-* [Various plugins](https://grafana.com/plugins) including [postgres](https://grafana.com/plugins/postgres) and [influxdb](https://grafana.com/plugins/influxdb)
+* [Various plugins](https://grafana.com/plugins) including [postgres](https://grafana.com/plugins/postgres), [influxdb](https://grafana.com/plugins/influxdb), [https://grafana.com/grafana/plugins/pierosavi-imageit-panel](imageit-panel)
 * Several python libs including https://github.com/m0nhawk/grafana_api and https://github.com/weaveworks/grafanalib
 * [TimescaleDB and Grafana](https://blog.timescale.com/grafana-time-series-exploration-visualization-postgresql-8c7baa9c3bfe/)
 * [Postgres for IOT thread](https://community.grafana.com/t/postgres-schema-for-iot-sensors/14449) and [another here](https://community.particle.io/t/postgres-schema-for-iot-sensors/47821). TLDR -> include everything in your db that might help you understand your data later on
+* [Time-series Analysis with TimescaleDB, Grafana and Plotly](https://corpglory.com/s/timescaledb-grafana-plotly-time-series-analysis/)
 
 ## Example usage
 * [home-monitoring-with-mqtt-influxdb-grafana](http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana)
