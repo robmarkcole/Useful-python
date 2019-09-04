@@ -8,15 +8,8 @@
 * Keras is part of Tensorflow
 * https://www.tensorflow.org/guide/keras
 
-## Tensorflow Lite
-* https://www.tensorflow.org/lite/
-* Run on edge devices such as coral accelerator -> https://coral.withgoogle.com/docs/edgetpu/models-intro/ -> [transfer learning possible on the edge](https://coral.withgoogle.com/docs/edgetpu/retrain-detection/)
-* Regular tensorflow models can be converted to `.tflite` file
-* [Get started with TensorFlow Lite](https://www.tensorflow.org/lite/guide/get_started)
-
-## Tensorflow on the edge
-* [TensorFlow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers/overview)
-* [SparkFun Edge](https://blog.hackster.io/introducing-the-sparkfun-edge-34c9eb80a000)
+## Serving
+* Serve via rest API -> https://www.tensorflow.org/tfx/tutorials/serving/rest_simple
 
 ## Tensorflow probability
 * TensorFlow Probability (TFP) is a Python library built on TensorFlow that makes it easy to combine probabilistic models and deep learning on modern hardware (TPU, GPU). It's for data scientists, statisticians, ML researchers, and practitioners who want to encode domain knowledge to understand data and make predictions.
