@@ -10,6 +10,7 @@
 ### Swift For TensorFlow
 * [fast.ai Embracing Swift for Deep Learning](https://www.fast.ai/2019/03/06/fastai-swift/)
 * [Swift Tensorflow walkthrough on Colaboratory](https://colab.research.google.com/github/tensorflow/swift/blob/master/docs/site/tutorials/walkthrough.ipynb)
+* [Thorough notebook](https://nbviewer.jupyter.org/github/jamesdellinger/fastai_deep_learning_course_part2_v3/blob/master/13_swift_resnet_pipeline_s4tf_v04_my_reimplementation.ipynb?flush_cache=true)
 
 ### Swift on raspberry pi
 * [Intro article: the-state-of-swift-on-raspberry-pi](https://medium.com/@piotr.gorzelany/the-state-of-swift-on-raspberry-pi-f23445418ee2)
