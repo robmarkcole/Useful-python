@@ -1,0 +1,1 @@
+curl -X POST -F image=@/Users/robin/Pictures/test-image3.jpg 'http://192.168.1.134:5000/v1/vision/detection'
