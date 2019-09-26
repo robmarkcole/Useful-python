@@ -10,6 +10,7 @@
 
 ## Serving
 * Serve via rest API -> https://www.tensorflow.org/tfx/tutorials/serving/rest_simple
+* Overview -> https://towardsdatascience.com/productising-tensorflow-keras-models-via-tensorflow-serving-69e191cb1f37
 
 ## Tensorflow probability
 * TensorFlow Probability (TFP) is a Python library built on TensorFlow that makes it easy to combine probabilistic models and deep learning on modern hardware (TPU, GPU). It's for data scientists, statisticians, ML researchers, and practitioners who want to encode domain knowledge to understand data and make predictions.
