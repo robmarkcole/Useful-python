@@ -1,6 +1,8 @@
 # Brokers
 ## Mosquitto - basic broker - RECOMMENDED
-* Use the Eclipse broker mosquitto at https://github.com/eclipse/mosquitto 
+* Use the Eclipse broker mosquitto at https://github.com/eclipse/mosquitto
+* Use docker -> `docker run -d -p 1883:1883 eclipse-mosquitto`
+
 * On mac `brew install mosquitto`
 * To have the broker start automatically on Mac startup: `brew services start mosquitto`
 * Or, if you don't want/need a background service you can just run: `mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf`
