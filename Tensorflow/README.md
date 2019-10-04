@@ -17,3 +17,6 @@
 * https://www.tensorflow.org/probability/
 * [Structural Time Series modeling in TensorFlow Probability](https://medium.com/tensorflow/structural-time-series-modeling-in-tensorflow-probability-344edac24083)
 * [Tensorflow time series examples](https://github.com/tgjeon/TensorFlow-Tutorials-for-Time-Series)
+
+## Refs
+* https://github.com/sayakpaul/TF-2.0-Hacks -> repo of tf 2 notebooks
