@@ -16,3 +16,5 @@ $ curl localhost:8080/function/hello-python -d "it's Alex here"
 
 Hello! You said: its Alex here
 ```
+
+* https://github.com/f43i4n/faas-mqtt-connector -> It currently only has basic MQTT functionality and few configuration options, but it may fulfil your needs or you could create a PR to improve the connector.
