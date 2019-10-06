@@ -7,17 +7,9 @@
 
 ## Pi
 
-* Benchmarking script (`label_image.py `) -> https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/examples/python/
-* Example using picamera -> https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/raspberry_pi
+* Python guide (runs `label_image.py`, successfully tested on pi3 on 6 Oct 2019) ->  https://www.tensorflow.org/lite/guide/python
+* Example using picamera (successfully tested on pi3 on 6 Oct 2019) -> https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/raspberry_pi
 
-* Following https://www.tensorflow.org/lite/guide/python on pi4 I hit:
-```
-pi@pi-4:~/tflite $ python3 label_image.py   --model_file /tmp/mobilenet_v1_1.0_224.tflite   --label_file /tmp/labels.txt   --image /tmp/grace_hopper.bmp
-Traceback (most recent call last):
-  File "label_image.py", line 27, in <module>
-    from tflite_runtime import Interpreter
-ImportError: cannot import name 'Interpreter' from 'tflite_runtime' (/home/pi/.local/lib/python3.7/site-packages/tflite_runtime/__init__.py)
-```
 
 ## Microcontrollers
 * https://www.tensorflow.org/lite/microcontrollers/overview
