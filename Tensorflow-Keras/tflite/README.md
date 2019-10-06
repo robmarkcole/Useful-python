@@ -7,7 +7,7 @@
 
 ## Pi
 
-* Python guide (runs `label_image.py`, successfully tested on pi3 on 6 Oct 2019) ->  https://www.tensorflow.org/lite/guide/python
+* Python guide (runs `label_image.py`, successfully tested on pi3, also on Mac on 6 Oct 2019) ->  https://www.tensorflow.org/lite/guide/python
 * Example using picamera (successfully tested on pi3 on 6 Oct 2019) -> https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/raspberry_pi
 
 
