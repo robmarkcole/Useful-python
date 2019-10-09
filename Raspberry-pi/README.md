@@ -1,4 +1,7 @@
 # Radpberry pi
+* To have a headless pi start with ssh enabled just put an empty file named `ssh` (no file extension) on `boot` SD card image
+* To configure wifi add a `wpa_supplicant.conf` file on `boot` SD card image
+
 ## Jupyter on Pi
 * [Example](https://www.hackster.io/mjrobot/rpi-physical-computing-using-jupyter-notebook-056fa8)
 ```
@@ -35,8 +38,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
  
 ## Mosquitto MQTT
+* `sudo apt-get install mosquitto mosquitto-clients` -> runs automatically
 * https://hub.docker.com/_/eclipse-mosquitto (docker, simple and easy)
-* https://theembeddedlab.com/tutorials/install-mosquitto-on-a-raspberry-pi/ (direct install)
 
 ## Samba
 * Expose folders as a shared drive
