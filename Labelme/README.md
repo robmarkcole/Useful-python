@@ -8,6 +8,9 @@ pip install labelme
 ```
 * http://emaraic.com/blog/yolov3-custom-object-detector
 * https://hackernoon.com/object-detection-in-google-colab-with-custom-dataset-5a7bb2b0e97e
+
+## Alternative annotation tools
 * Also checkout https://rectlabel.com/ -> 1 month free trial then 3 pounds per month
 * Browser annotation -> https://supervise.ly/ (managed) and https://imglab.in/ (open source)
 * https://labelbox.com/
+* https://labelstud.io/
