@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import time
 
-cm_hot = plt.cm.get_cmap('hot')
+cm_hot = plt.cm.get_cmap('inferno_r')
 
 def get_frame():
     data = np.random.randint(0, 100, size=(80,80))
