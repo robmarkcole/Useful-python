@@ -1,3 +1,4 @@
+# Basic load numpy as greyscale image
 import paho.mqtt.client as mqtt
 import json
 import numpy as np
