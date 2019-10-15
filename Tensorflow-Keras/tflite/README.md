@@ -1,6 +1,8 @@
 ## TFlite
 * Tflite is an alternative interpreter that requires optimised models, read -> https://www.tensorflow.org/lite/guide
+* [Runs on linux, Android or iOS](https://www.tensorflow.org/lite/guide/inference#supported_platforms)
 * To quickly start executing TensorFlow Lite models with Python, you can install just the TensorFlow Lite interpreter, instead of all TensorFlow packages. This interpreter-only package is a fraction the size of the full TensorFlow package and includes the bare minimum code required to run inferences with TensorFlow Lite
+* Examples -> https://github.com/tensorflow/examples/tree/master/lite
 
 ## Models
 * List of pretrained tflite models -> https://www.tensorflow.org/lite/models
