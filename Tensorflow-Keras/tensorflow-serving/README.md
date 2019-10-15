@@ -2,6 +2,7 @@
 * GPRC and Rest API
 * https://www.tensorflow.org/tfx/serving/api_rest
 * Serve via docker - [resnet example](https://medium.com/tensorflow/serving-ml-quickly-with-tensorflow-serving-and-docker-7df7094aa008)
+* https://github.com/fpaupier/tensorflow-serving_sidecar -> deploy on GCP
 
 ## Precit
 

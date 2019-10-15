@@ -14,3 +14,4 @@ pip install labelme
 * Browser annotation -> https://supervise.ly/ (managed) and https://imglab.in/ (open source)
 * https://labelbox.com/
 * https://labelstud.io/
+* https://github.com/Microsoft/VoTT (looks good)
