@@ -13,3 +13,8 @@ Text, data, Matplotlib figures, Altair charts, and more. Don’t worry, Streamli
 
 ## `st.progess()`
 When adding long running computations to an app, you can use st.progess() to display status in real time.
+
+## Example repos
+* https://github.com/JAVI897/ML-Metrics
+* https://github.com/arvkevi/nba-roster-turnover
+* CNN app -> https://towardsdatascience.com/full-stack-ai-building-a-ui-for-your-latest-ai-project-in-no-time-at-all-7e5c8fd4eafd

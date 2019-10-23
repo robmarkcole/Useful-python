@@ -15,3 +15,4 @@ pip install labelme
 * https://labelbox.com/
 * https://labelstud.io/
 * https://github.com/Microsoft/VoTT (looks good)
+* https://github.com/l3p-cv/lost (open source - got some docker error :-/ )
