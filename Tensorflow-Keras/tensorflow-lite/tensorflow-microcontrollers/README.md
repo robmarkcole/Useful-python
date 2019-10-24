@@ -9,3 +9,13 @@
 #### `micro_speech` 
 * `micro_speech` -> One of the first steps with an Arduino board is getting the LED to flash. Here, we’ll do it with a twist by using TensorFlow Lite Micro to recognise voice keywords. It has a simple vocabulary of “yes” and “no.” Remember this model is running locally on a microcontroller with only 256KB of RAM, so don’t expect commercial ‘voice assistant’ level accuracy – it has no Internet connection and on the order of 2000x less local RAM available.
 * Works OK, bias towards it recognising `Yes` over `No`
+
+#### Accelerometer classification
+* Required getting clean data and removing some extraneous `,,,,` from the csv I initially generated. Once trained get very high accuracy:
+```
+punch: 0.998051
+flex: 0.001949
+
+punch: 0.000109
+flex: 0.999891
+```
