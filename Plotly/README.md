@@ -8,3 +8,4 @@
 ## Dash
 * Gallery -> https://dash-gallery.plotly.host/Portal/
 * Dash is a platform for building analytical web applications. No JavaScript required.
+* The dash-canvas component library of Dash (https://dash.plot.ly/canvas) is an interactive component for annotating images with several tools (freehand brush, lines, bounding boxes, ...). See examples -> https://dash-canvas.plotly.host/Portal/
