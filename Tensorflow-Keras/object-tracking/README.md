@@ -9,3 +9,7 @@
 
 ## Senantic imnage retreival
 * https://github.com/cvjena/semantic-embeddings
+
+## HART
+* https://github.com/akosiorek/hart
+* hierarchical attentive recurrent neural networks
