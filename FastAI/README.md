@@ -21,6 +21,9 @@ Course components:
 ## Fastai package
 * Not supported on Mac (read the docs). Did run some of the examples but training was going to take hours on the Mac CPU vs minutes on a GPU, so Mac is not feasible.
 
+## In production
+* [flask-gunicorn-nginx-and-docker](https://medium.com/technonerds/a-production-grade-machine-learning-api-using-flask-gunicorn-nginx-and-docker-part-1-49927238befb)
+
 ## FastAi Serving
 * Equivalent to Tensorflow serving
 * https://github.com/developmentseed/fastai-serving
