@@ -6,3 +6,6 @@
 ## Example `main.py`
 * `uvicorn main:app --reload` (took a couple of trys to get it to run)
 * http://127.0.0.1:8000/items/5?q=somequery
+
+## deploy-machine-learning-models-with-keras-fastapi-redis-and-docker
+* https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece
