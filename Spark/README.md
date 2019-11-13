@@ -1,11 +1,9 @@
 # Spark
 * TLDR: tool for processing data in parallel across a cluster, works in-memory.
 * [Intro to pyspark](https://towardsdatascience.com/a-brief-introduction-to-pyspark-ff4284701873)
-* API in python and scala. [Intro read omn tradeoffs](https://www.datacamp.com/community/tutorials/apache-spark-python)
+* API in python and scala. [Intro read on tradeoffs](https://www.datacamp.com/community/tutorials/apache-spark-python)
 * [pyspark docs](https://spark.apache.org/docs/0.9.0/python-programming-guide.html)
-* Understand [hadoop vs spark](https://logz.io/blog/hadoop-vs-spark/)
-* Get started on a hosted env for freee on databricks -> https://databricks.com/
-* [Geospatial Analytics at Scale with Deep Learning and Apache Spark](https://databricks.com/session/geospatial-analytics-at-scale-with-deep-learning-and-apache-spark)
+* Get started on a hosted env for free on databricks -> https://databricks.com/
 
 ## Spark Dataframes
 The key data type used in PySpark is the Spark dataframe. This object can be thought of as a table distributed across a cluster and has functionality that is similar to dataframes in R and Pandas. If you want to do distributed computation using PySpark, then you’ll need to perform operations on Spark dataframes, and not other python data types.
@@ -17,3 +15,8 @@ One of the key differences between Pandas and Spark dataframes is eager versus l
 ## Geo data
 * Geo Spatial Data Analytics on Spark -> https://github.com/harsha2010/magellan
 * [GeoSpark](http://geospark.datasyslab.org/) -> GeoSpark is a cluster computing system for processing large-scale spatial data. GeoSpark extends Apache Spark / SparkSQL with a set of out-of-the-box Spatial Resilient Distributed Datasets (SRDDs)/ SpatialSQL that efficiently load, process, and analyze large-scale spatial data across machines.
+* [Geospatial Analytics at Scale with Deep Learning and Apache Spark](https://databricks.com/session/geospatial-analytics-at-scale-with-deep-learning-and-apache-spark)
+
+## Comparisons to other tools
+* Understand [hadoop vs spark](https://logz.io/blog/hadoop-vs-spark/)
+* Spark vs Dask -> https://docs.dask.org/en/latest/spark.html
