@@ -1,6 +1,39 @@
-# Radpberry pi
+# Raspberry pi
 * To have a headless pi start with ssh enabled just put an empty file named `ssh` (no file extension) on `boot` SD card image
 * To configure wifi add a `wpa_supplicant.conf` file on `boot` SD card image
+
+## Numpy
+* https://www.raspberrypi.org/documentation/linux/software/python.md
+* `sudo apt-get install python3-numpy`
+
+## Tensorflow-lite
+* https://www.tensorflow.org/lite/guide/python
+
+## Pip3
+* https://www.raspberrypi.org/documentation/linux/software/python.md
+* `sudo apt-get install python3-pip`
+
+## PiCamera
+* https://picamera.readthedocs.io/en/release-1.13/index.html
+* `sudo apt-get install python3-picamera`
+
+## OpenCV
+* `sudo apt install python3-opencv` to [install from the Raspbian official package manager](https://raspberrypi.stackexchange.com/questions/100253/how-can-i-install-opencv-on-raspberry-pi-4-raspbian-buster)
+
+## Pillow
+* Very useful library for working with images
+* [Install](https://www.techcoil.com/blog/how-to-setup-python-imaging-library-pillow-on-raspbian-stretch-lite-for-processing-images-on-your-raspberry-pi/)
+
+```
+sudo apt-get update
+sudo apt-get install libjpeg-dev -y
+sudo apt-get install zlib1g-dev -y
+sudo apt-get install libfreetype6-dev -y
+sudo apt-get install liblcms1-dev -y
+sudo apt-get install libopenjp2-7 -y
+sudo apt-get install libtiff5 -y
+pip3 install pillow
+```
 
 ## Jupyter on Pi
 * [Example](https://www.hackster.io/mjrobot/rpi-physical-computing-using-jupyter-notebook-056fa8)
@@ -16,27 +49,7 @@ sudo pip3 install jupyterlab
 
 * [Connect from remote machine via SSH](https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/) -> first run  `jupyter notebook --generate-config` then set default password using `jupyter notebook password`. Can then run notebook or lab (`jupyter lab --port=9000 --no-browser &`) and connect with ssh: `ssh -N -f -L 9000:localhost:9000 pi@ip` and visit `http://localhost:9000`
 
-## Python
-* [Build python 3.6.5](https://gist.github.com/dschep/24aa61672a2092246eaca2824400d37f) (commands below) -> does not update the PATH python automatically but tested on 8/6/2019 successfully
 
-```
-$ wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tar.xz
-$ tar xf Python-3.6.5.tar.xz
-$ cd Python-3.6.5
-$ ./configure
-$ make
-$ sudo make altinstall
-```
-
-Then:
-```
-pi@raspberrypi:~/Downloads/Python-3.6.5 $ ./python
-Python 3.6.5 (default, Jun  8 2019, 07:25:32)
-[GCC 6.3.0 20170516] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>>
-```
- 
 ## Mosquitto MQTT
 * `sudo apt-get install mosquitto mosquitto-clients` -> runs automatically
 * https://hub.docker.com/_/eclipse-mosquitto (docker, simple and easy)
@@ -71,47 +84,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## Gstreamer
 * `sudo apt-get install gstreamer-tools` or if [specific version required](https://github.com/pimoroni/mlx90640-library/blob/master/examples/src/rawrgb.cpp) `sudo apt-get install gstreamer1.0-tools`
 
-## Find a file
-* https://www.bitpi.co/2015/02/15/using-find-command-raspbian/
-
-## View images on pi on Mac via SSH
-* https://github.com/eddieantonio/imgcat
-
 ## MariaDB
 * https://howtoraspberrypi.com/mariadb-raspbian-raspberry-pi/
 
-## Pip3
-* https://www.raspberrypi.org/documentation/linux/software/python.md
-* `sudo apt-get install python3-pip`
-
-## PiCamera
-* https://picamera.readthedocs.io/en/release-1.13/index.html
-* `sudo apt-get install python3-picamera`
-
-## OpenCV
-* `sudo apt install python3-opencv` to [install from the Raspbian official package manager](https://raspberrypi.stackexchange.com/questions/100253/how-can-i-install-opencv-on-raspberry-pi-4-raspbian-buster)
-
-## Pillow
-* Very useful library for working with images
-* [Install](https://www.techcoil.com/blog/how-to-setup-python-imaging-library-pillow-on-raspbian-stretch-lite-for-processing-images-on-your-raspberry-pi/)
-
-```
-sudo apt-get update
-sudo apt-get install libjpeg-dev -y
-sudo apt-get install zlib1g-dev -y
-sudo apt-get install libfreetype6-dev -y
-sudo apt-get install liblcms1-dev -y
-sudo apt-get install libopenjp2-7 -y
-sudo apt-get install libtiff5 -y
-pip3 install pillow
-```
-
-## Minio
-* Local S3
-* Not officially supported on pi but as it is just a Go package, can be installed. [Instructions here](https://github.com/christianbaun/ossperf/wiki/Minio-on-a-Raspberry-Pi-3-with-Raspbian-(Debian-Jessie-8.0))
-
-```
-$ wget https://dl.minio.io/server/minio/release/linux-arm/minio
-$ chmod +x minio 
-$ ./minio server --address ":8080"  s3-storage-folder 
-```
+## Kubernetes
+* On pi4 cluster series -> https://www.linxlabs.com/
