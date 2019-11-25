@@ -2,23 +2,15 @@
 * To have a headless pi start with ssh enabled just put an empty file named `ssh` (no file extension) on `boot` SD card image
 * To configure wifi add a `wpa_supplicant.conf` file on `boot` SD card image
 
-## Numpy
-* https://www.raspberrypi.org/documentation/linux/software/python.md
-* `sudo apt-get install python3-numpy`
-
-## Tensorflow-lite
-* https://www.tensorflow.org/lite/guide/python
-
-## Pip3
-* https://www.raspberrypi.org/documentation/linux/software/python.md
+## Useful installs
 * `sudo apt-get install python3-pip`
+* `sudo apt-get install python3-numpy`
+* `sudo apt-get install python3-matplotlib`
+* `sudo apt install python3-opencv`
 
 ## PiCamera
 * https://picamera.readthedocs.io/en/release-1.13/index.html
 * `sudo apt-get install python3-picamera`
-
-## OpenCV
-* `sudo apt install python3-opencv` to [install from the Raspbian official package manager](https://raspberrypi.stackexchange.com/questions/100253/how-can-i-install-opencv-on-raspberry-pi-4-raspbian-buster)
 
 ## Pillow
 * Very useful library for working with images
