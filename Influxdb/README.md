@@ -24,7 +24,7 @@ docker run -p 8888:8888 \
 
 ## References
 * [python client](https://github.com/influxdata/influxdb-python)
-* [InfluxDB cloud includes a free Hobbby plan](https://www.influxdata.com/influxcloud-pricing/)
+* [InfluxDB cloud includes a free Hobbby plan](https://www.influxdata.com/influxdb-cloud-pricing/)
 * [Home assistant integration](https://www.home-assistant.io/components/influxdb/)
 * [InfluxDB and Grafana for sensor time series](https://thingsmatic.com/2017/03/02/influxdb-and-grafana-for-sensor-time-series/)
 * Both InfluxDB and Grafana work great on a Raspberry Pi without using much resources.
