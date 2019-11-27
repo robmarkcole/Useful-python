@@ -10,10 +10,9 @@
 * List of pretrained tflite models -> https://www.tensorflow.org/lite/models
 
 ## Pi
-
 * Python guide (runs `label_image.py`, successfully tested on pi3, also on Mac on 6 Oct 2019) ->  https://www.tensorflow.org/lite/guide/python
 * Example using picamera (successfully tested on pi3 on 6 Oct 2019) -> https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/raspberry_pi
-
+* Object detection -> https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/TFLite_detection_webcam.py
 
 ## Microcontrollers
 * https://www.tensorflow.org/lite/microcontrollers/overview
