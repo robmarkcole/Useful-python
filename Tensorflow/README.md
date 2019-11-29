@@ -21,6 +21,9 @@
 ## Pruning
 * https://www.dlology.com/blog/how-to-compress-your-keras-model-x5-smaller-with-tensorflow-model-optimization/
 
+## Production ML
+* https://github.com/alirezadir/Production-Level-Deep-Learning
+
 ## Tensorflow probability
 * TensorFlow Probability (TFP) is a Python library built on TensorFlow that makes it easy to combine probabilistic models and deep learning on modern hardware (TPU, GPU). It's for data scientists, statisticians, ML researchers, and practitioners who want to encode domain knowledge to understand data and make predictions.
 * https://www.tensorflow.org/probability/
