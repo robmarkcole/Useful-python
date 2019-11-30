@@ -1,4 +1,3 @@
-#Tested on Metro M4 airloft with 5.0 firmware and bundle. Often returns error - weak wifi?# 
 import board
 import busio
 from digitalio import DigitalInOut
@@ -6,8 +5,10 @@ import adafruit_esp32spi.adafruit_esp32spi_socket as socket
 from adafruit_esp32spi import adafruit_esp32spi
 import adafruit_requests as requests
 
-print("ESP32 SPI webclient test")
-JSON_URL = "http://api.coindesk.com/v1/bpi/currentprice/EUR.json"
+from secrets import secrets
+
+print("ESP32 SPI webclient test by Robin")
+JSON_URL = "http://api.coindesk.com/v1/bpi/currentprice/USD.json"
 
 # If you are using a board with pre-defined ESP32 Pins:
 esp32_cs = DigitalInOut(board.ESP_CS)
@@ -30,7 +31,7 @@ for ap in esp.scan_networks():
 print("Connecting to AP...")
 while not esp.is_connected:
     try:
-        esp.connect_AP(b'abc', b'123')
+        esp.connect_AP(secrets['ssid'], secrets['password'])
     except RuntimeError as e:
         print("could not connect to AP, retrying: ",e)
         continue
