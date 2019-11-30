@@ -16,3 +16,4 @@ pip install labelme
 * https://labelstud.io/
 * https://github.com/Microsoft/VoTT (looks good)
 * https://github.com/l3p-cv/lost (open source - got some docker error :-/ )
+* https://github.com/opencv/cvat -> by openCV, looks well maintained and has rest API

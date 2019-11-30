@@ -7,5 +7,5 @@
 * [MQTT in CircuitPython](https://learn.adafruit.com/mqtt-in-circuitpython)
 
 <p align="center">
-<img src="https://github.com/robmarkcole/Useful-python/blob/master/Circuitpython/vscode-circuitpython.jpg" width="700">
+<img src="https://github.com/robmarkcole/Useful-python/blob/master/Circuitpython/vscode-circuitpython.jpg" width="900">
 </p>
