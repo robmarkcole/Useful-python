@@ -1,5 +1,4 @@
 ## OpenFASS
-
 * https://www.openfaas.com/
 * Functions as a service -> each function is run in a Docker container and containers are managed by OpenFASS
 * Write functions in any language for Linux or Windows and package in Docker/OCI image format
@@ -17,4 +16,6 @@ $ curl localhost:8080/function/hello-python -d "it's Alex here"
 Hello! You said: its Alex here
 ```
 
+## MQTT
+* Official -> https://github.com/openfaas-incubator/mqtt-connector
 * https://github.com/f43i4n/faas-mqtt-connector -> It currently only has basic MQTT functionality and few configuration options, but it may fulfil your needs or you could create a PR to improve the connector.
