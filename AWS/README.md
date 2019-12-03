@@ -70,6 +70,7 @@ AWS products in alphabetical order:
 * ML & Jupyter notebooks
 * [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
 * Fast.ai on sagemaker [setup instructions](https://course.fast.ai/start_sagemaker.html)
+* [Get started training and deploying ML](https://aws.amazon.com/getting-started/tutorials/build-train-deploy-machine-learning-model-sagemaker/)
 
 ### Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/
