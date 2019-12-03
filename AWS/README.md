@@ -14,7 +14,8 @@ AWS products in alphabetical order:
 
 ### Data Pipeline
 * https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
-* ETL orchestrator
+* ETL orchestrator -> a web service that you can use to automate the movement and transformation of data
+* Jobs are typically time scheduled
 
 ### DynamoDB
 * https://aws.amazon.com/dynamodb/
