@@ -8,6 +8,10 @@ AWS products in alphabetical order:
 * Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. With a few clicks in the AWS Management Console, you can create REST and WebSocket APIs that act as a “front door” for applications to access data, business logic, or functionality from your backend services, such as workloads running on Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS Lambda, any web application, or real-time communication applications.
 * [Deploy deep learning models with api-gateway and lambda](https://course.fast.ai/deployment_aws_lambda.html)
 
+### Batch
+* https://aws.amazon.com/batch/
+* Efficiently run hundreds of thousands of batch computing jobs on AWS
+
 ### Cloud9
 * https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html
 * Web IDE, runs on EC2 instance
