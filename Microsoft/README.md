@@ -12,6 +12,11 @@ List of services in alphabetical order:
 * A fully managed version of the popular open-source Redis server with a turnkey caching solution.
 * https://redis.io/ -> in-memory data structure store, used as a database, cache and message broker
 
+#### Azure Cognitive services
+* https://docs.microsoft.com/en-us/azure/cognitive-services/
+* Wide range of services, including vision and time series anomaly detection
+* https://docs.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview
+
 #### Azure container registry
 * Private regsitry of docker containers
 * https://azure.microsoft.com/en-us/services/container-registry/
