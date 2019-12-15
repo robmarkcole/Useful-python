@@ -13,3 +13,4 @@
 * [3D printed case](https://cults3d.com/en/3d-model/tool/jetson-nano-case)
 * [Pothole detector](https://github.com/JordanMicahBennett/Smart-Ai-Pothole-Detector------Powered-by-Tensorflow-TensorRT-on-Google-Colab-and-or-Jetson-Nano)
 * [Face recognition with dlib](https://medium.com/@ageitgey/build-a-hardware-based-face-recognition-system-for-150-with-the-nvidia-jetson-nano-and-python-a25cb8c891fd)
+* [Run Yolov3](https://pysource.com/2019/08/29/yolo-v3-install-and-run-yolo-on-nvidia-jetson-nano-with-gpu/?unapproved=1323&moderation-hash=175e57f50e7350d7d591c5db18ba8fbb#comment-1323)
