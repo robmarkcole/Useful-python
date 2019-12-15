@@ -8,6 +8,7 @@
 
 ## Models
 * List of pretrained tflite models -> https://www.tensorflow.org/lite/models
+* Facenet (face recognition) -> https://github.com/Kao1126/EdgeTPU-FaceNet
 
 ## Pi
 * Python guide (runs `label_image.py`, successfully tested on pi3, also on Mac on 6 Oct 2019) ->  https://www.tensorflow.org/lite/guide/python
