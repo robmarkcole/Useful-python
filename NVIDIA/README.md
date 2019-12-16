@@ -6,7 +6,9 @@
 * Jetson nano $100 -> https://www.nvidia.com/en-gb/autonomous-machines/embedded-systems/jetson-nano/
 * 128 CUDA cores GPU, ARM CPU, 4GB RAM, no wifi
 * Getting started course -> https://courses.nvidia.com/courses/course-v1:DLI+C-RX-02+V1/about
+* [Hello world with Jetpack](https://github.com/dusty-nv/jetson-inference#hello-ai-world)
 * [Jetson nano is supported by Balena](https://www.balena.io/docs/reference/hardware/devices/) -> prospect of deploying apps to fleet of Jetsons. Example app [OCR](https://github.com/ricktorzynski/balena-ocr-tesseract-docker)
+* [Process up to 8 streams concurrently, at 1080p and 30 frames-per-second with a resnet10 model](https://github.com/Azure-Samples/NVIDIA-Deepstream-Azure-IoT-Edge-on-a-NVIDIA-Jetson-Nano)
 
 ## Jetson AGX Xavier
 * Higher end dev kit $699
@@ -40,3 +42,12 @@
 
 ## In production
 * [AWS IoT Greengrass on Jetson Nano](https://info.nvidia.com/deploy-ai-with-aws-ml-iot-services-on-nvidia-jetson-nano.html?ondemandrgt=yes) and [this repo](https://github.com/mahendrabairagi/AWS_ML_At_Edge_With_NVIDIA_Jetson_Nano)
+
+## TensorRT
+* https://developer.nvidia.com/tensorrt
+* A deep learning inference optimizer and runtime - up to 40x faster than CPU-only platforms
+* TensorRT Inference Server is a containerized microservice that maximizes GPU utilization and runs multiple models 
+* Optimize neural network models trained in all major frameworks
+
+## CUDA
+* NVIDIA’s parallel programming model
