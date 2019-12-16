@@ -9,6 +9,8 @@
 * [Hello world with Jetpack](https://github.com/dusty-nv/jetson-inference#hello-ai-world)
 * [Jetson nano is supported by Balena](https://www.balena.io/docs/reference/hardware/devices/) -> prospect of deploying apps to fleet of Jetsons. Example app [OCR](https://github.com/ricktorzynski/balena-ocr-tesseract-docker)
 * [Process up to 8 streams concurrently, at 1080p and 30 frames-per-second with a resnet10 model](https://github.com/Azure-Samples/NVIDIA-Deepstream-Azure-IoT-Edge-on-a-NVIDIA-Jetson-Nano)
+* [Run classification at 75 FPS with ResNet-18](https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-camera-2.md)
+* [Live object detection with Mobilenet-V2 in 10 lines of python](https://github.com/dusty-nv/jetson-inference/blob/master/docs/detectnet-example-2.md)
 
 ## Jetson AGX Xavier
 * Higher end dev kit $699
@@ -23,6 +25,7 @@
 ## Jetpack SDK: build AI apps
 * https://developer.nvidia.com/embedded/jetpack
 * JetPack SDK is the most comprehensive solution for building AI applications - bundles all required dev tools
+* Python or C++
 
 ## deepstream-sdk: streaming analytics toolkit
 * https://developer.nvidia.com/deepstream-sdk
