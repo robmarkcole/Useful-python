@@ -76,6 +76,9 @@ AWS products in alphabetical order:
 * Fast.ai on sagemaker [setup instructions](https://course.fast.ai/start_sagemaker.html)
 * [Get started training and deploying ML](https://aws.amazon.com/getting-started/tutorials/build-train-deploy-machine-learning-model-sagemaker/)
 * [SageMaker Python SDK](https://github.com/aws/sagemaker-python-sdk)
+* [SageMaker Studio extends the JupyterLab interface](https://docs.aws.amazon.com/sagemaker/latest/dg/gs-studio-ui.html)
+* Label ground truth [with mechanical turk](https://docs.aws.amazon.com/sagemaker/latest/dg/sms.html)
+* [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) -> train machine learning models once and run them anywhere in the cloud and at the edge (Greengrass)
 
 ### Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/
