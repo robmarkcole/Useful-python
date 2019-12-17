@@ -42,6 +42,7 @@
 * [Face recognition with dlib](https://medium.com/@ageitgey/build-a-hardware-based-face-recognition-system-for-150-with-the-nvidia-jetson-nano-and-python-a25cb8c891fd)
 * [Run Yolo - on nano only yolov3-tiny](https://pysource.com/2019/08/29/yolo-v3-install-and-run-yolo-on-nvidia-jetson-nano-with-gpu/?unapproved=1323&moderation-hash=175e57f50e7350d7d591c5db18ba8fbb#comment-1323)
 * [Monitor Jetson CPU usage etc](https://github.com/rbonghi/jetson_stats)
+* [Detect significant changes in a camera feed to save bandwidth](https://www.hackster.io/smellslikeml/saving-bandwidth-with-anomaly-detection-16eb67)
 
 ## In production
 * [AWS IoT Greengrass on Jetson Nano](https://info.nvidia.com/deploy-ai-with-aws-ml-iot-services-on-nvidia-jetson-nano.html?ondemandrgt=yes) and [this repo](https://github.com/mahendrabairagi/AWS_ML_At_Edge_With_NVIDIA_Jetson_Nano)
