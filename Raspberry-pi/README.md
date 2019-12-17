@@ -2,6 +2,9 @@
 * To have a headless pi start with ssh enabled just put an empty file named `ssh` (no file extension) on `boot` SD card image
 * To configure wifi add a `wpa_supplicant.conf` file on `boot` SD card image
 
+## Ubuntu
+* [Ubunbtu is supported on Pi4](https://www.raspberrypi.org/downloads/)
+
 ## Useful installs
 * `sudo apt-get install python3-pip`
 * `sudo apt-get install python3-numpy`
