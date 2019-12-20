@@ -1,7 +1,7 @@
 ## Redis
-* Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, HyperLogLogs, Bitmaps. 
+* Redis is an in-memory cache that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, HyperLogLogs, Bitmaps. 
 * Redis stands for REmote DIctionary Server
-* Use case -> cache SQL query results
+* Use case -> cache SQL query results, requests to a server
 * `brew install redis` then `$ redis-server`
 * https://redis.io/ and [online example](http://try.redis.io/)
 * [AnimalRecognitionDemo](https://github.com/RedisGears/AnimalRecognitionDemo) -> dont forget to use python 2 commands, runs but did not detect the cat images
