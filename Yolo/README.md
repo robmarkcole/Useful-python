@@ -14,3 +14,6 @@ We have a very small model as well for constrained environments, yolov3-tiny.
 
 ## Yolo on Jetson Nano 
 * https://pysource.com/2019/08/29/yolo-v3-install-and-run-yolo-on-nvidia-jetson-nano-with-gpu/
+
+## Yolo face
+* [Yolo for faces only, run on CPU](https://github.com/iitzco/faced)
