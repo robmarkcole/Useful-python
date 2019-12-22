@@ -14,6 +14,9 @@ Text, data, Matplotlib figures, Altair charts, and more. Don’t worry, Streamli
 ## `st.progess()`
 When adding long running computations to an app, you can use st.progess() to display status in real time.
 
+## Docker deploy
+* [Read](https://maelfabien.github.io/project/Streamlit/#)
+
 ## Example repos
 * https://github.com/MarcSkovMadsen/awesome-streamlit
 * https://github.com/JAVI897/ML-Metrics
