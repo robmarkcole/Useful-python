@@ -21,3 +21,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * CNN app -> https://towardsdatascience.com/full-stack-ai-building-a-ui-for-your-latest-ai-project-in-no-time-at-all-7e5c8fd4eafd
 * [A minimal example of how to use streamlit on Heroku](https://github.com/ericmjl/minimal-streamlit-example)
 * [Include bokeh plots and deploy on Heroku](https://pythonforundergradengineers.com/streamlit-app-with-bokeh.html)
+
+## Streamlit vs alternatives
+* [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
+* `Streamlit uses a procedural paradigm, rather than a callback paradigm, for app construction. We just have to think of the app as a linear sequence of actions that happen from top to bottom. State is never really an issue, because every code change and interaction re-runs the source file from top to bottom, from scratch. When building quick apps, this paradigm really simplifies things compared to a callback-based paradigm.`
