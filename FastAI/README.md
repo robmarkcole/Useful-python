@@ -2,6 +2,8 @@
 * TLDR: deep learning course using the [fastai](https://docs.fast.ai/) package
 * [fastai website](https://www.fast.ai/)
 * Course (v3) videos online late Jan 2019
+* [Github](https://github.com/fastai/fastai)
+* `pip install fastai --upgrade`
 
 Course components:
 1. Seven [full video lessons](https://course.fast.ai/lessons/lessons.html) of a little over 2 hours each, plus two shorter introductory videos
@@ -11,7 +13,6 @@ Course components:
 ## Free GPU - Colab
 * Free GPU (shared, not always available), but some setup of the env required for each notebook, and need to make data available.
 * [Getting started with Colab and fast.ai](https://course-v3.fast.ai/start_colab.html) -> a little bit of prep is required before using each notebook. Use the Github repo to get the latest course notebooks entering the source repo as `fastai/course-v3` and in the first cell of a notebook run `!curl https://course-v3.fast.ai/setup/colab | bash`
-* TLDR - OK for initial tryout, bit frustrating to use seriously
 
 ## Paid GPU
 * Overview of paid options -> https://course-v3.fast.ai/index.html
@@ -28,3 +29,7 @@ Course components:
 * Equivalent to Tensorflow serving
 * https://github.com/developmentseed/fastai-serving
 * Host apps on Render -> https://github.com/render-examples/fastai-v3
+
+## Visual UI
+* Visual UI adds a graphical interface to fastai allowing the user to quickly load, choose parameters, train and view results without the need to dig deep into the code.
+* https://github.com/asvcode/Vision_UI

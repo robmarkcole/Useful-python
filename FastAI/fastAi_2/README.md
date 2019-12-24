@@ -4,4 +4,3 @@
 * Getting started -> https://forums.fast.ai/t/getting-started-with-fastai-v2/53927
 * Forums -> https://forums.fast.ai/c/fastai-users/fastai-v2 and [read first](https://forums.fast.ai/t/fastai-v2-read-this-before-posting-please/53517)
 * Adopts literal programming -> https://medium.com/@dienhoa.t/fast-ai-literature-programming-2d0d4230dd81
-* 
