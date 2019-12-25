@@ -79,6 +79,7 @@ AWS products in alphabetical order:
 * [SageMaker Studio extends the JupyterLab interface](https://docs.aws.amazon.com/sagemaker/latest/dg/gs-studio-ui.html)
 * Label ground truth [with mechanical turk](https://docs.aws.amazon.com/sagemaker/latest/dg/sms.html)
 * [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) -> train machine learning models once and run them anywhere in the cloud and at the edge (Greengrass)
+* kernels for Jupyter that provide support for R, Python 2 and 3, Apache MXNet, TensorFlow, and PySpark. Currently does not support tensorflow 2
 
 ### Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/

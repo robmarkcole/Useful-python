@@ -17,7 +17,7 @@ Course components:
 ## Paid GPU
 * Overview of paid options -> https://course-v3.fast.ai/index.html
 * I've been using Floydhub which has a nice ecosystem but isn't the cheapest, but hace nice ecosystem and UI, and good integration with the course, also pre-paid which is more reassuring ($1.20/hour + $9.00/month (100GB storage))
-* Tried out Paperspace as cheaper than Floydhub, classic notebook rather than Jupyter lab, didn't like it as much as Floydhub -> https://course-v3.fast.ai/start_gradient.html
+* Significantly cheaper checkout Onepanel $0.29 per hour + storage with fast.ai signup URL
 
 ## Fastai package
 * Not supported on Mac (read the docs). Did run some of the examples but training was going to take hours on the Mac CPU vs minutes on a GPU, so Mac is not feasible.

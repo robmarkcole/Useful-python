@@ -3,21 +3,24 @@
 
 GCP products in alphabetical order:
 
-#### AI platform VM
-* https://cloud.google.com/deep-learning-vm/
-* The AI Platform Deep Learning VM Images are a set of Debian 9-based Compute Engine virtual machine images optimized for data science and machine learning tasks. 
-* The VM images deliver a seamless notebook experience with integrated support for JupyterLab. [Connecting to Jupyter Lab](https://cloud.google.com/deep-learning-vm/docs/jupyter)
+#### AI hub
+* https://aihub.cloud.google.com/u/0/
 
 ## AI Platform Notebooks
 * https://cloud.google.com/ai-platform-notebooks/
-* An enterprise notebook service to get your projects up and running in minutes 
+* An enterprise notebook service to get your projects up and running in minutes
+* $0.176 hourly CPU only, $0.452 hourly with GPU (1 NVIDIA Tesla K80)
+* Can create instance from [custom docker container](https://cloud.google.com/ai-platform/notebooks/docs/custom-container?_ga=2.51808105.-1104585797.1574315998)
+* Tensorflow 2 is supported. Example notebooks include Geronds [tf2_course](https://github.com/ageron/tf2_course)
 * Notebooks is integrated with BigQuery, Cloud Dataproc, and Cloud Dataflow, making it easy to go from data ingestion to preprocessing and exploration, and eventually model training and deployment.
 * There are no minimum fees or up-front commitments. There’s no charge for using Notebooks. You pay only for the cloud resources you use with the Notebooks instance
-* [Docs](https://cloud.google.com/ml-engine/docs/notebooks/#how-to)
-* TLDR: looks like a lot of faff, just use Colab
+* Git jupyterlab integration is installed
 
-#### AI hub
-* https://aihub.cloud.google.com/u/0/
+#### AI platform VM
+* Used by the Notebooks
+* https://cloud.google.com/deep-learning-vm/
+* The AI Platform Deep Learning VM Images are a set of Debian 9-based Compute Engine virtual machine images optimized for data science and machine learning tasks. 
+* The VM images deliver a seamless notebook experience with integrated support for JupyterLab. [Connecting to Jupyter Lab](https://cloud.google.com/deep-learning-vm/docs/jupyter)
 
 #### BigQuery
 * https://cloud.google.com/bigquery/
