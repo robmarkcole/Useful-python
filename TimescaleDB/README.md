@@ -20,7 +20,7 @@
 * Presented in [this article](https://blog.timescale.com/blog/simplified-time-series-analytics-using-the-time_bucket-function/)
 
 ## RPi
-* TimescaleDB cannot be installed on an RPi -> `doesn't support architecture 'arm64'` -> see [this issue](https://github.com/timescale/timescaledb-docker/issues/25)
+* TimescaleDB cannot be installed on an RPi even with docker -> `doesn't support architecture 'arm64'` -> see [this issue](https://github.com/timescale/timescaledb-docker/issues/25)
 * [Tutorial using timescale cloud](https://blog.timescale.com/tutorials/how-to-store-sensor-data-from-a-raspberry-pi-into-postgresql/) and [the code](https://github.com/timescale/examples/tree/master/pi-light)
 
 ## Home Assistant
