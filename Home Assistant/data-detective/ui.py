@@ -16,7 +16,9 @@ def get_data():
 
 @st.cache
 def get_sensors(df):
-    return list(df[df['domain']=='sensor']['entity_name'].unique())
+    sensors = list(df[df['domain']=='sensor']['entity_name'].unique())
+    sensors.sort() # in place sort
+    return sensors
 
 def get_sensor_data(df, sensor_names : List[str]):
     data = df[df['entity_name'].isin(sensor_names)]
@@ -27,7 +29,7 @@ def get_sensor_line_chart(data):
         x='last_changed:T',
         y=alt.Y('state'),
         color='entity_name',
-        tooltip=['entity_name', 'state', 'last_changed'],
+        tooltip=[ 'state', ], # 'entity_name','last_changed'
     ).interactive()
     return line_chart
 
