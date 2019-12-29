@@ -1,8 +1,14 @@
 ## Prophet
 * https://facebook.github.io/prophet/
-* Time series forecasting with seasonality - model effects of holidays etc
 * Used by [AWS Forecast](https://aws.amazon.com/forecast/)
 * Installation: On Mac use `conda install -c conda-forge fbprophet`
+
+## Model
+* Time series forecasting with seasonality - model effects of holidays etc. [Read the paper](https://peerj.com/preprints/3190/)
+
+<p align="center">
+<img src="https://github.com/robmarkcole/Useful-python/blob/master/Prophet/model.jpg" width="600">
+</p>
 
 ## Examples
 * [Prophet model with date and number of bike rentals using kaggle dataset](https://towardsdatascience.com/forecast-model-tuning-with-additional-regressors-in-prophet-ffcbf1777dda)
