@@ -16,6 +16,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 
 ## Docker deploy
 * [Read](https://maelfabien.github.io/project/Streamlit/#)
+* Simple example -> https://github.com/Ashton-Sidhu/toot
 
 ## Example repos
 * https://github.com/MarcSkovMadsen/awesome-streamlit
