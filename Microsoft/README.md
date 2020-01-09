@@ -25,6 +25,12 @@ List of services in alphabetical order:
 * https://azure.microsoft.com/en-gb/services/cosmos-db/
 * NoSQL
 
+## Custom Vision
+* https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/?WT.mc_id=AI4DEV01-blog-heboelma
+* Custom Vision lets you build, deploy, and improve your own image classifiers. An image classifier is an AI service that applies labels (which represent classes) to images, based on their visual characteristics.
+* Article on [model training](https://towardsdatascience.com/create-a-model-with-azure-custom-vision-and-python-7bc5caed82c4) and deployment via [Docker on Jetson nano](https://medium.com/microsoftazure/running-a-gpu-enabled-azure-custom-vision-docker-container-on-a-nvidia-jetson-nano-db8747b00b4f) (flask app)
+
+
 #### Azure DataBricks -> Spark
 * https://azure.microsoft.com/en-gb/services/databricks/
 * Integration of the [DataBricks](https://databricks.com/) platform with Azure

@@ -43,6 +43,7 @@
 * [Run Yolo - on nano only yolov3-tiny](https://pysource.com/2019/08/29/yolo-v3-install-and-run-yolo-on-nvidia-jetson-nano-with-gpu/?unapproved=1323&moderation-hash=175e57f50e7350d7d591c5db18ba8fbb#comment-1323)
 * [Monitor Jetson CPU usage etc](https://github.com/rbonghi/jetson_stats)
 * [Detect significant changes in a camera feed to save bandwidth](https://www.hackster.io/smellslikeml/saving-bandwidth-with-anomaly-detection-16eb67)
+* Azure custom vision model deployment via [Docker on Jetson nano](https://medium.com/microsoftazure/running-a-gpu-enabled-azure-custom-vision-docker-container-on-a-nvidia-jetson-nano-db8747b00b4f) (flask app)
 
 ## In production
 * [AWS IoT Greengrass on Jetson Nano](https://info.nvidia.com/deploy-ai-with-aws-ml-iot-services-on-nvidia-jetson-nano.html?ondemandrgt=yes) and [this repo](https://github.com/mahendrabairagi/AWS_ML_At_Edge_With_NVIDIA_Jetson_Nano)
