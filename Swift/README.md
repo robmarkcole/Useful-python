@@ -18,6 +18,9 @@
 * [Setting up a Swift development environment on Raspberry Pi](https://hackernoon.com/setting-up-a-swift-development-environment-on-raspberry-pi-c7af7fceac1e) -> use Xcode on Mac for programming
 * [SwiftyGPIO](https://github.com/uraimo/SwiftyGPIO) -> support for GPIOs/SPI/I2C/PWM/UART/1Wire
 
+## Swift on embedded
+* https://github.com/swift-embedded/swift-embedded
+
 ## Swift & Jupyter
 * https://github.com/google/swift-jupyter -> Jupyter kernel, Ubuntu oriented, use Docker on Mac 
 * [https://github.com/KelvinJin/iSwift](another kernel)
