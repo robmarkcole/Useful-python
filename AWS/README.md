@@ -116,3 +116,8 @@ AWS products in alphabetical order:
 
 ## Certification
 * [Data scientist](https://aws.amazon.com/training/learning-paths/machine-learning/data-scientist/)
+
+## Books
+* [Getting started on AWS (pdf)](https://awsdocs.s3.amazonaws.com/gettingstarted/latest/awsgsg-intro.pdf)
+* [AWS best practices](https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf)
+* [The Good parts of AWS](https://danielvassallo.com/)
