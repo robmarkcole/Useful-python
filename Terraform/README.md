@@ -4,3 +4,6 @@
 * Reproducible production, staging, and development environments
 * Combine multiple providers consistently
 * human readable language called HCL (HashiCorp Configuration Language)
+
+## Examples
+* Terraform module to deploy an Apache Airflow cluster on AWS, backed by RDS PostgreSQL for metadata, S3 for logs and SQS as message broker with CeleryExecutor -> [here](https://github.com/PowerDataHub/terraform-aws-airflow)

@@ -1,76 +1,103 @@
-## AWS
+# AWS
 * https://aws.amazon.com/products
 
 AWS products in alphabetical order:
 
-### API-Gateway
+## API-Gateway
 * https://aws.amazon.com/api-gateway/
 * Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. With a few clicks in the AWS Management Console, you can create REST and WebSocket APIs that act as a “front door” for applications to access data, business logic, or functionality from your backend services, such as workloads running on Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS Lambda, any web application, or real-time communication applications.
 * [Deploy deep learning models with api-gateway and lambda](https://course.fast.ai/deployment_aws_lambda.html)
 
-### Batch
+## Athena
+* https://aws.amazon.com/athena
+* An interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+
+## Aurora
+* https://aws.amazon.com/rds/aurora
+* MySQL and PostgreSQL-compatible relational database built for the cloud. Performance and availability of commercial-grade databases at 1/10th the cost.
+
+## Batch
 * https://aws.amazon.com/batch/
 * Efficiently run hundreds of thousands of batch computing jobs on AWS
 
-### Cloud9
+## Cloud9
 * https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html
 * Web IDE, runs on EC2 instance
+* Amazon bought this and it is no longer open source
 
-### Data Pipeline
+## Data Pipeline
 * https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
 * ETL orchestrator -> a web service that you can use to automate the movement and transformation of data
 * Jobs are typically time scheduled
+* Example use case: Copy RDS or DynamoDB tables to S3, transform data structure, run analytics using SQL queries and load it to Redshift.
 
-### DynamoDB
+## (Data) Lake Formation
+* https://aws.amazon.com/lake-formation
+* a service that makes it easy to set up a secure data lake in days
+
+## DynamoDB
 * https://aws.amazon.com/dynamodb/
 * NoSQL
 * DynamoDB is [free for your first 25 GB](https://aws.amazon.com/free/) or [download a local Docker version](https://hub.docker.com/r/amazon/dynamodb-local)
 * [Rekognition with dynamoDB backend](https://read.acloud.guru/building-an-imgur-clone-part-2-image-rekognition-and-a-dynamodb-backend-abc9af300123)
 * Tables can be created from python [using boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html)
 
-### EC2
+## EC2
 * https://aws.amazon.com/ec2/
 * On demand compute
 
-### Elastic Beanstalk
+## Elastic Beanstalk
 * https://aws.amazon.com/elasticbeanstalk/
 * An easy-to-use service for deploying and scaling web applications and services 
 
-### Elasticsearch
-* https://aws.amazon.com/elasticsearch-service/what-is-elasticsearch/
-* Search engine
+## Elastic Map Reduce (EMR)
+* https://aws.amazon.com/emr/
+* A web service which provides a managed Hadoop framework is useful for computing large data sets.
 
-### Firehose
+## Firehose
 * Used for ingesting streaming data
 * https://aws.amazon.com/kinesis/data-firehose/
 * https://towardsdatascience.com/delivering-real-time-streaming-data-to-amazon-s3-using-amazon-kinesis-data-firehose-2cda5c4d1efe
 
-### Kibana
-* a free, open-source visualization tool. You can run Kibana on-premises, on Amazon EC2, or on Amazon Elasticsearch Service.
-* [Run with docker](https://opendistro.github.io/for-elasticsearch-docs/docs/kibana/#run-kibana-using-docker)
+## Glue
+* https://aws.amazon.com/glue/
+* A fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
+* Runs on a serverless Apache Spark environment. 
+* AWS Glue consists of a Data Catalog which is a central metadata repository, an ETL engine that can automatically generate Scala or Python code, and a flexible scheduler that handles dependency resolution, job monitoring, and retries.
+* Pricing on Glue is determined using the derived measure of "Data Processing Units."
+* [Airflow vs. AWS Glue](https://www.astronomer.io/guides/airflow-vs-aws-glue/) - TLDR Glue cannot be implemented on-premise or in any other cloud environment, requires data to be in AWS. If you need to access data from outside AWS (e.g. from an API) then Airflow can be used.
+* [When should I use AWS Glue vs. AWS Data Pipeline?](https://aws.amazon.com/glue/faqs/) -> data pipeline provides greater flexibility over the execution environment, access and control over the compute resources that run your code, as well as the code itself that does data processing
 
-### Kinesis
+## Kafka (MSK)
+* https://aws.amazon.com/msk
+* Managed Streaming for Apache Kafka
+
+## Kinesis
 * https://aws.amazon.com/kinesis/
 * Easily collect, process, and analyze video and data streams in real time
 * [Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/) -> [getting started](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/getting-started.html) -> **TLDR** using C++ and Gstreamer, with [Pi example here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producersdk-cpp-rpi.html)
  
-### Lambda
+## Lambda
 * https://aws.amazon.com/lambda/
 * Functions in the cloud, can be written in python etc
 * [Python walkthrough](https://www.fullstackpython.com/blog/aws-lambda-python-3-6.html) & [python official docs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html)
 * [Deploy Sklearn to Lambda](https://github.com/ryansb/sklearn-build-lambda)
 
-### Redshift
+## Quicksight
+* https://aws.amazon.com/quicksight
+* Pay-per-view analytics dashboard
+
+## Redshift
 * https://aws.amazon.com/redshift/
 * Amazon Redshift is a fast, scalable data warehouse that can extend queries to S3
 
-### S3
+## S3
 * https://aws.amazon.com/s3/
 * Bucket file storage
 * [tinys3](https://www.smore.com/labs/tinys3/) -> small lib for uploading files to S3
 * Need to be confident you understand all the access policies and security
 
-### SageMaker
+## SageMaker
 * ML & Jupyter notebooks
 * [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
 * Fast.ai on sagemaker [setup instructions](https://course.fast.ai/start_sagemaker.html)
@@ -81,11 +108,11 @@ AWS products in alphabetical order:
 * [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) -> train machine learning models once and run them anywhere in the cloud and at the edge (Greengrass)
 * kernels for Jupyter that provide support for R, Python 2 and 3, Apache MXNet, TensorFlow, and PySpark. Currently does not support tensorflow 2
 
-### Simple Notification Service (SNS)
+## Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/
 * fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications
 
-### Simple Queue Service (SQS)
+## Simple Queue Service (SQS)
 * Stores data in a queue to be retrieved by applications (equivalent to RabbitMQ)
 * https://aws.amazon.com/getting-started/tutorials/send-messages-distributed-applications/?trk=gs_card
 
@@ -120,4 +147,4 @@ AWS products in alphabetical order:
 ## Books
 * [Getting started on AWS (pdf)](https://awsdocs.s3.amazonaws.com/gettingstarted/latest/awsgsg-intro.pdf)
 * [AWS best practices](https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf)
-* [The Good parts of AWS](https://danielvassallo.com/)
+* [The Good parts of AWS](https://danielvassallo.com/) - PAID
