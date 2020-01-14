@@ -25,6 +25,10 @@ AWS products in alphabetical order:
 * Web IDE, runs on EC2 instance
 * Amazon bought this and it is no longer open source
 
+## CloudFormation
+* https://aws.amazon.com/cloudformation/
+* AWS CloudFormation provides a common language for you to model and provision AWS and third party application resources in your cloud environment.
+
 ## Data Pipeline
 * https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
 * ETL orchestrator -> a web service that you can use to automate the movement and transformation of data
@@ -45,10 +49,15 @@ AWS products in alphabetical order:
 ## EC2
 * https://aws.amazon.com/ec2/
 * On demand compute
+* [EC2 Auto Scaling](https://aws.amazon.com/ec2/autoscaling/) -> automatically add or remove EC2 instances according to conditions you define
 
 ## Elastic Beanstalk
 * https://aws.amazon.com/elasticbeanstalk/
-* An easy-to-use service for deploying and scaling web applications and services 
+* An easy-to-use service for deploying and scaling web applications and services
+
+## Elastic Load Balancing (ELB)
+* https://aws.amazon.com/elasticloadbalancing/
+* automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions.
 
 ## Elastic Map Reduce (EMR)
 * https://aws.amazon.com/emr/
@@ -90,6 +99,11 @@ AWS products in alphabetical order:
 ## Redshift
 * https://aws.amazon.com/redshift/
 * Amazon Redshift is a fast, scalable data warehouse that can extend queries to S3
+
+## Route 53
+* https://aws.amazon.com/route53/
+* Amazon Route 53 effectively connects user requests to infrastructure running in AWS – such as Amazon EC2 instances, Elastic Load Balancing load balancers, or Amazon S3 buckets – and can also be used to route users to infrastructure outside of AWS
+* route end users to Internet applications by translating names like www.example.com into the numeric IP addresses like 192.0.2.1
 
 ## S3
 * https://aws.amazon.com/s3/
