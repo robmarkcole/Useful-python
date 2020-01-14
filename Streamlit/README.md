@@ -18,6 +18,10 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [Read](https://maelfabien.github.io/project/Streamlit/#)
 * Simple example -> https://github.com/Ashton-Sidhu/toot
 
+## AWS deploy
+* [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
+* Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
+
 ## Example repos
 * https://github.com/MarcSkovMadsen/awesome-streamlit
 * https://github.com/JAVI897/ML-Metrics
