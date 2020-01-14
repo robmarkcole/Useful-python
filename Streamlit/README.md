@@ -25,6 +25,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * CNN app -> https://towardsdatascience.com/full-stack-ai-building-a-ui-for-your-latest-ai-project-in-no-time-at-all-7e5c8fd4eafd
 * [A minimal example of how to use streamlit on Heroku](https://github.com/ericmjl/minimal-streamlit-example)
 * [Include bokeh plots and deploy on Heroku](https://pythonforundergradengineers.com/streamlit-app-with-bokeh.html)
+* [Regression app](https://github.com/andfanilo/regression-streamlit-viz)
 
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
