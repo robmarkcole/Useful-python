@@ -4,6 +4,12 @@
 * [Psql](http://postgresguide.com/utilities/psql.html) is the command line tool for working with Postgres
 * For UI admin https://www.pgadmin.org/ ([download](https://www.pgadmin.org/download/pgadmin-4-macos/))
 
+## psycopg2
+* https://pypi.org/project/psycopg2-binary/
+* Psycopg2 is the most popular PostgreSQL database adapter for the Python.
+* Install `psycopg2-binary` instead of `psycopg2` if you are getting install errors
+* Psycopg2 is mostly implemented in C as a libpq wrapper. For a pure python alternative checkout [pg8000](https://github.com/tlocke/pg8000)
+
 ## PostGIS
 * [PostGIS](http://postgis.net/) is a spatial database extender. It adds support for geographic objects allowing location queries to be run in SQL.
 
