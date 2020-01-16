@@ -10,6 +10,10 @@
 * Install `psycopg2-binary` instead of `psycopg2` if you are getting install errors
 * Psycopg2 is mostly implemented in C as a libpq wrapper. For a pure python alternative checkout [pg8000](https://github.com/tlocke/pg8000)
 
+## postgrest
+* http://postgrest.org
+* PostgREST is a standalone web server that turns your PostgreSQL database directly into a RESTful API
+
 ## PostGIS
 * [PostGIS](http://postgis.net/) is a spatial database extender. It adds support for geographic objects allowing location queries to be run in SQL.
 
