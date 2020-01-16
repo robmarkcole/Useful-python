@@ -29,6 +29,11 @@ AWS products in alphabetical order:
 * https://aws.amazon.com/cloudformation/
 * AWS CloudFormation provides a common language for you to model and provision AWS and third party application resources in your cloud environment.
 
+## Cloudwatch
+* https://aws.amazon.com/cloudwatch/
+* a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers
+* [Plugin for grafana](https://grafana.com/grafana/plugins/cloudwatch)
+
 ## Data Pipeline
 * https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
 * ETL orchestrator -> a web service that you can use to automate the movement and transformation of data
@@ -129,6 +134,14 @@ AWS products in alphabetical order:
 ## Simple Queue Service (SQS)
 * Stores data in a queue to be retrieved by applications (equivalent to RabbitMQ)
 * https://aws.amazon.com/getting-started/tutorials/send-messages-distributed-applications/?trk=gs_card
+
+## Timestream
+* https://aws.amazon.com/timestream/
+* Time series db
+* built-in analytic functions such as smoothing, approximation, and interpolation
+* 1/10th the cost of relational databases
+* SQL-like queries
+* [Grafana support in enterprise](https://grafana.com/grafana/plugins/grafana-timestream-datasource)
 
 # IOT 
 * Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
