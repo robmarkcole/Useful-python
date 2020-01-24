@@ -1,7 +1,6 @@
 # AWS
 * https://aws.amazon.com/products
-
-AWS products in alphabetical order:
+* Docs -> https://docs.aws.amazon.com/index.html
 
 ## API-Gateway
 * https://aws.amazon.com/api-gateway/
@@ -59,6 +58,10 @@ AWS products in alphabetical order:
 ## Elastic Beanstalk
 * https://aws.amazon.com/elasticbeanstalk/
 * An easy-to-use service for deploying and scaling web applications and services
+
+## Elastic Container Regsitry (ECR)
+* https://docs.aws.amazon.com/ecr/index.html
+* a fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images. 
 
 ## Elastic Load Balancing (ELB)
 * https://aws.amazon.com/elasticloadbalancing/
@@ -166,7 +169,17 @@ AWS products in alphabetical order:
 
 ## IoT Analytics
 * https://aws.amazon.com/iot-analytics/
-* Hosted analytics platform, enabling querying and visualisation of data, e.g. filtered by MQTT topic
+* TLDR: Ingest data via MQTT or via an API. Filter, transform, and enrich data before storing it in a time-series data store for analysis
+* Raw readings are stored in a data store, and sent to pipelines for ETL
+* Lambda functions for processing
+* Jupyter notebooks for Sophisticated Analytics and Machine Learning 
+* Dashboarding with Quicksight
+
+## IoT Things Graph
+* https://docs.aws.amazon.com/thingsgraph/latest/ug/iot-tg-whatis.html
+* [launch video](https://www.youtube.com/watch?v=0WQhklWTHuM)
+* An orchestration service that simplifies development of IoT applications. These applications can use different devices and web services from different manufacturers that otherwise can't speak with each other 
+* There are three key concepts in AWS IoT Things Graph: model, mapping, and flow. 
 
 ## Certification
 * [Data scientist](https://aws.amazon.com/training/learning-paths/machine-learning/data-scientist/)
