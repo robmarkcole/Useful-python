@@ -107,7 +107,10 @@
 ## Quicksight
 * https://aws.amazon.com/quicksight
 * Pay-per-view analytics dashboard
-* [Build a Visualization and Monitoring Dashboard for IoT Data with Amazon Kinesis Analytics and Amazon QuickSight](https://aws.amazon.com/blogs/big-data/build-a-visualization-and-monitoring-dashboard-for-iot-data-with-amazon-kinesis-analytics-and-amazon-quicksight/)
+* Data can be cached in [SPICE](https://docs.aws.amazon.com/quicksight/latest/user/welcome.html#spice) for faster queries, with 1GB available by default
+* Pre-process tables using built in and [custom functions](https://docs.aws.amazon.com/quicksight/latest/user/working-with-calculated-fields.html) and filters, or SQL.
+* Some features only available in [Enterprise edition](https://docs.aws.amazon.com/quicksight/latest/user/upgrading-subscription.html) e.g. scheduled reports
+* Can programatically create dashboards [via API](https://aws.amazon.com/blogs/big-data/evolve-your-analytics-with-amazon-quicksights-new-apis-and-theming-capabilities/?icmpid=product_whatsnew)
 
 ## Redshift
 * https://aws.amazon.com/redshift/
@@ -154,6 +157,8 @@
 # IOT 
 * Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
 * [Unofficial intro](https://dev.to/frosnerd/sensor-data-processing-on-aws-using-iot-core-kinesis-and-elasticache-26j1)
+* [Build a Visualization and Monitoring Dashboard for IoT Data with Amazon Kinesis Analytics and Amazon QuickSight](https://aws.amazon.com/blogs/big-data/build-a-visualization-and-monitoring-dashboard-for-iot-data-with-amazon-kinesis-analytics-and-amazon-quicksight/)
+* [Visualizing Sensor Data in Amazon QuickSight](https://aws.amazon.com/blogs/compute/visualizing-sensor-data-in-amazon-quicksight/)
 
 ## IOT Core 
 * [Developer guide](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html)
