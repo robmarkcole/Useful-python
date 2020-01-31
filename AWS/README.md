@@ -93,6 +93,10 @@
 * https://aws.amazon.com/kinesis/
 * Easily collect, process, and analyze video and data streams in real time
 * [Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/) -> [getting started](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/getting-started.html) -> **TLDR** using C++ and Gstreamer, with [Pi example here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producersdk-cpp-rpi.html)
+
+## Kinesis Data Firehose
+* https://aws.amazon.com/kinesis/data-firehose/
+* Prepare and load real-time data streams into data stores and analytics tools
  
 ## Lambda
 * https://aws.amazon.com/lambda/
@@ -103,6 +107,7 @@
 ## Quicksight
 * https://aws.amazon.com/quicksight
 * Pay-per-view analytics dashboard
+* [Build a Visualization and Monitoring Dashboard for IoT Data with Amazon Kinesis Analytics and Amazon QuickSight](https://aws.amazon.com/blogs/big-data/build-a-visualization-and-monitoring-dashboard-for-iot-data-with-amazon-kinesis-analytics-and-amazon-quicksight/)
 
 ## Redshift
 * https://aws.amazon.com/redshift/

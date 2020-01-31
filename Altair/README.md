@@ -15,3 +15,7 @@
 ## altair_data_server
 * https://github.com/altair-viz/altair_data_server
 * [It is also possible](https://altair-viz.github.io/user_guide/faq.html#local-data-server) to serve your data from a local threaded server to avoid writing datasets to disk. Note that this approach may not work on some cloud-based Jupyter notebook services.
+
+## Altair-viewer
+* https://github.com/altair-viz/altair_viewer/
+* Plots launched in seperate window
