@@ -92,6 +92,7 @@
 ## Kinesis
 * https://aws.amazon.com/kinesis/
 * Easily collect, process, and analyze video and data streams in real time
+* [Kinesis is modeled after Apache Kafka](https://medium.com/faun/apache-kafka-vs-apache-kinesis-57a3d585ef78)
 * [Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/) -> [getting started](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/getting-started.html) -> **TLDR** using C++ and Gstreamer, with [Pi example here](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producersdk-cpp-rpi.html)
 
 ## Kinesis Data Firehose
@@ -156,14 +157,33 @@
 
 # IOT 
 * Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
-* [Unofficial intro](https://dev.to/frosnerd/sensor-data-processing-on-aws-using-iot-core-kinesis-and-elasticache-26j1)
-* [Build a Visualization and Monitoring Dashboard for IoT Data with Amazon Kinesis Analytics and Amazon QuickSight](https://aws.amazon.com/blogs/big-data/build-a-visualization-and-monitoring-dashboard-for-iot-data-with-amazon-kinesis-analytics-and-amazon-quicksight/)
-* [Visualizing Sensor Data in Amazon QuickSight](https://aws.amazon.com/blogs/compute/visualizing-sensor-data-in-amazon-quicksight/)
+* [Good intro article](https://blogs.itemis.com/en/a-serverless-iot-backend-with-aws-iot)
 
 ## IOT Core 
-* [Developer guide](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html)
+* https://aws.amazon.com/iot-core/
+* The core functionality comprising a range of services, included an MQTT broker
 * [Official python API](https://github.com/aws/aws-iot-device-sdk-python) or just use paho MQTT, eg in [this article](https://www.hackster.io/mariocannistra/python-and-paho-for-mqtt-with-aws-iot-921e41)
 * To get your device certificates (including `root-CA.crt`) from the IOT console select `Onboard -> Configure a device -> Download connection kit`
+
+## IoT Analytics
+* https://aws.amazon.com/iot-analytics/
+* TLDR: a 'one stop shop' solution, but at the expense of giving up control e.g. over data store
+* Ingest data via MQTT or via an API. Filter, transform, and enrich data before storing it in a time-series data store for analysis
+* Raw readings are stored in a data store, and sent to pipelines for ETL
+* Lambda functions for processing
+* Jupyter notebooks for Sophisticated Analytics and Machine Learning 
+* Dashboarding with Quicksight
+
+## IOT Events
+* https://aws.amazon.com/iot-events/
+* TLDR: similar to IFTTT
+* define the logic for each event using simple ‘if-then-else’ statements, and select the alert or custom action to trigger when an event occurs.
+
+## IoT Things Graph
+* https://docs.aws.amazon.com/thingsgraph/latest/ug/iot-tg-whatis.html
+* Similar to node-red -> rules engine
+* An orchestration service that simplifies development of IoT applications. These applications can use different devices and web services from different manufacturers that otherwise can't speak with each other 
+* There are three key concepts in AWS IoT Things Graph: model, mapping, and flow. 
 
 ## Greengrass
 * [Greengrass](https://aws.amazon.com/greengrass/)
@@ -177,19 +197,11 @@
 * [Github](https://github.com/aws/amazon-freertos)
 * [List of supported hardware](https://devices.amazonaws.com/search?page=1&sv=freertos)
 
-## IoT Analytics
-* https://aws.amazon.com/iot-analytics/
-* TLDR: Ingest data via MQTT or via an API. Filter, transform, and enrich data before storing it in a time-series data store for analysis
-* Raw readings are stored in a data store, and sent to pipelines for ETL
-* Lambda functions for processing
-* Jupyter notebooks for Sophisticated Analytics and Machine Learning 
-* Dashboarding with Quicksight
-
-## IoT Things Graph
-* https://docs.aws.amazon.com/thingsgraph/latest/ug/iot-tg-whatis.html
-* [launch video](https://www.youtube.com/watch?v=0WQhklWTHuM)
-* An orchestration service that simplifies development of IoT applications. These applications can use different devices and web services from different manufacturers that otherwise can't speak with each other 
-* There are three key concepts in AWS IoT Things Graph: model, mapping, and flow. 
+## IOT references
+* [Using AWS Lambda with Timescale Cloud for IoT Data](https://blog.timescale.com/blog/using-aws-lambda-with-timescale-cloud-for-iot-data/)
+* [Build a Visualization and Monitoring Dashboard for IoT Data with Amazon Kinesis Analytics and Amazon QuickSight](https://aws.amazon.com/blogs/big-data/build-a-visualization-and-monitoring-dashboard-for-iot-data-with-amazon-kinesis-analytics-and-amazon-quicksight/)
+* [Visualizing Sensor Data in Amazon QuickSight](https://aws.amazon.com/blogs/compute/visualizing-sensor-data-in-amazon-quicksight/)
+* [Useful summary of IOT approaches](https://www.reddit.com/r/aws/comments/acf982/how_do_i_decide_which_cloud_platformservices_to/)
 
 ## Certification
 * [Data scientist](https://aws.amazon.com/training/learning-paths/machine-learning/data-scientist/)
