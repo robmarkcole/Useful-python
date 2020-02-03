@@ -161,7 +161,8 @@
 
 ## IOT Core 
 * https://aws.amazon.com/iot-core/
-* The core functionality comprising a range of services, included an MQTT broker
+* The core functionality comprising a range of services, included a [message broker](https://docs.aws.amazon.com/iot/latest/developerguide/iot-message-broker.html) supporting MQTT and REST
+* [Rules](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html) can be triggered on MQTT topics, e.g. to trigger a lambda function
 * [Official python API](https://github.com/aws/aws-iot-device-sdk-python) or just use paho MQTT, eg in [this article](https://www.hackster.io/mariocannistra/python-and-paho-for-mqtt-with-aws-iot-921e41)
 * To get your device certificates (including `root-CA.crt`) from the IOT console select `Onboard -> Configure a device -> Download connection kit`
 
