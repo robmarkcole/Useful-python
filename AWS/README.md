@@ -138,6 +138,7 @@
 * Label ground truth [with mechanical turk](https://docs.aws.amazon.com/sagemaker/latest/dg/sms.html)
 * [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) -> train machine learning models once and run them anywhere in the cloud and at the edge (Greengrass)
 * kernels for Jupyter that provide support for R, Python 2 and 3, Apache MXNet, TensorFlow, and PySpark. Currently does not support tensorflow 2
+* [Build end-to-end machine learning workflows with Amazon SageMaker and Apache Airflow](https://aws.amazon.com/blogs/machine-learning/build-end-to-end-machine-learning-workflows-with-amazon-sagemaker-and-apache-airflow/)
 
 ## Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/
@@ -146,6 +147,11 @@
 ## Simple Queue Service (SQS)
 * Stores data in a queue to be retrieved by applications (equivalent to RabbitMQ)
 * https://aws.amazon.com/getting-started/tutorials/send-messages-distributed-applications/?trk=gs_card
+
+## Step Functions
+* https://docs.aws.amazon.com/step-functions/
+* AWS Step Functions makes it easy to coordinate the components of distributed applications as a series of steps in a visual workflow. You can quickly build and run state machines to execute the steps of your application in a reliable and scalable fashion.
+* Since lambdas are stateless, use step functions to coordinate
 
 ## Timestream
 * https://aws.amazon.com/timestream/

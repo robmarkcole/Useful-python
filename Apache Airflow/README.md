@@ -18,6 +18,10 @@ An operator in airflow is a dedicated task. They generally implement a single as
 * HTTPOperator - sends an HTTP request
 * SqlOperator - executes a SQL command
 * Sensor - they are a specific type of operator that will continue to work until a certain criterion is met.
+* PapermillOperator - executing Jupyter Notebooks. Save the notebooks on S3
+
+## Jupyter
+* [Airflow supports integration with Papermill, which is a tool for parameterizing and executing Jupyter Notebooks](https://airflow.readthedocs.io/en/1.10.6/howto/operator/papermill.html)
 
 ## Managed 
 * https://www.astronomer.io/
