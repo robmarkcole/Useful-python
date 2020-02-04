@@ -21,7 +21,7 @@
 
 ## Cloud9
 * https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html
-* Web IDE, runs on EC2 instance
+* Web IDE -> used when creating lambda functions
 * Amazon bought this and it is no longer open source
 
 ## CloudFormation
@@ -101,9 +101,10 @@
  
 ## Lambda
 * https://aws.amazon.com/lambda/
-* Functions in the cloud, can be written in python etc
+* Functions in the cloud, can be written in python etc. 'Serverless' computing, handles scaling etc, but can be slower responses than running a dedicated server.
 * [Python walkthrough](https://www.fullstackpython.com/blog/aws-lambda-python-3-6.html) & [python official docs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html)
 * [Deploy Sklearn to Lambda](https://github.com/ryansb/sklearn-build-lambda)
+* As your function development progresses, you will want to store your function code in source control. [A deployment package](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html) is a ZIP archive that contains your function code and dependencies.
 
 ## Quicksight
 * https://aws.amazon.com/quicksight
@@ -160,6 +161,10 @@
 * 1/10th the cost of relational databases
 * SQL-like queries
 * [Grafana support in enterprise](https://grafana.com/grafana/plugins/grafana-timestream-datasource)
+
+## Virtual Private Cloud (VPC)
+* Use Amazon Virtual Private Cloud (Amazon VPC) to create a private network for resources such as databases, cache instances, or internal services.
+* In AWS, VPC is free to use
 
 # IOT 
 * Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
