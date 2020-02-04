@@ -16,7 +16,7 @@ jupyter:
 Some text
 
 ```python
-print(2*3)
+print(2*3 + 5)
 ```
 
 ```python
