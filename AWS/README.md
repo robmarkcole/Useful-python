@@ -35,8 +35,9 @@
 
 ## Data Pipeline
 * https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
-* ETL orchestrator -> a web service that you can use to automate the movement and transformation of data
+* Similar concepts to Airflow, but AWS only
 * Jobs are typically time scheduled
+* Works with DynamoDB, RDS, Redshift, S3
 * Example use case: Copy RDS or DynamoDB tables to S3, transform data structure, run analytics using SQL queries and load it to Redshift.
 
 ## (Data) Lake Formation
@@ -78,10 +79,8 @@
 
 ## Glue
 * https://aws.amazon.com/glue/
-* A fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
-* Runs on a serverless Apache Spark environment. 
+* Transform and move AWS Cloud data into your data lake/warehouse ('big data' focus?)
 * AWS Glue consists of a Data Catalog which is a central metadata repository, an ETL engine that can automatically generate Scala or Python code, and a flexible scheduler that handles dependency resolution, job monitoring, and retries.
-* Pricing on Glue is determined using the derived measure of "Data Processing Units."
 * [Airflow vs. AWS Glue](https://www.astronomer.io/guides/airflow-vs-aws-glue/) - TLDR Glue cannot be implemented on-premise or in any other cloud environment, requires data to be in AWS. If you need to access data from outside AWS (e.g. from an API) then Airflow can be used.
 * [When should I use AWS Glue vs. AWS Data Pipeline?](https://aws.amazon.com/glue/faqs/) -> data pipeline provides greater flexibility over the execution environment, access and control over the compute resources that run your code, as well as the code itself that does data processing
 
