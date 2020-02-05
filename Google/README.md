@@ -64,6 +64,11 @@ GCP products in alphabetical order:
 * https://cloud.google.com/storage/
 * S3 equivalent object storage
 
+## SQL
+* [Hosted postgres](https://cloud.google.com/sql/)
+* https://github.com/robmarkcole/HASS-Google-Cloud-SQL
+* [Pricing](https://cloud.google.com/sql/pricing#pg-pricing) - storage per GB/month and egress, ingress is free
+
 ## Pub/Sub
 * https://cloud.google.com/pubsub/
 * Streaming event data
