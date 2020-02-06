@@ -45,6 +45,10 @@ List of services in alphabetical order:
 * Easily run popular open source frameworks – including Apache Hadoop, Spark and Kafka – using Azure HDInsight, a cost-effective, enterprise-grade service for open source analytics
 * Quickly spin up clusters
 
+#### Azure IOT
+* https://azure.microsoft.com/en-us/services/iot-hub/
+* Used by https://www.axonize.com/
+
 #### Azure Kubernetes Service (AKS)
 * https://azure.microsoft.com/en-us/services/kubernetes-service/
 
