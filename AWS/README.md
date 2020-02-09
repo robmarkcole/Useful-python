@@ -1,6 +1,8 @@
 # AWS
 * https://aws.amazon.com/products
 * Docs -> https://docs.aws.amazon.com/index.html
+* [Free tier - many services (dunamoDB & lambda) always free](https://aws.amazon.com/free)
+* [How to build a SaaS for free with AWS free tier](https://hackernoon.com/how-to-build-a-saas-with-0-fed2341078c8)
 
 ## API-Gateway
 * https://aws.amazon.com/api-gateway/
