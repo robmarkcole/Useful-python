@@ -105,9 +105,14 @@
 * [Deploy Sklearn to Lambda](https://github.com/ryansb/sklearn-build-lambda)
 * As your function development progresses, you will want to store your function code in source control. [A deployment package](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html) is a ZIP archive that contains your function code and dependencies.
 
+## Marketplace
+* https://aws.amazon.com/marketplace/
+* AWS Marketplace is a digital catalog that offers thousands of pre-configured software services from independent software vendors. AWS Marketplace offers a broad range of solutions ranging from operating systems to data analytics.
+
 ## Quicksight
 * https://aws.amazon.com/quicksight
 * Pay-per-view analytics dashboard
+* Little bit alpha - some glitchy behaviour
 * Data can be cached in [SPICE](https://docs.aws.amazon.com/quicksight/latest/user/welcome.html#spice) for faster queries, with 1GB available by default
 * Pre-process tables using built in and [custom functions](https://docs.aws.amazon.com/quicksight/latest/user/working-with-calculated-fields.html) and filters, or SQL.
 * Some features only available in [Enterprise edition](https://docs.aws.amazon.com/quicksight/latest/user/upgrading-subscription.html) e.g. scheduled reports
@@ -139,6 +144,7 @@
 * [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) -> train machine learning models once and run them anywhere in the cloud and at the edge (Greengrass)
 * kernels for Jupyter that provide support for R, Python 2 and 3, Apache MXNet, TensorFlow, and PySpark. Currently does not support tensorflow 2
 * [Build end-to-end machine learning workflows with Amazon SageMaker and Apache Airflow](https://aws.amazon.com/blogs/machine-learning/build-end-to-end-machine-learning-workflows-with-amazon-sagemaker-and-apache-airflow/)
+* [A Deep Dive Into AWS SageMaker](https://towardsdatascience.com/amazon-machine-learning-a-deep-dive-into-aws-sagemaker-a97897553e05)
 
 ## Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/
