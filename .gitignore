@@ -22,3 +22,5 @@ config.rst
 
 package-lock.json
 Flask/hello_world/.vscode/settings.json
+
+*/.vscode/*
