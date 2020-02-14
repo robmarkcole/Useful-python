@@ -12,6 +12,7 @@ GCP products in alphabetical order:
 * Notebooks is integrated with BigQuery, Cloud Dataproc, and Cloud Dataflow, making it easy to go from data ingestion to preprocessing and exploration, and eventually model training and deployment.
 * There are no minimum fees or up-front commitments. There’s no charge for using Notebooks. You pay only for the cloud resources you use with the Notebooks instance
 * Git jupyterlab integration is installed
+* Alternatively consider Colab pro -> https://colab.research.google.com/signup
 
 ## AI VM
 * Used by the Notebooks

@@ -11,6 +11,7 @@
 ## Vega-lite
 * https://vega.github.io/vega-lite/
 * Vega-Lite enables concise descriptions of visualizations as a set of encodings that map data fields to the properties of graphical marks. Vega-Lite uses a portable JSON format that compiles to full specifications in the larger Vega language.
+* [Supported in Kibana](https://www.elastic.co/blog/getting-started-with-vega-visualizations-in-kibana)
 
 ## altair_data_server
 * https://github.com/altair-viz/altair_data_server
@@ -19,3 +20,7 @@
 ## Altair-viewer
 * https://github.com/altair-viz/altair_viewer/
 * Plots launched in seperate window
+
+## Grammar of graphics
+* TLDR: a structured way of describing a plot
+* [Read](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
