@@ -25,6 +25,7 @@ GCP products in alphabetical order:
 * BigQuery runs blazing-fast SQL queries on gigabytes to petabytes of data and makes it easy to join public or commercial datasets with your data
 * [Getting Started With SQL and BigQuery on Kaggle](https://www.kaggle.com/dansbecker/getting-started-with-sql-and-bigquery)
 * [Public datasets](https://www.reddit.com/r/bigquery/wiki/datasets)
+* Export via pandas with [pandas.read_gbq](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_gbq.html) that has a dependency on [pandas-gbq](https://pandas-gbq.readthedocs.io/en/latest/)
 
 ## BigTable
 * https://cloud.google.com/bigtable/
