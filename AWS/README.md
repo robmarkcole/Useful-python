@@ -20,6 +20,7 @@
 ## Batch
 * https://aws.amazon.com/batch/
 * Efficiently run hundreds of thousands of batch computing jobs on AWS
+* Jobs run in docker containers on an EC2 imnstance, or on ECR
 
 ## Cloud9
 * https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html
@@ -151,9 +152,11 @@
 ## Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/
 * fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications
+* Use when you need to 'fan out' messages to lots of endpoints simultaneously. No guarantee of message delivery
 
 ## Simple Queue Service (SQS)
 * Stores data in a queue to be retrieved by applications (equivalent to RabbitMQ)
+* Data is persisted but must be polled
 * https://aws.amazon.com/getting-started/tutorials/send-messages-distributed-applications/?trk=gs_card
 
 ## Step Functions
