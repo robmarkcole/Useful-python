@@ -1,0 +1,6 @@
+--- 
+  countries: 
+    - name: India
+      capital: Delhi
+    - name: Singapore
+      capital: Singapore
