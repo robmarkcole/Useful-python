@@ -30,6 +30,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [A minimal example of how to use streamlit on Heroku](https://github.com/ericmjl/minimal-streamlit-example)
 * [Include bokeh plots and deploy on Heroku](https://pythonforundergradengineers.com/streamlit-app-with-bokeh.html)
 * [Regression app](https://github.com/andfanilo/regression-streamlit-viz)
+* [Corona virus model](https://github.com/archydeberker/corona-calculator)
 
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
