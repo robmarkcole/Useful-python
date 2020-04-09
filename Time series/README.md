@@ -3,7 +3,7 @@ A number of techniques are popular for analysis of time series data, both classi
 * [Intro to time series modelling](https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-9-time-series-analysis-in-python-a270cb05e0b3)
 * [More comprehensive tutorial](https://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/)
 * [Awesome time-series anomaly detection](https://github.com/rob-med/awesome-TS-anomaly-detection)
-
+* Consider LightGBM (in Microsoft folder) -> https://github.com/microsoft/forecasting
 
 ## Prophet
 * [Library from Facebook](https://facebook.github.io/prophet/docs/quick_start.html)
