@@ -2,6 +2,7 @@
 * https://facebook.github.io/prophet/
 * Used by [AWS Forecast](https://aws.amazon.com/forecast/) and available [in Mode](https://mode.com/notebooks/)
 * Installation: On Mac use `conda install -c conda-forge fbprophet`
+* With pip Pystan installs ok, but fbprophet usually fails. Use conda
 
 ## Model
 * Time series forecasting with seasonality - model effects of holidays etc. [Read the paper](https://peerj.com/preprints/3190/)
@@ -10,9 +11,7 @@
 <img src="https://github.com/robmarkcole/Useful-python/blob/master/Prophet/model.jpg" width="600">
 </p>
 
-* VS ARIMA -> the Prophet authors claim 'ARIMA forecasts are prone to large trend
-errors when there is a change in trend near the cutoff period and they fail to capture any
-seasonality'. Also it requires expert level experience to tune ARIMA models. In contrast Pophet is 'designed to have intuitive parameters  that  can  be  adjusted  without  knowing  the  details  of  the  underlying  model'
+* VS ARIMA -> the Prophet authors claim 'ARIMA forecasts are prone to large trend errors when there is a change in trend near the cutoff period and they fail to capture any seasonality'. Also it requires expert level experience to tune ARIMA models. In contrast Pophet is 'designed to have intuitive parameters  that  can  be  adjusted  without  knowing  the  details  of  the  underlying  model'
 
 ## Examples
 * [forecast hourly energy use with kaggle dataset](https://www.kaggle.com/robikscube/tutorial-time-series-forecasting-with-prophet)
