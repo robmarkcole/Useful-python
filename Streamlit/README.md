@@ -22,6 +22,10 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
 * Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
 
+## streamlit-launchpad
+* [streamlit-launchpad](https://github.com/ideonate/streamlit-launchpad)
+* Browse a folder containing multiple streamlit apps and launch them immediately 
+
 ## Example repos
 * https://github.com/MarcSkovMadsen/awesome-streamlit
 * https://github.com/JAVI897/ML-Metrics
@@ -31,6 +35,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [Include bokeh plots and deploy on Heroku](https://pythonforundergradengineers.com/streamlit-app-with-bokeh.html)
 * [Regression app](https://github.com/andfanilo/regression-streamlit-viz)
 * [Corona virus model](https://github.com/archydeberker/corona-calculator)
+* [pymedphys](https://discuss.streamlit.io/t/an-example-deployed-streamlit-app-pymedphys/2681?u=randyzwitch)
 
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
