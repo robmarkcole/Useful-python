@@ -1,12 +1,13 @@
 ## Sighthound
 
 ## ALPR
-* https://www.sighthound.com/products/alpr/
+* https://www.sighthound.com/products/alpr/ & [manual](https://www.sighthound.com/docs/alpr/)
 * Uses mongoDB backend?
 * Node.js, Port 9000
 * Login with registered email
 * Docs on google drive
 * Must allocate 4GB RAM
+* Backend in C
 
 Exported result:
 
