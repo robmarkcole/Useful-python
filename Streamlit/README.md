@@ -18,6 +18,9 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [Read](https://maelfabien.github.io/project/Streamlit/#)
 * Simple example -> https://github.com/Ashton-Sidhu/toot
 
+## RPi installation
+* Had fo `sudo apt-get install libatlas-base-dev` but then was able to run streamlit on rpi
+
 ## AWS deploy
 * [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
 * Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
@@ -36,6 +39,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [Regression app](https://github.com/andfanilo/regression-streamlit-viz)
 * [Corona virus model](https://github.com/archydeberker/corona-calculator)
 * [pymedphys](https://discuss.streamlit.io/t/an-example-deployed-streamlit-app-pymedphys/2681?u=randyzwitch)
+* [Schelling Segregation Model](http://adilmoujahid.com/posts/2020/05/streamlit-python-schelling/)
 
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)

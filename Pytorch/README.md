@@ -16,7 +16,11 @@
 
 ## Serve using flask
 * https://github.com/avinassh/pytorch-flask-api
+* https://medium.com/datadriveninvestor/deploy-your-pytorch-model-to-production-f69460192217
 * https://imadelhanafi.com/posts/train_deploy_ml_model/ (https://github.com/imadelh/ML-web-app)
+
+## Train and deploy via sagemaker
+* https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
 ## References
 * https://github.com/ritchieng/the-incredible-pytorch

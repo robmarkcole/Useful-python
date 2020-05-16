@@ -15,6 +15,7 @@
 
 ## Serving
 * Serve via rest API -> https://www.tensorflow.org/tfx/tutorials/serving/rest_simple
+* Keras minimal serving example -> https://github.com/harupy/keras-flask-classifier
 * Overview -> https://towardsdatascience.com/productising-tensorflow-keras-models-via-tensorflow-serving-69e191cb1f37
 * https://github.com/MoerkerkeLander/camera-feed-object-detector-tf-serve
 
