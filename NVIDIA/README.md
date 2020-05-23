@@ -1,6 +1,7 @@
 ## NVIDIA
 * All hardware -> https://developer.nvidia.com/buy-jetson
 * [Jetson projects](https://developer.nvidia.com/embedded/community/jetson-projects)
+* [good blog - Jetson hacks](https://www.jetsonhacks.com/)
 
 ## Jetson nano
 * Jetson nano $100 -> https://www.nvidia.com/en-gb/autonomous-machines/embedded-systems/jetson-nano/
@@ -11,6 +12,10 @@
 * [Process up to 8 streams concurrently, at 1080p and 30 frames-per-second with a resnet10 model](https://github.com/Azure-Samples/NVIDIA-Deepstream-Azure-IoT-Edge-on-a-NVIDIA-Jetson-Nano)
 * [Run classification at 75 FPS with ResNet-18](https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-camera-2.md)
 * [Live object detection with Mobilenet-V2 in 10 lines of python](https://github.com/dusty-nv/jetson-inference/blob/master/docs/detectnet-example-2.md)
+
+## NVIDIA Jetson Xavier NX Developer Kit
+* https://developer.nvidia.com/embedded/jetson-xavier-nx-devkit
+* https://www.jetsonhacks.com/2020/05/16/nvidia-jetson-xavier-nx-developer-kit/
 
 ## Jetson AGX Xavier
 * Higher end dev kit $699
