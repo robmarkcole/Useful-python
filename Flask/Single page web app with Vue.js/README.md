@@ -1,7 +1,6 @@
 ## Single page web app
 * https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/
 
-
 ## Vue.js
 * https://vuejs.org/
 * [Getting started](https://medium.com/js-dojo/getting-started-with-vuejs-for-web-and-native-285dc64f0f0d)
