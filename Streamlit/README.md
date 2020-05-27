@@ -30,6 +30,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * Browse a folder containing multiple streamlit apps and launch them immediately 
 
 ## Example repos
+* https://github.com/robmarkcole/streamlit_forecasting_app
 * https://github.com/MarcSkovMadsen/awesome-streamlit
 * https://github.com/JAVI897/ML-Metrics
 * https://github.com/arvkevi/nba-roster-turnover
