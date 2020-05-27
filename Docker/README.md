@@ -7,6 +7,10 @@
 * You use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration
 * [dockerize-a-flask-celery-and-redis-application-with-docker-compose](https://nickjanetakis.com/blog/dockerize-a-flask-celery-and-redis-application-with-docker-compose)
 
+## Dockerhub
+* [How to push](https://stackoverflow.com/questions/28349392/how-to-push-a-docker-image-to-a-private-repository#28349540)
+* [My profile](https://hub.docker.com/u/robmarkcole)
+
 ## Portainer 
 * [Portainer](https://www.portainer.io/) for container management from a GUI, run with `docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer`
 
