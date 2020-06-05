@@ -6,6 +6,7 @@
 * Compose is a tool for defining and running multi-container Docker applications -> https://docs.docker.com/compose/
 * You use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration
 * [dockerize-a-flask-celery-and-redis-application-with-docker-compose](https://nickjanetakis.com/blog/dockerize-a-flask-celery-and-redis-application-with-docker-compose)
+* [Simple tutorial on docker compose with flask](http://containertutorials.com/docker-compose/flask-compose.html)
 
 ## Dockerhub
 * [How to push](https://stackoverflow.com/questions/28349392/how-to-push-a-docker-image-to-a-private-repository#28349540)
