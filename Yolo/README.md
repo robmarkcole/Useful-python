@@ -1,4 +1,7 @@
-## Yolo
+## Yolo V4
+* https://github.com/sicara/tf2-yolov4
+
+## Yolo (V3)
 * https://pjreddie.com/darknet/yolo/
 * Python wrapper -> https://github.com/madhawav/YOLO3-4-Py (first `xcode-select --install`) -> Getting error `Library not loaded: libdarknet.so`
 
