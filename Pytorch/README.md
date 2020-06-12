@@ -15,6 +15,7 @@
 
 ## Object detection
 * https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Object-Detection
+* detr -> https://github.com/facebookresearch/detr
 
 ## Medical imaging
 * https://github.com/perone/medicaltorch/

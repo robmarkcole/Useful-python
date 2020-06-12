@@ -150,6 +150,10 @@
 * [Build end-to-end machine learning workflows with Amazon SageMaker and Apache Airflow](https://aws.amazon.com/blogs/machine-learning/build-end-to-end-machine-learning-workflows-with-amazon-sagemaker-and-apache-airflow/)
 * [A Deep Dive Into AWS SageMaker](https://towardsdatascience.com/amazon-machine-learning-a-deep-dive-into-aws-sagemaker-a97897553e05)
 
+## Secrets manager
+* Store credentials on AWS
+* Usage with jupyter -> http://veekaybee.github.io/2020/02/25/secrets/
+
 ## Simple Notification Service (SNS)
 * https://aws.amazon.com/sns/
 * fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications
