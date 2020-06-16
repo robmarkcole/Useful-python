@@ -184,6 +184,7 @@
 # IOT 
 * Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/
 * [Good intro article](https://blogs.itemis.com/en/a-serverless-iot-backend-with-aws-iot)
+* Use case: [Building a lawn monitor and weed detection solution with AWS machine learning and IoT services](https://aws.amazon.com/blogs/machine-learning/building-a-lawn-monitor-and-weed-detection-solution-with-aws-machine-learning-and-iot-services/)
 
 ## IOT Core 
 * https://aws.amazon.com/iot-core/
