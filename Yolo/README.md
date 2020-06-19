@@ -1,3 +1,6 @@
+## Yolo v5
+* https://towardsdatascience.com/how-to-train-a-custom-object-detection-model-with-yolo-v5-917e9ce13208
+
 ## Yolo V4
 * https://github.com/sicara/tf2-yolov4
 
