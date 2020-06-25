@@ -6,6 +6,9 @@ A number of techniques are popular for analysis of time series data, both classi
 * [Awesome time-series anomaly detection](https://github.com/rob-med/awesome-TS-anomaly-detection)
 * Consider LightGBM (in Microsoft folder) -> https://github.com/microsoft/forecasting
 
+## Arima
+* https://towardsdatascience.com/advanced-time-series-analysis-with-arma-and-arima-a7d9b589ed6d
+
 ## Prophet
 * [Library from Facebook](https://facebook.github.io/prophet/docs/quick_start.html)
 * I remember many headaches getting this setup. Use a conda env. Have fun.
@@ -23,3 +26,4 @@ A number of techniques are popular for analysis of time series data, both classi
 ## Deep learning
 * https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
 * https://github.com/sagarmk/Forecasting-on-Air-pollution-with-RNN-LSTM
+* https://www.notion.so/Corrupt-sparse-irregular-and-ugly-Deep-learning-on-time-series-887b823df439417bb8428a3474d939b3

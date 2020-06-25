@@ -3,10 +3,12 @@
 * Python, but also has a C++ interface
 * PyTorch provides two high-level features: (1) Tensor computing (like NumPy) with strong acceleration via graphics processing units (GPU). (2) Deep neural networks built on a tape-based autodiff system
 * There are two popular pytorch wrappers, fastai and pytorch-lightning
+* Good idea to use colab as torch already installed and has GPU
 
 ## pytorch-lightning
 * https://github.com/PyTorchLightning/pytorch-lightning
 * TLDR: Lightning is a way to organize your PyTorch code to decouple the science code from the engineering. It's more of a PyTorch style-guide than a framework. Cuts down boilerplate code.
+* [Getting started with mnist](https://www.learnopencv.com/getting-started-with-pytorch-lightning/)
 * [How To Tag Any Image Using Deep Learning](https://towardsdatascience.com/how-to-tag-any-image-using-deep-learning-84a0dc2e03c2)
 * [object-detection-with-pytorch-lightning - kaggle](https://www.kaggle.com/artgor/object-detection-with-pytorch-lightning)
 
