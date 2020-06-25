@@ -9,7 +9,3 @@
 <p align="center">
 <img src="https://github.com/robmarkcole/Useful-python/blob/master/Circuitpython/vscode-circuitpython.jpg" width="900">
 </p>
-
-## Pyportal
-* https://learn.adafruit.com/adafruit-pyportal
-* https://learn.adafruit.com/pyportal-mqtt-sensor-node-control-pad-home-assistant
