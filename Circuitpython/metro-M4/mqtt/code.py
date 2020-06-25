@@ -6,7 +6,7 @@ from adafruit_esp32spi import adafruit_esp32spi
 from adafruit_esp32spi import adafruit_esp32spi_wifimanager
 import adafruit_esp32spi.adafruit_esp32spi_socket as socket
 
-from adafruit_minimqtt import MQTT
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
 
 ### WiFi ###
 
@@ -55,31 +55,37 @@ def publish(client, userdata, topic, pid):
 
 # Connect to WiFi
 wifi.connect()
+print("Connected to", str(esp.ssid, 'utf-8'), "\tRSSI:", esp.rssi)
+print("My IP address is", esp.pretty_ip(esp.ip_address))
 
-# Set up a MiniMQTT Client
-client =  MQTT(socket,
-               broker = '192.168.1.164', #secrets['mqtt-broker'],
-               port = 1883,
-               network_manager = wifi)
+try:
+    
+    # Initialize MQTT interface with the esp interface
+    MQTT.set_socket(socket, esp)
+    # Set up a MiniMQTT Client
+    client =  MQTT.MQTT(broker = '192.168.1.164', port=1883)
 
-# Connect callback handlers to client
-client.on_connect = connect
-client.on_disconnect = disconnect
-client.on_subscribe = subscribe
-client.on_unsubscribe = unsubscribe
-client.on_publish = publish
+    # Connect callback handlers to client
+    client.on_connect = connect
+    client.on_disconnect = disconnect
+    client.on_subscribe = subscribe
+    client.on_unsubscribe = unsubscribe
+    client.on_publish = publish
 
-print('Attempting to connect to %s'%client.broker)
-client.connect()
+    print('Attempting to connect to %s'%client.broker)
+    client.connect()
 
-print('Subscribing to %s'%mqtt_topic)
-client.subscribe(mqtt_topic)
+    print('Subscribing to %s'%mqtt_topic)
+    client.subscribe(mqtt_topic)
 
-print('Publishing to %s'%mqtt_topic)
-client.publish(mqtt_topic, 'Hello Robin!')
+    print('Publishing to %s'%mqtt_topic)
+    client.publish(mqtt_topic, 'Hello Robin!')
 
-print('Unsubscribing from %s'%mqtt_topic)
-client.unsubscribe(mqtt_topic)
+    print('Unsubscribing from %s'%mqtt_topic)
+    client.unsubscribe(mqtt_topic)
 
-print('Disconnecting from %s'%client.broker)
-client.disconnect()
+    print('Disconnecting from %s'%client.broker)
+    client.disconnect()
+
+except Exception as exc:
+    print(exc)
