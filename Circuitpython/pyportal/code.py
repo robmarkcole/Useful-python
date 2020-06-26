@@ -1,5 +1,6 @@
 import board
 import busio
+import time
 from digitalio import DigitalInOut
 import neopixel
 from adafruit_esp32spi import adafruit_esp32spi
@@ -52,7 +53,7 @@ def message(client, topic, message):
 wifi.connect()
 print("Connected to", str(esp.ssid, 'utf-8'), "\tRSSI:", esp.rssi)
 print("My IP address is", esp.pretty_ip(esp.ip_address))
-    
+
 # Initialize MQTT interface with the esp interface
 MQTT.set_socket(socket, esp)
 # Set up a MiniMQTT Client
@@ -80,9 +81,10 @@ client.publish(mqtt_topic, 'Hello from pyportal!')
 while True:
     try:
         client.loop()
-    except (ValueError, RuntimeError) as e:
-        print("Failed to get data, retrying\n", e)
+    except Exception as e:
+        print("ERROR \n", e)
         wifi.reset()
+        wifi.connect()
         client.reconnect()
         continue
     time.sleep(1)

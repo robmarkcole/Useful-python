@@ -54,6 +54,7 @@ List of services in alphabetical order:
 #### Azure ML
 * https://azure.microsoft.com/en-gb/services/machine-learning-service/
 * [Data science VMs](https://azure.microsoft.com/en-gb/services/virtual-machines/data-science-virtual-machines/) -> Linux!
+* https://towardsdatascience.com/default-risk-prediction-for-personal-bank-loans-6965b7dc70b
 
 #### Azure Pipelines (CI)
 * https://azure.microsoft.com/en-gb/services/devops/pipelines/
