@@ -73,6 +73,16 @@ client.subscribe(mqtt_topic)
 print('Publishing to %s'%mqtt_topic)
 client.publish(mqtt_topic, 'Hello from pyportal!')
 
-while True:
+#while True:
     # Poll the message queue
-    client.loop()
+    #client.loop()
+
+while True:
+    try:
+        client.loop()
+    except (ValueError, RuntimeError) as e:
+        print("Failed to get data, retrying\n", e)
+        wifi.reset()
+        client.reconnect()
+        continue
+    time.sleep(1)
