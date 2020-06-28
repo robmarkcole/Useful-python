@@ -21,6 +21,9 @@ When adding long running computations to an app, you can use st.progess() to dis
 ## RPi installation
 * Had fo `sudo apt-get install libatlas-base-dev` but then was able to run streamlit on rpi
 
+## Heroku deploy
+* https://github.com/davidefiocco/streamlit-fastapi-model-serving
+
 ## AWS deploy
 * [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
 * Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
