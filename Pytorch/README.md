@@ -5,6 +5,10 @@
 * There are two popular pytorch wrappers, fastai and pytorch-lightning
 * Good idea to use colab as torch already installed and has GPU
 
+## Hub
+* https://pytorch.org/hub/
+* Various models that can be easily imported and deployed
+
 ## pytorch-lightning
 * https://github.com/PyTorchLightning/pytorch-lightning
 * TLDR: Lightning is a way to organize your PyTorch code to decouple the science code from the engineering. It's more of a PyTorch style-guide than a framework. Cuts down boilerplate code.

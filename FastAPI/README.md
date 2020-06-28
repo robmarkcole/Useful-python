@@ -8,9 +8,8 @@
 * http://127.0.0.1:8000/items/5?q=somequery
 
 ## deploy-machine-learning-models-with-keras-fastapi-redis-and-docker
-## Fast API
 * https://fastapi.tiangolo.com/
 * https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece
 
-## `main.py`
-* `pip install uvicorn, fastapi` then `uvicorn main:app --reload`
+## Deploy to Ec2
+* https://towardsdatascience.com/deployment-could-be-easy-a-data-scientists-guide-to-deploy-an-image-detection-fastapi-api-using-329cdd80400
