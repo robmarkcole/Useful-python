@@ -6,6 +6,7 @@
 ## Jetson nano
 * Jetson nano $100 -> https://www.nvidia.com/en-gb/autonomous-machines/embedded-systems/jetson-nano/
 * 128 CUDA cores GPU, ARM CPU, 4GB RAM, no wifi
+* Supports pytorch (currently 1.1) and tensorflow
 * Getting started course -> https://courses.nvidia.com/courses/course-v1:DLI+C-RX-02+V1/about
 * [Hello world with Jetpack](https://github.com/dusty-nv/jetson-inference#hello-ai-world)
 * [Jetson nano is supported by Balena](https://www.balena.io/docs/reference/hardware/devices/) -> prospect of deploying apps to fleet of Jetsons. Example app [OCR](https://github.com/ricktorzynski/balena-ocr-tesseract-docker)

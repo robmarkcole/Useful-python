@@ -47,6 +47,11 @@
 * https://aws.amazon.com/lake-formation
 * a service that makes it easy to set up a secure data lake in days
 
+## Deep learning instances 
+* https://aws.amazon.com/machine-learning/amis/
+* Integrated with sagemaker
+* [use spotty to simplify training](https://towardsdatascience.com/how-to-train-deep-learning-models-on-aws-spot-instances-using-spotty-8d9e0543d365)
+
 ## DynamoDB
 * https://aws.amazon.com/dynamodb/
 * NoSQL

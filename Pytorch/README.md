@@ -8,6 +8,7 @@
 ## Hub
 * https://pytorch.org/hub/
 * Various models that can be easily imported and deployed
+* Example deplyed model ([DeepLabV3 image segmentation](https://pytorch.org/hub/pytorch_vision_deeplabv3_resnet101/)) -> https://github.com/davidefiocco/streamlit-fastapi-model-serving
 
 ## pytorch-lightning
 * https://github.com/PyTorchLightning/pytorch-lightning
