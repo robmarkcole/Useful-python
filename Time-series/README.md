@@ -1,5 +1,5 @@
 ## Time series
-A number of techniques are popular for analysis of time series data, both classical and deep learning techniques.
+TLDR: understand whether there is autocorrelation or not, mean is changing with time, and variance with time, then employ appropriate feature engineering
 * Various python packages for ts -> https://tslearn.readthedocs.io/en/stable/integration_other_software.html
 * [Intro to time series modelling](https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-9-time-series-analysis-in-python-a270cb05e0b3)
 * [More comprehensive tutorial](https://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/)
@@ -27,3 +27,7 @@ A number of techniques are popular for analysis of time series data, both classi
 * https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
 * https://github.com/sagarmk/Forecasting-on-Air-pollution-with-RNN-LSTM
 * https://www.notion.so/Corrupt-sparse-irregular-and-ugly-Deep-learning-on-time-series-887b823df439417bb8428a3474d939b3
+
+## Concepts
+* Autocorrelation: also known as serial correlation, is the correlation of a signal with a delayed copy of itself as a function of delay.
+* correlogram: is an image of correlation statistics, an ACF plot
