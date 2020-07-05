@@ -5,6 +5,7 @@ TLDR: understand whether there is autocorrelation or not, mean is changing with 
 * [More comprehensive tutorial](https://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/)
 * [Awesome time-series anomaly detection](https://github.com/rob-med/awesome-TS-anomaly-detection)
 * Consider LightGBM (in Microsoft folder) -> https://github.com/microsoft/forecasting
+* [Finding correlations in time series data](https://erdem.pl/2020/06/finding-correlations-in-time-series-data)
 
 ## Arima
 * https://towardsdatascience.com/advanced-time-series-analysis-with-arma-and-arima-a7d9b589ed6d
