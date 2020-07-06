@@ -25,6 +25,8 @@ GCP products in alphabetical order:
 * [Getting Started With SQL and BigQuery on Kaggle](https://www.kaggle.com/dansbecker/getting-started-with-sql-and-bigquery)
 * [Public datasets](https://www.reddit.com/r/bigquery/wiki/datasets)
 * Export via pandas with [pandas.read_gbq](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_gbq.html) that has a dependency on [pandas-gbq](https://pandas-gbq.readthedocs.io/en/latest/)
+* [How to do time series forecasting in BigQuery Using ARIMA](https://towardsdatascience.com/how-to-do-time-series-forecasting-in-bigquery-af9eb6be8159) and [notebook](https://github.com/GoogleCloudPlatform/bigquery-oreilly-book/blob/master/blogs/bqml_arima/bqml_arima.ipynb)
+* Book [BigQuery: The Definitive Guide](https://github.com/GoogleCloudPlatform/bigquery-oreilly-book)
 
 ## BigTable
 * A petabyte-scale, fully managed NoSQL database service for large analytical and operational workloads.
