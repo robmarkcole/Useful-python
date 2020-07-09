@@ -25,6 +25,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * https://github.com/davidefiocco/streamlit-fastapi-model-serving
 
 ## AWS deploy
+* https://discuss.streamlit.io/t/deployment-on-aws-with-authentication/4073 with example [sagemaker-explaining-credit-decisions](https://github.com/awslabs/sagemaker-explaining-credit-decisions)
 * [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
 * Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
 
