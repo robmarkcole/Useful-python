@@ -21,6 +21,11 @@ TLDR: understand whether there is autocorrelation or not, mean is changing with 
 * [Forecasting USD-MNT Exchange Rate](https://medium.com/mongolian-data-stories/forecasting-usd-mnt-exchange-rate-part-1-prophet-4e95ecadf9b2)
 * [Forecasting demand](https://www.kaggle.com/myster/eda-prophet-winning-solution-3-0)
 
+## Darts
+* https://github.com/unit8co/darts
+* High level wrapper to many ts methods
+* Many dependencies, including prophet, but did eventually install in docker via pip
+
 ## Bayesian techniques
 * [STAN docs give intro to several techniques](http://mc-stan.org/docs/bayes-stats-stan/time-series-chapter.html)
 * ARIMA - Stats test for stationarity, find p & q parameters. [Simple intro](https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3)
