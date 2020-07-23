@@ -3,6 +3,7 @@
 * FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. Handles conversion to/from json, type checks
 * [awesome-fastapi](https://github.com/mjhea0/awesome-fastapi)
 * Run the example and access from another machine with `uvicorn main:app --reload --host 0.0.0.0 --port 8000`
+* [Developing and Testing an Asynchronous API with FastAPI and Pytest](https://testdriven.io/blog/fastapi-crud/)
 
 ## ML and data sci
 * https://towardsdatascience.com/deploying-iris-classifications-with-fastapi-and-docker-7c9b83fdec3a -> https://github.com/happilyeverafter95/iris-classifier-fastapi

@@ -243,3 +243,6 @@
 * [Getting started on AWS (pdf)](https://awsdocs.s3.amazonaws.com/gettingstarted/latest/awsgsg-intro.pdf)
 * [AWS best practices](https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf)
 * [The Good parts of AWS](https://danielvassallo.com/) - PAID
+
+## Fun projects
+* [Security lock with circuitpython and aws](https://idk.dev/building-an-electronic-security-lock-using-serverless/)
