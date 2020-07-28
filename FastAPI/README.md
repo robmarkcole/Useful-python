@@ -18,5 +18,9 @@
 ## On raspberry pi
 * Installs fine
 
+## fastapi-html
+* Article -> https://eugeneyan.com/writing/how-to-set-up-html-app-with-fastapi-jinja-forms-templates/
+* Code -> https://github.com/eugeneyan/fastapi-html
+
 ## Issues
 * On uploading image `post request causes 400 Bad Request`, [resolved](https://stackoverflow.com/questions/62429244/uploading-images-in-fastapi-post-request-causes-400-bad-request) with `pip install python-multipart`
