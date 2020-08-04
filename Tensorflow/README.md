@@ -2,6 +2,7 @@
 * https://www.tensorflow.org
 * TensorFlow2 is changing the way to code machine learning models to be more pythonic. Debugging and creating models were complicated with sessions and graphs but not anymore. Eager Execution allows evaluating tensors on the fly without having to run a session to execute code from end to end. Now, TensorFlow 2.0 introduces eager execution by default.
 * https://www.tensorflow.org/guide/keras
+* Model files saved with `.pb` (protobuf) extension. Checkpoint files have `.ckpt` extension. HDF5 files (old keras) have extension `.h5`
 
 ## Hub
 * https://tfhub.dev/

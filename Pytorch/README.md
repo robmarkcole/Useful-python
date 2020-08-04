@@ -4,6 +4,7 @@
 * PyTorch provides two high-level features: (1) Tensor computing (like NumPy) with strong acceleration via graphics processing units (GPU). (2) Deep neural networks built on a tape-based autodiff system
 * There are two popular pytorch wrappers, fastai and pytorch-lightning
 * Good idea to use colab as torch already installed and has GPU
+* Pytorch saved models have the file extension `.pt`
 
 ## Hub
 * https://pytorch.org/hub/
@@ -23,6 +24,7 @@
 ## Object detection
 * https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Object-Detection
 * detr -> https://github.com/facebookresearch/detr
+* Yolo v5
 
 ## Medical imaging
 * https://github.com/perone/medicaltorch/

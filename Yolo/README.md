@@ -1,5 +1,7 @@
 ## Yolo v5
-* https://towardsdatascience.com/how-to-train-a-custom-object-detection-model-with-yolo-v5-917e9ce13208
+* https://github.com/ultralytics/yolov5
+* https://blog.roboflow.ai/retail-store-item-detection-using-yolov5/
+* YOLOv5 vs v4, comparable mean Average Precision ([mAP](https://forums.fast.ai/t/mean-average-precision-map/14345)) and faster inferences. Pytorch!
 
 ## Yolo V4
 * https://github.com/sicara/tf2-yolov4
