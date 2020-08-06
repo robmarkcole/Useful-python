@@ -72,6 +72,10 @@
 * https://docs.aws.amazon.com/ecr/index.html
 * a fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images. 
 
+## Elastic Container Service (ECS)
+* container orchestration platform, similar to kubernetes
+* Note Amazon also offers a Kubernetes based container orchestration service known as Amazon Elastic Kubernetes Service (Amazon EKS).
+
 ## Elastic Load Balancing (ELB)
 * https://aws.amazon.com/elasticloadbalancing/
 * automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions.
@@ -79,6 +83,11 @@
 ## Elastic Map Reduce (EMR)
 * https://aws.amazon.com/emr/
 * A web service which provides a managed Hadoop framework is useful for computing large data sets.
+
+## Fargate
+* Serverless compute for containers, do not have to manage resources, suitable if your application is stateless
+* [Deploy Machine Learning Pipeline on AWS Fargate using Flask](https://towardsdatascience.com/deploy-machine-learning-pipeline-on-aws-fargate-eb6e1c50507)
+* [Deploy PyCaret and Streamlit app using AWS Fargate — serverless infrastructure](https://towardsdatascience.com/deploy-pycaret-and-streamlit-app-using-aws-fargate-serverless-infrastructure-8b7d7c0584c2)
 
 ## Firehose
 * Used for ingesting streaming data

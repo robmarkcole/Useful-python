@@ -10,6 +10,7 @@ TLDR: understand whether there is autocorrelation or not, mean is changing with 
 
 ## Arima
 * https://towardsdatascience.com/advanced-time-series-analysis-with-arma-and-arima-a7d9b589ed6d
+* https://towardsdatascience.com/time-series-forecasting-with-sarima-in-python-cda5b793977b
 
 ## Prophet
 * [Library from Facebook](https://facebook.github.io/prophet/docs/quick_start.html)

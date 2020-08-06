@@ -4,6 +4,10 @@
 * https://www.tensorflow.org/guide/keras
 * Model files saved with `.pb` (protobuf) extension. Checkpoint files have `.ckpt` extension. HDF5 files (old keras) have extension `.h5`
 
+## Cloud
+* [Train your TensorFlow model on Google Cloud using TensorFlow Cloud](https://blog.tensorflow.org/2020/08/train-your-tensorflow-model-on-google.html)
+*  TensorFlow Cloud is a python package that simplifies the process of training models on the cloud using multiple GPUs/TPUs into a single function, with zero code changes to your model. Uses cloud storage.
+
 ## Hub
 * https://tfhub.dev/
 * Various models and their checkpoints to allow fine tuning
