@@ -38,6 +38,9 @@
 ## Train and deploy via sagemaker
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
+## Deploy on azure
+* [Efficient Serverless deployment of PyTorch models on Azure](https://medium.com/pytorch/efficient-serverless-deployment-of-pytorch-models-on-azure-dc9c2b6bfee7)
+
 ## References
 * https://github.com/ritchieng/the-incredible-pytorch
 * https://github.com/bharathgs/Awesome-pytorch-list
