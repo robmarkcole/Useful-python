@@ -79,7 +79,9 @@ GCP products in alphabetical order:
 * [Asyncio Google Cloud Client Library for Python](https://github.com/talkiq/gcloud-aio)
 
 ## Certification
+Pass an exam to gain certification. It's recommended that you have 3+ years hands-on experience with Google Cloud products and solutions first. Recommends courses offered via Coursera, Pluralsight, and Qwiklabs
 * https://cloud.google.com/certification/data-engineer
+* https://cloud.google.com/certification/machine-learning-engineer
 
 ## Training - qwiklabs
 * https://www.qwiklabs.com -> online labs including all required resources in a sandbox ([watch](https://google.qwiklabs.com/focuses/605?locale=en&parent=catalog&qlcampaign=yt18-gsp088-74577))

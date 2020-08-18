@@ -46,6 +46,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [Corona virus model](https://github.com/archydeberker/corona-calculator)
 * [pymedphys](https://discuss.streamlit.io/t/an-example-deployed-streamlit-app-pymedphys/2681?u=randyzwitch)
 * [Schelling Segregation Model](http://adilmoujahid.com/posts/2020/05/streamlit-python-schelling/)
+* [NLP app Insight using fastAPI](https://github.com/abhimishra91/insight)
 
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
