@@ -1,1 +1,0 @@
-* I am running notebooks from the course on Floydhub -> I put copies here once completing a lesson. 
