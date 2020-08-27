@@ -5,3 +5,7 @@
 
 ## Pandas vs. Numpy
 * https://blog.thedataincubator.com/2018/02/numpy-and-pandas/
+
+## PandaSQL
+* https://towardsdatascience.com/when-pandas-is-not-enough-use-pandasql-d762b9b84b38
+* Query a pandas dataframe with SQL

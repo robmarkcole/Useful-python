@@ -21,6 +21,10 @@
 ## Swift on embedded
 * https://github.com/swift-embedded/swift-embedded
 
+## Swift board
+* https://github.com/madmachineio/SwiftIO
+* https://www.madmachine.io/
+
 ## Swift & Jupyter
 * https://github.com/google/swift-jupyter -> Jupyter kernel, Ubuntu oriented, use Docker on Mac 
 * [https://github.com/KelvinJin/iSwift](another kernel)

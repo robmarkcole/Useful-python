@@ -1,6 +1,6 @@
 ## Docker
 * [Getting started with python and docker](https://djangostars.com/blog/what-is-docker-and-how-to-use-it-with-python/)
-* [Ports in docker](https://stackoverflow.com/questions/50278632/what-does-localhost-means-inside-a-docker-container)
+* Excellent docker intro -> https://towardsdatascience.com/how-docker-can-help-you-become-a-more-effective-data-scientist-7fc048ef91d5
 
 ## Docker-compose
 * Compose is a tool for defining and running multi-container Docker applications -> https://docs.docker.com/compose/
@@ -36,3 +36,6 @@
 
 ## Useful docker commands
 * debug the docker image locally on my dev machine, first build `docker build -t $yourimage .` then run `docker run -it --entrypoint=/bin/bash $yourimage`
+
+## Docker networking
+* [Ports in docker](https://stackoverflow.com/questions/50278632/what-does-localhost-means-inside-a-docker-container)
