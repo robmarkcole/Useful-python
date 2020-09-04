@@ -1,5 +1,8 @@
 ## Render
 * https://render.com
-* Host sttaic sites for free
-* Deploy fast.ai models via flask app -> https://course.fast.ai/deployment_render.html
-* Example -> https://fastai-v3.onrender.com/ ([code](https://github.com/render-examples/fastai-v3))
+* The easiest cloud for developers and startups
+* Similar to Heroku but reportedly cheaper, probably not as widely documented on the internet
+* Render connects with GitHub to deploy your apps and websites automatically on every push to your project.
+* Host staic sites for free
+* Deploy ML models via flask or docker
+* Managed postgres
