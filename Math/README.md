@@ -1,0 +1,3 @@
+## Neural network math
+* [Deep Dive into Math Behind Deep Networks](https://towardsdatascience.com/https-medium-com-piotr-skalski92-deep-dive-into-deep-networks-math-17660bc376ba)
+* [Let’s Code Convolutional Neural Network in plain NumPy](https://towardsdatascience.com/lets-code-convolutional-neural-network-in-plain-numpy-ce48e732f5d5) and [code](https://github.com/SkalskiP/ILearnDeepLearning.py#lets-code-a-neural-network-in-plain-numpy)
