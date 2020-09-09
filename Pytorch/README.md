@@ -17,6 +17,7 @@
 * [Getting started with mnist](https://www.learnopencv.com/getting-started-with-pytorch-lightning/)
 * [How To Tag Any Image Using Deep Learning](https://towardsdatascience.com/how-to-tag-any-image-using-deep-learning-84a0dc2e03c2)
 * [object-detection-with-pytorch-lightning - kaggle](https://www.kaggle.com/artgor/object-detection-with-pytorch-lightning)
+* [Surface Crack Classification](https://github.com/mtszkw/surface-crack)
 
 ## Face
 * https://github.com/timesler/facenet-pytorch
