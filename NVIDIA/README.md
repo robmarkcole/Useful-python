@@ -50,7 +50,16 @@
 * [Monitor Jetson CPU usage etc](https://github.com/rbonghi/jetson_stats)
 * [Detect significant changes in a camera feed to save bandwidth](https://www.hackster.io/smellslikeml/saving-bandwidth-with-anomaly-detection-16eb67)
 * Azure custom vision model deployment via [Docker on Jetson nano](https://medium.com/microsoftazure/running-a-gpu-enabled-azure-custom-vision-docker-container-on-a-nvidia-jetson-nano-db8747b00b4f) (flask app)
-* [Weed detection as commercial company](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1). ONNX & TensorRT for deployment. 
+* [Weed detection as commercial company](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1). ONNX & TensorRT for deployment.
+
+## OpenDataCam
+* Run object tracking & counting app on Jetson
+* https://github.com/opendatacam/opendatacam
+* yolov4 run at ~1-2 FPS on Jetson Nano
+* To track vehicles need 8-9 FPS which cannot be performed on Nano and a Javier is required
+* Write up with logging to influxDB and edge deployment with 4G sim -> https://www.hologram.io/blog/using-nvidia-jetson-and-opendatacam
+* Can deploy with balena
+* Uses openCV to access IP cam streams
 
 ## In production
 * [AWS IoT Greengrass on Jetson Nano](https://info.nvidia.com/deploy-ai-with-aws-ml-iot-services-on-nvidia-jetson-nano.html?ondemandrgt=yes) and [this repo](https://github.com/mahendrabairagi/AWS_ML_At_Edge_With_NVIDIA_Jetson_Nano)
