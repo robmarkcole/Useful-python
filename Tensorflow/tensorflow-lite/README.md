@@ -3,6 +3,8 @@
 * Basically targetted at Android & iOS, but also [runs on Mac, Windows, linux](https://www.tensorflow.org/lite/guide/inference#supported_platforms)
 * [Comparison of TF, TF Lite, and TF Lite quant models](https://medium.com/towards-artificial-intelligence/testing-tensorflow-lite-image-classification-model-e9c0100d8de3)
 * [Example project showing how we can compare TensorFlow and TensorFlow Lite models](https://github.com/frogermcs/TFLite-Tester)
+* https://github.com/sayakpaul/Adventures-in-TensorFlow-Lite
+* [E2E-Object-Detection-in-TFLite](https://github.com/sayakpaul/E2E-Object-Detection-in-TFLite)
 
 ## Models
 * List of pretrained tflite models (notably no face recognition) -> https://www.tensorflow.org/lite/models

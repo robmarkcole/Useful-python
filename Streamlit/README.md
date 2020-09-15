@@ -21,14 +21,6 @@ When adding long running computations to an app, you can use st.progess() to dis
 ## RPi installation
 * Had fo `sudo apt-get install libatlas-base-dev` but then was able to run streamlit on rpi
 
-## Heroku deploy
-* https://github.com/davidefiocco/streamlit-fastapi-model-serving
-
-## AWS deploy
-* https://discuss.streamlit.io/t/deployment-on-aws-with-authentication/4073 with example [sagemaker-explaining-credit-decisions](https://github.com/awslabs/sagemaker-explaining-credit-decisions)
-* [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
-* Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
-
 ## streamlit-launchpad
 * [streamlit-launchpad](https://github.com/ideonate/streamlit-launchpad)
 * Browse a folder containing multiple streamlit apps and launch them immediately 
@@ -40,13 +32,21 @@ When adding long running computations to an app, you can use st.progess() to dis
 * https://github.com/JAVI897/ML-Metrics
 * https://github.com/arvkevi/nba-roster-turnover
 * CNN app -> https://towardsdatascience.com/full-stack-ai-building-a-ui-for-your-latest-ai-project-in-no-time-at-all-7e5c8fd4eafd
-* [A minimal example of how to use streamlit on Heroku](https://github.com/ericmjl/minimal-streamlit-example)
 * [Include bokeh plots and deploy on Heroku](https://pythonforundergradengineers.com/streamlit-app-with-bokeh.html)
 * [Regression app](https://github.com/andfanilo/regression-streamlit-viz)
 * [Corona virus model](https://github.com/archydeberker/corona-calculator)
 * [pymedphys](https://discuss.streamlit.io/t/an-example-deployed-streamlit-app-pymedphys/2681?u=randyzwitch)
 * [Schelling Segregation Model](http://adilmoujahid.com/posts/2020/05/streamlit-python-schelling/)
 * [NLP app Insight using fastAPI](https://github.com/abhimishra91/insight)
+
+## Deployment
+* https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099
+* [Using Streamlit + Nginx + Docker to build and put in production dashboards in AWS Lightsail](https://medium.com/@dasirra/using-streamlit-nginx-docker-to-build-and-put-in-production-dashboards-in-aws-lightsail-781dab8f2836)
+* [A minimal example of how to use streamlit on Heroku](https://github.com/ericmjl/minimal-streamlit-example)
+* https://discuss.streamlit.io/t/deployment-on-aws-with-authentication/4073 with example [sagemaker-explaining-credit-decisions](https://github.com/awslabs/sagemaker-explaining-credit-decisions)
+* [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
+* Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
+* https://github.com/davidefiocco/streamlit-fastapi-model-serving
 
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
