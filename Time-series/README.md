@@ -22,6 +22,9 @@ TLDR: understand whether there is autocorrelation or not, mean is changing with 
 * [Forecasting USD-MNT Exchange Rate](https://medium.com/mongolian-data-stories/forecasting-usd-mnt-exchange-rate-part-1-prophet-4e95ecadf9b2)
 * [Forecasting demand](https://www.kaggle.com/myster/eda-prophet-winning-solution-3-0)
 
+## Neural prophet
+* https://github.com/ourownstory/neural_prophet
+
 ## Lunminaire
 * https://github.com/zillow/luminaire & https://zillow.github.io/luminaire/index.html
 * Luminaire is a python package that provides ML driven solutions for monitoring time series data.
