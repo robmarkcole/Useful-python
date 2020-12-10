@@ -1,4 +1,3 @@
 ## JAX
-* https://github.com/google/jax
-* Dependency of https://github.com/deepmind/dm-haiku
-* People are now talking about PyTorch, TensorFlow, and JAX
+* https://github.com/google/jax and https://jax.readthedocs.io/en
+* JAX is NumPy on the CPU, GPU, and TPU, with great automatic differentiation for high-performance machine learning research.
