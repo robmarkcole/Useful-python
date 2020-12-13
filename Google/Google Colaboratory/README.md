@@ -10,3 +10,17 @@
 ## Expose over internet
 * https://imadelhanafi.com/posts/google_colal_server/
 * https://github.com/robmarkcole/pytorch-serve-from-colab
+
+* https://stackoverflow.com/questions/59508225/is-it-possible-to-connect-vscode-on-a-local-machine-with-google-colab-the-fre
+
+```
+# Install jupyterlab and ngrok
+!pip install jupyterlab pyngrok -q
+
+# Run jupyterlab in background
+!nohup jupyter lab --ip=0.0.0.0 &
+
+# Make jupyterlab accessible via ngrok
+from pyngrok import ngrok
+print(ngrok.connect(8888))
+```
