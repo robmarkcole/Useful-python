@@ -1,3 +1,9 @@
+# Github
+* https://docs.github.com/en
+* https://github.blog
+* https://github.com/features
+* https://github.com/marketplace
+
 ## Github pages
 * [Host web pages and interactive plots on Github](https://automating-gis-processes.github.io/2016/Lesson5-share-on-github.html)
 
@@ -10,3 +16,14 @@
 ## gitpitch.com
 * Host presentations online gitpitch.com
 * Create a `PITCHME.md` file in the `master` branch. You can then navigate to the url
+
+## Gitbook
+* https://www.gitbook.com
+* Alternative to Conflunce?
+* Free for personal use
+
+## ghapi
+* https://github.com/fastai/ghapi/tree/master/
+* Python API and CLI for interacting with Github API
+* Read [blog announcement](https://github.blog/2020-12-18-learn-about-ghapi-a-new-third-party-python-client-for-the-github-api/)
+* Not to be confused with https://cli.github.com/manual/
