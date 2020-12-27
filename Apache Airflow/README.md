@@ -1,10 +1,7 @@
 ## Airflow
-* https://airflow.incubator.apache.org/
-* https://github.com/apache/incubator-airflow
-* On Windows? Use Docker https://hub.docker.com/r/puckel/docker-airflow/
+* https://airflow.apache.org
 * Airflow is a platform to programmatically author, schedule and monitor workflows.
 * Airflow pipelines are configuration as code (Python), allowing for dynamic pipeline generation.
-* [Using Airflow from Jupyter](https://medium.com/@rajnishkumargarg/using-jupyter-notebook-in-apache-airflow-9ccf32e37c7a)
 
 ### DAGs
 An Airflow DAG is a collection of all the tasks you want to run, organized in a way that show their relationships and dependencies. It is defined in python files that are placed in `DAG_FOLDER` which is defined in the Airflow configuration file (`airflow.cfg`) that is in airflow_home directory.
@@ -24,7 +21,8 @@ An operator in airflow is a dedicated task. They generally implement a single as
 * [Airflow supports integration with Papermill, which is a tool for parameterizing and executing Jupyter Notebooks](https://airflow.readthedocs.io/en/1.10.6/howto/operator/papermill.html)
 
 ## Managed 
-* https://www.astronomer.io/
+* https://www.astronomer.io/ -> cloud and enterprise options, push custom docker images
+* https://aws.amazon.com/managed-workflows-for-apache-airflow/ -> min cost about $300 a month, put DAGS on S3
 
 ## References
 * [Building Data Pipeline with Airflow](https://www.linkedin.com/pulse/building-data-pipeline-airflow-mehmet-vergili/)

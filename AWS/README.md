@@ -255,3 +255,11 @@
 
 ## Fun projects
 * [Security lock with circuitpython and aws](https://idk.dev/building-an-electronic-security-lock-using-serverless/)
+
+## General notes on cloud providers
+* AWS & Azure are biggest, GCP quite a bit smaller, consider how difficult it will be to hire experienced people
+* By far simpler to stay on a single cloud, there is always a cost to going multi-cloud, must be driven by business need
+* Start with the simplest possible architecture
+* Going overboard with security is a premature optimisation
+* Even simple auth methods can be made pretty secure, e.g. throttling password attempts on SSH
+* Terraform is popular, might be mixed with Cloudformation
