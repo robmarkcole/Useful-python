@@ -122,6 +122,7 @@
 * [Python walkthrough](https://www.fullstackpython.com/blog/aws-lambda-python-3-6.html) & [python official docs](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html)
 * [Deploy Sklearn to Lambda](https://github.com/ryansb/sklearn-build-lambda)
 * As your function development progresses, you will want to store your function code in source control. [A deployment package](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html) is a ZIP archive that contains your function code and dependencies.
+* In December 2020, AWS has released container support for AWS Lambda. Read [Python FastAPI and AWS Lambda Container](https://guillaume-braibant.medium.com/python-fastapi-and-aws-lambda-container-3e524c586f01)
 
 ## Marketplace
 * https://aws.amazon.com/marketplace/

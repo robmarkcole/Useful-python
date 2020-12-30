@@ -11,11 +11,12 @@
 * https://towardsdatascience.com/build-and-host-fast-data-science-applications-using-fastapi-823be8a1d6a0
 * https://towardsdatascience.com/a-step-by-step-tutorial-to-build-and-deploy-an-image-classification-api-95fa449f0f6a
 
-## Deploy to Ec2
-* https://towardsdatascience.com/deployment-could-be-easy-a-data-scientists-guide-to-deploy-an-image-detection-fastapi-api-using-329cdd80400
+## Deploy to AWS
+* https://towardsdatascience.com/deployment-could-be-easy-a-data-scientists-guide-to-deploy-an-image-detection-fastapi-api-using-329cdd80400 (EC2)
+* [Python FastAPI and AWS Lambda Container](https://guillaume-braibant.medium.com/python-fastapi-and-aws-lambda-container-3e524c586f01)
 
 ## On raspberry pi
-* Installs fine
+* Installs fine, used on https://github.com/robmarkcole/tensorflow-lite-rest-server
 
 ## fastapi-html
 * Article -> https://eugeneyan.com/writing/how-to-set-up-html-app-with-fastapi-jinja-forms-templates/
