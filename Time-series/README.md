@@ -29,6 +29,10 @@ TLDR: understand whether there is autocorrelation or not, mean is changing with 
 * https://github.com/zillow/luminaire & https://zillow.github.io/luminaire/index.html
 * Luminaire is a python package that provides ML driven solutions for monitoring time series data.
 
+## Traces
+* https://github.com/datascopeanalytics/traces
+* A Python library for unevenly-spaced time series analysis
+
 ## Darts
 * https://github.com/unit8co/darts
 * High level wrapper to many ts methods
