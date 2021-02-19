@@ -47,6 +47,7 @@ When adding long running computations to an app, you can use st.progess() to dis
 * [Via EC2](https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/)
 * Via docker and [beanstalk (not working?)](https://discuss.streamlit.io/t/deploying-streamlit-app-to-aws-beanstalk-using-docker/1493/4)
 * https://github.com/davidefiocco/streamlit-fastapi-model-serving
+* https://hersanyagci.medium.com/model-deployment-with-streamlit-on-aws-ec2-f52ab42d7813
 
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
