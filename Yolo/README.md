@@ -2,6 +2,7 @@
 * https://github.com/ultralytics/yolov5
 * https://blog.roboflow.ai/retail-store-item-detection-using-yolov5/
 * YOLOv5 vs v4, comparable mean Average Precision ([mAP](https://forums.fast.ai/t/mean-average-precision-map/14345)) and faster inferences. Pytorch!
+* pip installable: https://github.com/fcakyon/yolov5-pip
 
 ## Yolo V4
 * https://github.com/sicara/tf2-yolov4

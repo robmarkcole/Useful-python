@@ -52,3 +52,6 @@ When adding long running computations to an app, you can use st.progess() to dis
 ## Streamlit vs alternatives
 * [Good article comparing streamlit to voila & panel](https://ericmjl.github.io/essays-on-data-science/miscellaneous/dashboarding-landscape/)
 * `Streamlit uses a procedural paradigm, rather than a callback paradigm, for app construction. We just have to think of the app as a linear sequence of actions that happen from top to bottom. State is never really an issue, because every code change and interaction re-runs the source file from top to bottom, from scratch. When building quick apps, this paradigm really simplifies things compared to a callback-based paradigm.`
+
+## Streamlit components
+* https://robvanzoest.medium.com/build-a-practical-timeline-in-streamlit-5b3603ade11c
