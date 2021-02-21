@@ -34,3 +34,7 @@ AND city.name = 'Gotham';
 ## Postico
 * Simple mac app for exploring db
 * https://eggerapps.at/postico/
+
+## Blobs & binary file storage
+* https://wiki.postgresql.org/wiki/BinaryFilesInDB
+* https://www.reddit.com/r/PostgreSQL/comments/cdq14v/storing_images_in_db_or_locally/
