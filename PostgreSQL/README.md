@@ -38,3 +38,6 @@ AND city.name = 'Gotham';
 ## Blobs & binary file storage
 * https://wiki.postgresql.org/wiki/BinaryFilesInDB
 * https://www.reddit.com/r/PostgreSQL/comments/cdq14v/storing_images_in_db_or_locally/
+
+## Python
+* Run python withing postgres -> http://blog.crunchydata.com/recommendation_engine_in_postgres_with_pandas_and_python

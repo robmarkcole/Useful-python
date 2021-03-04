@@ -41,6 +41,7 @@ TLDR: understand whether there is autocorrelation or not, mean is changing with 
 ## Bayesian techniques
 * [STAN docs give intro to several techniques](http://mc-stan.org/docs/bayes-stats-stan/time-series-chapter.html)
 * ARIMA - Stats test for stationarity, find p & q parameters. [Simple intro](https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3)
+* [orbit](https://github.com/uber/orbit) -> Bayesian forecasting with object-oriented design and probabilistic models under the hood, by Uber
 
 ## Deep learning
 * https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
