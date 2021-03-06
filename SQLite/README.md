@@ -8,3 +8,4 @@
 * Add a JSON API using [datasette](https://github.com/simonw/datasette)
 * Attach images with [sqlalchemy-imageattach](https://github.com/dahlia/sqlalchemy-imageattach)
 * [Storing Digital/BLOB Files in Remote SQL Databases In Python](https://towardsdatascience.com/storing-digital-files-in-remote-sql-databases-in-python-73494f09d39b)
+* [litestream](https://litestream.io/) allows continual backup of sqlite db to S3
