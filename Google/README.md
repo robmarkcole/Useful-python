@@ -20,6 +20,11 @@ GCP products in alphabetical order:
 * The AI Platform Deep Learning VM Images are a set of Debian 9-based Compute Engine virtual machine images optimized for data science and machine learning tasks. 
 * The VM images deliver a seamless notebook experience with integrated support for JupyterLab. [Connecting to Jupyter Lab](https://cloud.google.com/deep-learning-vm/docs/jupyter)
 
+## App Engine
+* Deploy API and webapps with ease
+* Quickstart flask app: https://medium.com/@dmahugh_70618/deploying-a-flask-app-to-google-app-engine-faa883b5ffab
+* Official docs: https://cloud.google.com/appengine/docs/standard/python3/building-app
+
 ## BigQuery
 * BigQuery runs blazing-fast SQL queries on gigabytes to petabytes of data and makes it easy to join public or commercial datasets with your data
 * [Getting Started With SQL and BigQuery on Kaggle](https://www.kaggle.com/dansbecker/getting-started-with-sql-and-bigquery)
