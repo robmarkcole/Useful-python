@@ -16,4 +16,4 @@ Then run `docker logs jupyter` to extract the url & token and place these in you
 
 Alternative environments are listed on https://github.com/jupyter/docker-stacks. I use `scipy-notebook` when only python is required, or `datascience-notebook` if R or Julia are required. 
 
-Note in the example above we are passing in environment variables from the host. To set an env var on host OSX: `echo 'export ENV_VAR=12345' >> ~/.zshenv`
+Note in the example above we are passing in environment variables from the host. To set an env var on host OSX: `echo 'export ENV_VAR=12345' >> ~/.zprofile`
