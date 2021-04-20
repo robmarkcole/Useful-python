@@ -135,6 +135,10 @@
 * https://aws.amazon.com/marketplace/
 * AWS Marketplace is a digital catalog that offers thousands of pre-configured software services from independent software vendors. AWS Marketplace offers a broad range of solutions ranging from operating systems to data analytics.
 
+## MLsolutions
+* https://aws.amazon.com/ml-solutions-lab/
+* The Amazon Machine Learning (ML) Solutions Lab pairs your team with ML experts to help you identify and build ML solutions to address your organization’s highest return-on-investment ML opportunities.
+
 ## Quicksight
 * https://aws.amazon.com/quicksight
 * Pay-per-view analytics dashboard
