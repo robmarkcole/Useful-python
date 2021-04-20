@@ -37,7 +37,7 @@
 * [Plugin for grafana](https://grafana.com/grafana/plugins/cloudwatch)
 
 ## Data Pipeline
-* https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
+* https://aws.amazon.com/datapipeline/
 * Similar concepts to Airflow, but AWS only
 * Jobs are typically time scheduled
 * Works with DynamoDB, RDS, Redshift, S3
@@ -51,6 +51,10 @@
 * https://aws.amazon.com/machine-learning/amis/
 * Integrated with sagemaker
 * [use spotty to simplify training](https://towardsdatascience.com/how-to-train-deep-learning-models-on-aws-spot-instances-using-spotty-8d9e0543d365)
+
+## DeepLens
+* https://aws.amazon.com/deeplens/ is £235.00 for 2019 device
+* [Protecting people from hazardous areas through virtual boundaries with Computer Vision](https://aws.amazon.com/blogs/machine-learning/protecting-people-through-virtual-boundaries-computer-vision/) uses mxnet to train resnet-50 on sagemaker and deploy to the `Deeplens` camera for edge inferencing. Model inferencing is via a lambda that processes every frame on device. [Training notebook](https://github.com/aws-samples/aws-deeplens-recipes/blob/master/static/code/pedestrian-safety/Train_Object_Detection_Pedestriansafety_DeepLens-2clss.ipynb)
 
 ## DynamoDB
 * https://aws.amazon.com/dynamodb/
@@ -124,6 +128,8 @@
 * As your function development progresses, you will want to store your function code in source control. [A deployment package](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html) is a ZIP archive that contains your function code and dependencies.
 * In December 2020, AWS has released container support for AWS Lambda. Read [Python FastAPI and AWS Lambda Container](https://guillaume-braibant.medium.com/python-fastapi-and-aws-lambda-container-3e524c586f01)
 * https://medium.com/swlh/deploying-a-multi-model-inference-service-using-aws-lambda-synchronous-express-workflows-and-3ef9c71d37f7
+* [lambda-opencv](https://github.com/awslabs/lambda-opencv) illustrates how to create an AWS Lambda function using Python 3.7 and OpenCV (latest) to grayscale an image in S3 and save it back to S3
+* [aws-lambda-powertools-python](https://awslabs.github.io/aws-lambda-powertools-python/latest/) -> A suite of utilities for AWS Lambda functions to ease adopting best practices such as tracing, structured logging, custom metrics, and more.
 
 ## Marketplace
 * https://aws.amazon.com/marketplace/
@@ -141,6 +147,9 @@
 ## Redshift
 * https://aws.amazon.com/redshift/
 * Amazon Redshift is a fast, scalable data warehouse that can extend queries to S3
+
+## Rekognition
+* [Use computer vision to detect crop disease through image analysis with Amazon Rekognition Custom Labels](https://aws.amazon.com/blogs/machine-learning/plant-leaf-disease-detection-with-amazon-rekognition-custom-labels/)
 
 ## Route 53
 * https://aws.amazon.com/route53/
@@ -165,6 +174,8 @@
 * kernels for Jupyter that provide support for R, Python 2 and 3, Apache MXNet, TensorFlow, and PySpark. Currently does not support tensorflow 2
 * [Build end-to-end machine learning workflows with Amazon SageMaker and Apache Airflow](https://aws.amazon.com/blogs/machine-learning/build-end-to-end-machine-learning-workflows-with-amazon-sagemaker-and-apache-airflow/)
 * [A Deep Dive Into AWS SageMaker](https://towardsdatascience.com/amazon-machine-learning-a-deep-dive-into-aws-sagemaker-a97897553e05)
+* [Object detection with Detectron2 on Amazon SageMaker](https://aws.amazon.com/blogs/machine-learning/object-detection-with-detectron2-on-amazon-sagemaker/)
+* [Amazon SageMaker Data Wrangler](https://aws.amazon.com/sagemaker/data-wrangler/) is a UI for querying and visualising data on AWS, and preparing for use in ML training, e.g. convert column types or impute missing data with mean or median values. This is a hosted version of https://github.com/awslabs/aws-data-wrangler (Pandas on AWS) 
 
 ## Secrets manager
 * Store credentials on AWS
@@ -196,6 +207,11 @@
 ## Virtual Private Cloud (VPC)
 * Use Amazon Virtual Private Cloud (Amazon VPC) to create a private network for resources such as databases, cache instances, or internal services.
 * In AWS, VPC is free to use
+
+## awswrangler
+* https://github.com/awslabs/aws-data-wrangler (Pandas on AWS)
+* [Build an ETL pipeline using AWS S3, Glue and Athena with the AWS Data Wrangler library](https://www.linkedin.com/pulse/build-etl-pipeline-using-aws-s3-glue-athena-data-wrangler-tom-reid/)
+* get data from and into core AWS services using Pandas data frames
 
 # IOT 
 * Aws have a variety of products in their IOT ecosystem -> https://aws.amazon.com/iot/

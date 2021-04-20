@@ -38,6 +38,9 @@ TLDR: understand whether there is autocorrelation or not, mean is changing with 
 * High level wrapper to many ts methods
 * Many dependencies, including prophet, but did eventually install in docker via pip
 
+## GluonTS
+* https://github.com/awslabs/gluon-ts
+
 ## Bayesian techniques
 * [STAN docs give intro to several techniques](http://mc-stan.org/docs/bayes-stats-stan/time-series-chapter.html)
 * ARIMA - Stats test for stationarity, find p & q parameters. [Simple intro](https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3)
