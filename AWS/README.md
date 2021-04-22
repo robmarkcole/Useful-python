@@ -22,14 +22,14 @@
 * Efficiently run hundreds of thousands of batch computing jobs on AWS
 * Jobs run in docker containers on an EC2 imnstance, or on ECR
 
-## Cloud9
-* https://docs.aws.amazon.com/cloud9/latest/user-guide/welcome.html
-* Web IDE -> used when creating lambda functions
-* Amazon bought this and it is no longer open source
+## CDK
+* https://aws.amazon.com/cdk/
+* write TypeScript, JavaScript, Python, Java, or C# and the CDK converts this into a Cloud Formation template
 
 ## CloudFormation
 * https://aws.amazon.com/cloudformation/
 * AWS CloudFormation provides a common language for you to model and provision AWS and third party application resources in your cloud environment.
+* Lots of YAML to write
 
 ## Cloudwatch
 * https://aws.amazon.com/cloudwatch/
