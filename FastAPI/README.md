@@ -4,6 +4,7 @@
 * [awesome-fastapi](https://github.com/mjhea0/awesome-fastapi)
 * Run the example and access from another machine with `uvicorn main:app --reload --host 0.0.0.0 --port 8000`
 * [Developing and Testing an Asynchronous API with FastAPI and Pytest](https://testdriven.io/blog/fastapi-crud/)
+* To develop an API use FastAPI. If you are building something based on backend-rendered HTML templates (Jinja2), then you won't get much out of FastAPI compared to Starlette.
 
 ## ML and data sci
 * https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece -> https://github.com/shanesoh/deploy-ml-fastapi-redis-docker

@@ -179,7 +179,8 @@
 * [Build end-to-end machine learning workflows with Amazon SageMaker and Apache Airflow](https://aws.amazon.com/blogs/machine-learning/build-end-to-end-machine-learning-workflows-with-amazon-sagemaker-and-apache-airflow/)
 * [A Deep Dive Into AWS SageMaker](https://towardsdatascience.com/amazon-machine-learning-a-deep-dive-into-aws-sagemaker-a97897553e05)
 * [Object detection with Detectron2 on Amazon SageMaker](https://aws.amazon.com/blogs/machine-learning/object-detection-with-detectron2-on-amazon-sagemaker/)
-* [Amazon SageMaker Data Wrangler](https://aws.amazon.com/sagemaker/data-wrangler/) is a UI for querying and visualising data on AWS, and preparing for use in ML training, e.g. convert column types or impute missing data with mean or median values. This is a hosted version of https://github.com/awslabs/aws-data-wrangler (Pandas on AWS) 
+* [Amazon SageMaker Data Wrangler](https://aws.amazon.com/sagemaker/data-wrangler/) is a UI for querying and visualising data on AWS, and preparing for use in ML training, e.g. convert column types or impute missing data with mean or median values. This is a hosted version of https://github.com/awslabs/aws-data-wrangler (Pandas on AWS)
+* [amazon-sagemaker-endpoint-deployment-of-fastai-model-with-torchserve](https://github.com/aws-samples/amazon-sagemaker-endpoint-deployment-of-fastai-model-with-torchserve)
 
 ## Secrets manager
 * Store credentials on AWS

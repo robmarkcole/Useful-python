@@ -7,3 +7,4 @@
 ## Ecosystem
 * Visual UI adds a graphical interface to fastai allowing the user to quickly load, choose parameters, train and view results without the need to dig deep into the code -> https://github.com/asvcode/Vision_UI
 * Equivalent to Tensorflow serving but simpler -> https://github.com/developmentseed/fastai-serving
+* [amazon-sagemaker-endpoint-deployment-of-fastai-model-with-torchserve](https://github.com/aws-samples/amazon-sagemaker-endpoint-deployment-of-fastai-model-with-torchserve)
