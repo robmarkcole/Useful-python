@@ -6,6 +6,10 @@
 * [Developing and Testing an Asynchronous API with FastAPI and Pytest](https://testdriven.io/blog/fastapi-crud/)
 * To develop an API use FastAPI. If you are building something based on backend-rendered HTML templates (Jinja2), then you won't get much out of FastAPI compared to Starlette.
 
+## SQLmodel
+* https://sqlmodel.tiangolo.com/
+* SQLModel is designed to simplify interacting with SQL databases in FastAPI
+
 ## ML and data sci
 * https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece -> https://github.com/shanesoh/deploy-ml-fastapi-redis-docker
 * [FastAPI and Scikit-Learn: Easily Deploy Models](http://nickc1.github.io/api,/scikit-learn/2019/01/10/scikit-fastapi.html)
