@@ -56,3 +56,9 @@ When adding long running computations to an app, you can use st.progess() to dis
 
 ## Streamlit components
 * https://robvanzoest.medium.com/build-a-practical-timeline-in-streamlit-5b3603ade11c
+
+## Authentication
+* https://github.com/asehmi/auth-simple-for-streamlit
+
+## Streaming
+* https://github.com/ash2shukla/streamlit-stream
